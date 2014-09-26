@@ -3,17 +3,28 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/home/HomeView',
-  'views/projects/ProjectsView',
-  'views/contributors/ContributorsView',
-  'views/footer/FooterView'
-], function($, _, Backbone, HomeView, ProjectsView, ContributorsView, FooterView) {
-  
+  //'views/home/HomeView',
+  //'views/static/AboutView',
+  //'views/static/LoginView',
+  //'views/footer/FooterView'
+], function(
+  $, 
+  _, 
+  Backbone
+  //HomeView, 
+  //AboutView, 
+  //LoginView, 
+  //FooterView
+) {
+  /*
   var AppRouter = Backbone.Router.extend({
+
     routes: {
       // Define some URL routes
-      'projects': 'showProjects',
-      'users': 'showContributors',
+      '': 'index',
+      'about': 'showAbout',
+      'login': 'showLogin',
+      '*path': 'default'
       
       // Default
       '*actions': 'defaultAction'
@@ -24,19 +35,20 @@ define([
 
     var app_router = new AppRouter;
     
-    app_router.on('route:showProjects', function(){
+    app_router.on('route:showAbout', function(){
    
         // Call render on the module we loaded in via the dependency array
-        var projectsView = new ProjectsView();
-        projectsView.render();
+        var aboutView = new AboutView();
+        aboutView.render();
 
     });
 
-    app_router.on('route:showContributors', function () {
+    app_router.on('route:showLogin', function () {
     
         // Like above, call render but know that this view has nested sub views which 
         // handle loading and displaying data from the GitHub API  
-        var contributorsView = new ContributorsView();
+        var loginView = new LoginView();
+        loginView.render();
     });
 
     app_router.on('route:defaultAction', function (actions) {
@@ -52,9 +64,60 @@ define([
     // loaded initially.
     var footerView = new FooterView();
 
-    Backbone.history.start();
+    Backbone.history.start({pushState: true});
   };
   return { 
     initialize: initialize
   };
+  */
+
+  var Router = Backbone.Router.extend({
+
+    routes: {
+      ''      : 'index',
+      'about' : 'about',
+      'login' : 'login',
+      '*path' : 'default'
+    },
+
+    initialize: function(){
+      console.log("ROUTER -- initialize");
+    },
+
+    index: function(){
+      console.log("ROUTER -- index");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.homeView.render();
+      window.CorsicaApp.views.footerView.render();
+    },
+
+    about: function(){
+      console.log("ROUTER -- about");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.aboutView.render();
+      window.CorsicaApp.views.footerView.render();
+
+    },
+
+    login: function(){
+      console.log("ROUTER -- login");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.loginView.render();
+      window.CorsicaApp.views.footerView.render();
+    },
+
+    default: function(path){
+      console.log("ROUTER -- default", path);
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.homeView.render();
+      window.CorsicaApp.views.footerView.render();
+    }
+  });
+
+  return Router;
+
 });

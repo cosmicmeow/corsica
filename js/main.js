@@ -17,8 +17,20 @@ require([
   // Load our app module and pass it to our definition function
   'app',
 
-], function(App){
+], function(
+  App
+){
   // The "app" dependency is passed in as "App"
   // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
-  App.initialize();
+  //App.initialize();
+
+  // Preloader should go here - on complete init CorsicaApp
+    
+    $(document).ready(function() {
+        // window.GoodToDoApp is defined so that any module
+        // reference it easily.
+        window.CorsicaApp = new App();
+        window.CorsicaApp.init();
+    });
+
 });

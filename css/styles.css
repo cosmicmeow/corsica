@@ -40,6 +40,17 @@
   #accordion .panel-body .col-lg-12 {
     padding: 20px; }
 
+#login_view {
+  margin-top: 50px; }
+  #login_view .login_button {
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+    height: 100px;
+    border: 1px solid #333;
+    line-height: 100px;
+    cursor: pointer; }
+
 body {
   font-family: 'Maven Pro', sans-serif;
   font-size: 15px; }
