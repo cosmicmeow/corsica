@@ -74,10 +74,11 @@ define([
   var Router = Backbone.Router.extend({
 
     routes: {
-      ''      : 'index',
-      'about' : 'about',
-      'login' : 'login',
-      '*path' : 'default'
+      ''          : 'index',
+      'about'     : 'about',
+      'login'     : 'login',
+      'dashboard' : 'dashboard',
+      '*path'     : 'default'
     },
 
     initialize: function(){
@@ -106,6 +107,14 @@ define([
 
       window.CorsicaApp.views.navbarView.render();
       window.CorsicaApp.views.loginView.render();
+      window.CorsicaApp.views.footerView.render();
+    },
+
+    dashboard: function(){
+      console.log("ROUTER -- dashboard");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.dashboardView.render();
       window.CorsicaApp.views.footerView.render();
     },
 

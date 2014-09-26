@@ -9,7 +9,7 @@ define([
   'views/home/HomeView',
   'views/static/AboutView',
   'views/static/LoginView',
-  //'views/dashboard/DashboardView',
+  'views/dashboard/DashboardView',
   //'views/search/SearchView',
   'views/footer/FooterView'
 ], function(
@@ -22,7 +22,7 @@ define([
   NavbarView,
   AboutView,
   LoginView,
-  //DashboardView,
+  DashboardView,
   //SearchView,
   FooterView
 ){
@@ -58,7 +58,7 @@ define([
     this.views.loginView = new LoginView();
     this.views.navbarView = new NavbarView();
     this.views.footerView = new FooterView();
-    //this.views.dashboardView = new DashboardView();
+    this.views.dashboardView = new DashboardView();
     //this.views.searchView = new SearchView();
 
     Backbone.history.start({pushState: true, root: '/'});
