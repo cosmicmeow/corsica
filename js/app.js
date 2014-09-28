@@ -13,7 +13,7 @@ define([
   //'views/search/SearchView',
   'views/footer/FooterView',
   'models/course/Course',
-  //'collections/courses/CourseCollection'
+  'collections/courses/CourseCollection'
 ], function(
   $,
   _,
@@ -65,7 +65,7 @@ define([
     this.views.dashboardView = new DashboardView();
     //this.views.searchView = new SearchView();
 
-    Backbone.history.start({pushState: true, root: '/'});
+    Backbone.history.start({pushState: false, root: '/'});
 
     this.setupGlobalHandlers();
 
