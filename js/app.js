@@ -1,7 +1,7 @@
 // Filename: app.js
 define([
-  'jquery', 
-  'underscore', 
+  'jquery',
+  'underscore',
   'backbone',
   'router', // Request router.js
   //'models/user',
@@ -11,11 +11,13 @@ define([
   'views/static/LoginView',
   'views/dashboard/DashboardView',
   //'views/search/SearchView',
-  'views/footer/FooterView'
+  'views/footer/FooterView',
+  'models/course/Course',
+  //'collections/courses/CourseCollection'
 ], function(
-  $, 
-  _, 
-  Backbone, 
+  $,
+  _,
+  Backbone,
   Router,
   //UserModel,
   HomeView,
@@ -24,7 +26,9 @@ define([
   LoginView,
   DashboardView,
   //SearchView,
-  FooterView
+  FooterView,
+  Course,
+  CourseCollection
 ){
 
   /*
@@ -33,7 +37,7 @@ define([
     Router.initialize();
   };
 
-  return { 
+  return {
     initialize: initialize
   };
 
@@ -93,6 +97,14 @@ define([
         });
     };
 
-    return App;
+    /** DO APP STUFF HERE **/
 
+
+
+
+
+
+
+
+    return App;
 });

@@ -45,8 +45,12 @@ server.route({
     path: '/data',
     handler: function (request, reply) {
       var courses = [];
+      var klass;
       _.each(data.main, function(info){
-        courses.push(course(info));
+        klass = course(info);
+        if (klass.status === "shut"){
+          courses.push(klass);
+        }
       });
         reply(courses);
     }
