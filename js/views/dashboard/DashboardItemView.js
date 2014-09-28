@@ -1,3 +1,4 @@
+/* global define */
 define([
   'jquery',
   'underscore',
@@ -9,26 +10,25 @@ define([
   _.templateSettings = {
   interpolate: /\{\{(.+?)\}\}/g
   };
-  var aCourse = new Course();
+
 
   var DashboardItemView = Backbone.View.extend({
-    el: $("#course_list"),
-    model: aCourse,
+    //el: $("#course_list"),
+    className: "course row",
+    model: new Course(),
     template: _.template(
-      '<div class="course row">' +
         '<div class="col-sm-5">' +
-          '<span class="course_num">{{courseNum}}</span>' +
-          '<span class="course_name">{{description}}</span>' +
+          '<span class="course_num">{{courseNum}} </span>' +
+          '<span class="course_name">{{description}} </span>' +
         '</div>' +
         '<div class="col-sm-1"><span class="course_crn">{{crn}}</span></div>' +
         '<div class="col-sm-3"><span class="course_instructor">{{i_user}}</span></div>' +
-        '<div class="col-sm-3"><span class="course_stat">{{capacity}}</span></div>' +
-      '</div>'
+        '<div class="col-sm-3"><span class="course_stat">{{capacity}}</span></div>'
     ),
     render: function(){
 
       console.log("dashboard -- item");
-      this.$el.html(this.template(this.model.toJSON()));
+      this.$el.html(this.template(this.model));
       return this;
     }
 
