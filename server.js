@@ -2,8 +2,9 @@ var Path = require('path');
 var Hapi = require('hapi');
 var data = require('./data/fall_2014');
 var _ = require('lodash');
+var port = process.env.PORT || 3000;
 
-var server = new Hapi.Server('localhost', 3000, { files: { relativeTo: Path.join(__dirname, './') } });
+var server = new Hapi.Server('localhost', port, { files: { relativeTo: Path.join(__dirname, './') } });
 
 var course = function (info){
   return {
@@ -68,5 +69,5 @@ server.route({
 
 // Start your Mullet Server
 server.start(function () {
-  console.log('Coursica is running on port: 3000');
+  console.log('Coursica is running on port:', port);
 });
