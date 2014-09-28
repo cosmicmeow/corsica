@@ -2,7 +2,7 @@ var Path = require('path');
 var Hapi = require('hapi');
 var data = require('./data/fall_2014');
 var _ = require('lodash');
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
 var server = new Hapi.Server('localhost', port, { files: { relativeTo: Path.join(__dirname, './') } });
 
