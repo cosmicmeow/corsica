@@ -3,6 +3,9 @@ var Hapi = require('hapi');
 var data = require('./data/fall_2014');
 var _ = require('lodash');
 var port = (process.env.PORT || 5000);
+var dotenv = require('dotenv');
+dotenv.load();
+var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 var server = new Hapi.Server(port, { files: { relativeTo: Path.join(__dirname, './') } });
 
@@ -63,10 +66,27 @@ server.route({
     path: '/subscribe',
     handler: function (request, reply) {
       //twilio you are subscribed to --- blah
+       var number = request.payload.number;
+       var name = request.payload.name;
+       var message = request.payload.message;
+       message = "you are now subscribed to Corsica";
+      //reply(request.payload);
+      twilio.sendMessage({
+
+          to: number, // Any number Twilio can deliver to
+          from: '+13476479140',
+          body: 'Hello ' + name + ": " + message,
+      }, function(err, responseData) {
+          console.log(err);
+          if (!err) {
+          console.log(responseData);
+          reply(responseData.from + " " + responseData.body);
+          }
+      });
     }
 });
 
 // Start your Mullet Server
 server.start(function () {
-  console.log('Coursica is running on port:', port);
+  console.log('Corsica is running on port:', port);
 });
