@@ -26,7 +26,7 @@ var course = function (info){
     unknown4: info[15],
     unknown5: info[16],
     unknown6: info[17],
-    unknown7: info[18],
+    unknown7: info[18]
   };
 };
 
@@ -52,7 +52,15 @@ server.route({
     }
 });
 
+server.route({
+    method: 'POST',
+    path: '/subscribe',
+    handler: function (request, reply) {
+      //twilio you are subscribed to --- blah
+    }
+});
+
 // Start your Mullet Server
 server.start(function () {
-  console.log('The Mullet Stack is running on port: 3000');
+  console.log('Coursica is running on port: 3000');
 });
