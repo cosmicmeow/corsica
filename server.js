@@ -49,6 +49,8 @@ server.route({
       _.each(data.main, function(info){
         klass = course(info);
         if (klass.status === "shut"){
+          klass.description = klass.description.substr(0,20);
+          klass.courseNum = "CS"+klass.courseNum;
           courses.push(klass);
         }
       });
