@@ -2,8 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/dashboard/dashboardItemTemplate.html'
-], function($, _, Backbone, dashboardItemTemplate){
+  'text!templates/dashboard/dashboardItemTemplate.html',
+  'models/course/Course'
+], function($, _, Backbone, dashboardItemTemplate, Course){
 
   _.templateSettings = {
   interpolate: /\{\{(.+?)\}\}/g
@@ -11,6 +12,7 @@ define([
 
   var DashboardItemView = Backbone.View.extend({
     el: $("#course_list"),
+    model: Course,
     template: _.template(
       '<div class="course row">' +
         '<div class="col-sm-5">' +
