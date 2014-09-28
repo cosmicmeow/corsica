@@ -8,12 +8,12 @@ define([
   //'views/static/LoginView',
   //'views/footer/FooterView'
 ], function(
-  $, 
-  _, 
+  $,
+  _,
   Backbone
-  //HomeView, 
-  //AboutView, 
-  //LoginView, 
+  //HomeView,
+  //AboutView,
+  //LoginView,
   //FooterView
 ) {
   /*
@@ -25,18 +25,18 @@ define([
       'about': 'showAbout',
       'login': 'showLogin',
       '*path': 'default'
-      
+
       // Default
       '*actions': 'defaultAction'
     }
   });
-  
+
   var initialize = function(){
 
     var app_router = new AppRouter;
-    
+
     app_router.on('route:showAbout', function(){
-   
+
         // Call render on the module we loaded in via the dependency array
         var aboutView = new AboutView();
         aboutView.render();
@@ -44,16 +44,16 @@ define([
     });
 
     app_router.on('route:showLogin', function () {
-    
-        // Like above, call render but know that this view has nested sub views which 
-        // handle loading and displaying data from the GitHub API  
+
+        // Like above, call render but know that this view has nested sub views which
+        // handle loading and displaying data from the GitHub API
         var loginView = new LoginView();
         loginView.render();
     });
 
     app_router.on('route:defaultAction', function (actions) {
-     
-       // We have no matching route, lets display the home page 
+
+       // We have no matching route, lets display the home page
         var homeView = new HomeView();
         homeView.render();
     });
@@ -66,7 +66,7 @@ define([
 
     Backbone.history.start({pushState: true});
   };
-  return { 
+  return {
     initialize: initialize
   };
   */
