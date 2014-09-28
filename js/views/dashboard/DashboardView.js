@@ -9,23 +9,18 @@ define([
   'models/course/Course'
 ], function($, _, Backbone, DashboardTemplate, DashboardItemView, CourseCollection, Course){
 
+  //Handlebars
+  _.templateSettings = {
+  interpolate: /\{\{(.+?)\}\}/g
+  };
   var DashboardView = Backbone.View.extend({
     el: $("#page"),
     modelView: DashboardItemView,
-    collection: CourseCollection,
+    collection: new CourseCollection(),
 
     render: function(){
 
-      this.$el.html(DashboardTemplate);
-
-      // for (var i = 0; i < 30; i++){
-      //   dashboardItemView = new DashboardItemView();
-      //   dashboardItemView.render();
-      // }
-      //console.log(dashboardItemView);
-    },
-    initialize: function() {
-      //CourseCollection.fetch();
+      var body = this.$el.html(DashboardTemplate);
 
       var Courses = new CourseCollection();
       Courses.fetch({
@@ -35,10 +30,13 @@ define([
           var aCourse = new Course();
           aCourse.set(data);
           Courses.add(aCourse);
+          var item = new DashboardItemView({model:data});
+          body.find("#course_list").append(item.render().el);
         });
       }});
-      console.log(Courses);
 
+    },
+    initialize: function() {
     }
   });
 
