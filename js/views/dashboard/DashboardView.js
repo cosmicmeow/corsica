@@ -3,13 +3,13 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/dashboard/dashboardTemplate',
+  'text!templates/dashboard/dashboardTemplate.html',
   'views/dashboard/DashboardItemView',
   'collections/courses/CourseCollection'
 ], function($, _, Backbone, DashboardTemplate, DashboardItemView, CourseCollection){
 
   var DashboardView = Backbone.View.extend({
-    el: $("#course_list"),
+    el: $("#page"),
     modelView: DashboardItemView,
     collection: CourseCollection,
 
