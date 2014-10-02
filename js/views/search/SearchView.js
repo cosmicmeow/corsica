@@ -40,12 +40,16 @@ define([
     search: function () {
       var term = this.$("#term").val();
       var dropdown = this.$("#dropdown").val();
-      console.log(dropdown);
+      var body = this.$el.html(SearchTemplate);
+      console.log(self.Courses.where({"avaliableSeats":"0"}));
       // console.log("searching!");
-      console.log(self.Courses.where({"crn":"21330"}));
+      _.each(self.Courses.where({"crn":term}), function(data) {
+         var item = new SearchItemView({model:data.attributes});
+         body.find("#course_list").append(item.render().el);
+      });
     },
     render: function () {
-      var body = this.$el.html(SearchTemplate);
+      return this.$el.html(SearchTemplate);
     }
   });
 
