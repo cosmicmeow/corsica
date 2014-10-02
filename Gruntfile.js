@@ -14,10 +14,15 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
 
+		},
+		nodemon: {
+		  dev: {
+		    script: 'server.js'
+		  }
 		}
 	});
-
+	grunt.loadNpmTasks('grunt-nodemon');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['watch']);
+	grunt.registerTask('default',['watch'],'nodemon');
 };
