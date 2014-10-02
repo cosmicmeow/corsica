@@ -11,7 +11,6 @@ define(['backbone', 'models/course/Course'], function(Backbone, CourseModel) {
             return data.events || [];
         }
     });
-    console.log(ClassCollection);
 
     return ClassCollection;
 

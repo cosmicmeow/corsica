@@ -15,12 +15,8 @@ define([
   };
   var DashboardView = Backbone.View.extend({
     el: $("#page"),
-    modelView: SearchItemView,
-    collection: new CourseCollection(),
-
-    render: function(){
-
-      var body = this.$el.html(SearchTemplate);
+    initialize: function() {
+      var self = this;
 
       var Courses = new CourseCollection();
       Courses.fetch({
@@ -30,13 +26,26 @@ define([
           var aCourse = new Course();
           aCourse.set(data);
           Courses.add(aCourse);
-          var item = new SearchItemView({model:data});
-          body.find("#course_list").append(item.render().el);
+          // var item = new SearchItemView({model:data});
+          // body.find("#course_list").append(item.render().el);
         });
+        this.Courses = Courses;
       }});
-
     },
-    initialize: function() {
+    modelView: SearchItemView,
+    collection: new CourseCollection(),
+    events: {
+      "click #search": "search"
+    },
+    search: function () {
+      var term = this.$("#term").val();
+      var dropdown = this.$("#dropdown").val();
+      console.log(dropdown);
+      // console.log("searching!");
+      console.log(self.Courses.where({"crn":"21330"}));
+    },
+    render: function () {
+      var body = this.$el.html(SearchTemplate);
     }
   });
 

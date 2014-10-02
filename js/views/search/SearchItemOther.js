@@ -28,7 +28,7 @@ define([
     render: function(){
 
       console.log("dashboard -- search");
-      //this.$el.html(this.template(this.model));
+      this.$el.html(this.template(this.model));
       return this;
     }
 
