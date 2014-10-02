@@ -10,10 +10,8 @@ define([
   'views/static/AboutView',
   'views/static/LoginView',
   'views/dashboard/DashboardView',
-  //'views/search/SearchView',
-  'views/footer/FooterView',
-  'models/course/Course',
-  'collections/courses/CourseCollection'
+  'views/search/SearchView',
+  'views/footer/FooterView'
 ], function(
   $,
   _,
@@ -25,10 +23,8 @@ define([
   AboutView,
   LoginView,
   DashboardView,
-  //SearchView,
-  FooterView,
-  Course,
-  CourseCollection
+  SearchView,
+  FooterView
 ){
 
   /*
@@ -63,7 +59,7 @@ define([
     this.views.navbarView = new NavbarView();
     this.views.footerView = new FooterView();
     this.views.dashboardView = new DashboardView();
-    //this.views.searchView = new SearchView();
+    this.views.searchView = new SearchView();
 
     Backbone.history.start({pushState: false, root: '/'});
 

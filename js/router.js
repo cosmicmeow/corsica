@@ -78,6 +78,7 @@ define([
       'about'     : 'about',
       'login'     : 'login',
       'dashboard' : 'dashboard',
+      'search'    : 'search',
       '*path'     : 'default'
     },
 
@@ -115,6 +116,13 @@ define([
 
       window.CorsicaApp.views.navbarView.render();
       window.CorsicaApp.views.dashboardView.render();
+      window.CorsicaApp.views.footerView.render();
+    },
+    search: function(){
+      console.log("ROUTER -- search");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.searchView.render();
       window.CorsicaApp.views.footerView.render();
     },
 
