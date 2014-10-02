@@ -60,7 +60,7 @@ server.route({
         reply(courses);
     }
 });
-
+/*
 server.route({
     method: 'POST',
     path: '/subscribe',
@@ -85,8 +85,9 @@ server.route({
       });
     }
 });
+*/
 
-// Start your Mullet Server
+// Start your Server
 server.start(function () {
   console.log('Corsica is running on port:', port);
 });
