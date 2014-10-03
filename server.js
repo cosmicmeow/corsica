@@ -78,27 +78,3 @@ app.use(function(req, res, next) {
 
 app.listen(process.env.PORT || 3000);
 app.set('port', process.env.PORT || 3000);
-
-// server.route({
-//     method: 'GET',
-//     path: '/data',
-//     handler: function (request, reply) {
-//       var courses = [];
-//       var klass;
-//       _.each(data.main, function(info){
-//         klass = course(info);
-//         if (klass.status === "shut"){
-//           klass.description = klass.description.substr(0,20);
-//           klass.courseNum = "CS"+klass.courseNum;
-//           courses.push(klass);
-//         }
-//       });
-//         reply(courses);
-//     }
-// });
-
-//
-// // Start your Server
-// server.start(function () {
-//   console.log('Corsica is running on port:', port);
-// });
