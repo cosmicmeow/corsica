@@ -1,13 +1,33 @@
-var Path = require('path');
-var Hapi = require('hapi');
+var express = require('express');
+var path = require('path');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var path = require('path');
 var data = require('./data/fall_2014');
 var _ = require('lodash');
 var port = (process.env.PORT || 5000);
 var dotenv = require('dotenv');
 dotenv.load();
-var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+//var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
-var server = new Hapi.Server(port, { files: { relativeTo: Path.join(__dirname, './') } });
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hjs');
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '/')));
+
+// app.use('/', routes);
+// app.use('/users', users);
 
 var course = function (info){
   return {
@@ -33,61 +53,52 @@ var course = function (info){
   };
 };
 
-
-// Serve static files from `static` dir.
-server.route({
-  method: 'GET',
-  path: '/{path*}',
-  handler: {
-      directory: { path: './', listing: false, index: true }
-  }
-});
-
-server.route({
-    method: 'GET',
-    path: '/data',
-    handler: function (request, reply) {
-      var courses = [];
-      var klass;
-      _.each(data.main, function(info){
-        klass = course(info);
-        if (klass.status === "shut"){
-          klass.description = klass.description.substr(0,20);
-          klass.courseNum = "CS"+klass.courseNum;
-          courses.push(klass);
-        }
-      });
-        reply(courses);
-    }
-});
-/*
-server.route({
-    method: 'POST',
-    path: '/subscribe',
-    handler: function (request, reply) {
-      //twilio you are subscribed to --- blah
-       var number = request.payload.number;
-       var name = request.payload.name;
-       var message = request.payload.message;
-       message = "you are now subscribed to Corsica";
-      //reply(request.payload);
-      twilio.sendMessage({
-
-          to: number, // Any number Twilio can deliver to
-          from: '+13476479140',
-          body: 'Hello ' + name + ": " + message,
-      }, function(err, responseData) {
-          console.log(err);
-          if (!err) {
-          console.log(responseData);
-          reply(responseData.from + " " + responseData.body);
+app.get('/data', function(req, res) {
+        var courses = [];
+        var klass;
+        _.each(data.main, function(info){
+          klass = course(info);
+          if (klass.status === "shut"){
+            klass.description = klass.description.substr(0,20);
+            klass.courseNum = "CS"+klass.courseNum;
+            courses.push(klass);
           }
-      });
-    }
+        });
+        res.status(200).send(courses);
 });
-*/
 
-// Start your Server
-server.start(function () {
-  console.log('Corsica is running on port:', port);
+
+/// catch 404 and forwarding to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
+
+
+app.listen(process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3000);
+
+// server.route({
+//     method: 'GET',
+//     path: '/data',
+//     handler: function (request, reply) {
+//       var courses = [];
+//       var klass;
+//       _.each(data.main, function(info){
+//         klass = course(info);
+//         if (klass.status === "shut"){
+//           klass.description = klass.description.substr(0,20);
+//           klass.courseNum = "CS"+klass.courseNum;
+//           courses.push(klass);
+//         }
+//       });
+//         reply(courses);
+//     }
+// });
+
+//
+// // Start your Server
+// server.start(function () {
+//   console.log('Corsica is running on port:', port);
+// });
