@@ -54,51 +54,6 @@ app.use(function(req, res, next) {
    }
 });
 
-var course = function (info){
-  return {
-    status: info[0],
-    capacity: info[1],
-    avaliableSeats: info[2],
-    prop: info[3],
-    courseNum: info[4],
-    crn: info[5],
-    note: info[6],
-    description: info[7],
-    days: info[8],
-    location: info[9],
-    instructor: info[10],
-    i_user: info[11],
-    unknown1: info[12],
-    unknown2: info[13],
-    unknown3: info[14],
-    unknown4: info[15],
-    unknown5: info[16],
-    unknown6: info[17],
-    unknown7: info[18]
-  };
-};
-
-app.get('/data', function(req, res) {
-        var courses = [];
-        var klass;
-        _.each(data.main, function(info){
-          klass = course(info);
-          if (klass.status === "shut"){
-            klass.description = klass.description.substr(0,20);
-            klass.courseNum = "CS"+klass.courseNum;
-            courses.push(klass);
-          }
-        });
-        res.status(200).send(courses);
-});
-
-
-/// catch 404 and forwarding to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
 
 console.log("Head to http://localhost:" + (process.env.PORT || 3000));
 app.listen(process.env.PORT || 3000);
