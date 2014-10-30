@@ -23,7 +23,7 @@ app.set('view engine', 'hjs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '/app')));
 
 // app.use('/', routes);
 // app.use('/users', users);
@@ -74,6 +74,6 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-
+console.log("Head to http://localhost:" + (process.env.PORT || 3000));
 app.listen(process.env.PORT || 3000);
 app.set('port', process.env.PORT || 3000);
