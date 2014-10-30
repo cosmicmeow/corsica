@@ -53,7 +53,12 @@ app.use(function(req, res, next) {
      res.redirect("/login");
    }
 });
-
+/// catch 404 and forwarding to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
 
 console.log("Head to http://localhost:" + (process.env.PORT || 3000));
 app.listen(process.env.PORT || 3000);
