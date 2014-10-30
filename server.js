@@ -8,11 +8,14 @@ var data = require('./data/fall_2014');
 var _ = require('lodash');
 var port = (process.env.PORT || 5000);
 var dotenv = require('dotenv');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash    = require('connect-flash');
+var session      = require('express-session');
+var configDB = require('./config/database.js');
+require('./config/passport')(passport); // pass passport for configuration
 dotenv.load();
 //var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-
-// var routes = require('./routes/index');
-// var users = require('./routes/users');
 
 var app = express();
 
@@ -23,10 +26,23 @@ app.set('view engine', 'hjs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/app')));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '/client')));
 
-// app.use('/', routes);
-// app.use('/users', users);
+// configuration ===============================================================
+mongoose.connect(configDB.url); // connect to our database
+
+require('./config/passport')(passport); // pass passport for configuration
+
+/** PASSPORT USER LOGIN**/
+// required for passport
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+// routes ======================================================================
+require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 var course = function (info){
   return {
