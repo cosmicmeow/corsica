@@ -18,7 +18,6 @@ dotenv.load();
 //var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
@@ -43,17 +42,19 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
-//app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static(path.join(__dirname, '/public')));
-
-app.use(function(req, res, next) {
-   if(req.user){
-     return express.static(path.join(__dirname, '/public'));
-   } else {
-     res.redirect("/login");
-   }
+app.use('/', function(req, res, next) {
+    console.log("user", req.user);
+    console.log(req.path.indexOf('/client'));
+    console.log(req.user === null && req.path.indexOf('/client') === 0);
+    if (req.user === undefined && req.path.indexOf('/client') === 0)
+    {
+        res.redirect('/login');
+        return;
+    }
+    next();
 });
-/// catch 404 and forwarding to error handler
+app.use("/", express.static(path.join(__dirname, '/public')));
+
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
