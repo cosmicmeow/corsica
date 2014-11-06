@@ -11,14 +11,22 @@ define([
 
   //Handlebars
   _.templateSettings = {
-  interpolate: /\{\{(.+?)\}\}/g
+    interpolate: /\{\{(.+?)\}\}/g
   };
   var DashboardView = Backbone.View.extend({
     el: $("#page"),
     modelView: DashboardItemView,
     collection: new CourseCollection(),
 
+    events: {
+    },
+    
+    initialize: function() {
+    },
+
     render: function(){
+
+      console.log("Render - Dashboard")
 
       var body = this.$el.html(DashboardTemplate);
 
@@ -35,9 +43,8 @@ define([
         });
       }});
 
-    },
-    initialize: function() {
     }
+
   });
 
   //DashboardView.render();
