@@ -85,6 +85,16 @@ app.get('/data', function(req, res) {
 			failureFlash : true // allow flash messages
 		}));
 
+		app.get('/client', isLoggedIn, function(req, res) {
+			res.clearCookie('email');
+			res.cookie('email', req.user.local.email, {httpOnly: false});
+			console.log(req.user);
+			res.render('index.ejs', {
+				user : req.user,
+				stringify: JSON.stringify(req.user.local)
+			});
+		});
+
 		// SIGNUP =================================
 		// show the signup form
 		app.get('/signup', function(req, res) {
