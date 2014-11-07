@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Node Authentication</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<style>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<style>
 		body 		{ padding-top:80px; word-wrap:break-word; }
 	</style>
 </head>
@@ -15,6 +15,11 @@
 		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
 		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
 	</div>
+
+	<script>
+	//console.log(foo);
+	</script>
+
 
 	<div class="row">
 
@@ -29,7 +34,7 @@
 						<strong>email</strong>: <%= user.local.email %><br>
 						<strong>password</strong>: <%= user.local.password %>
 					</p>
-					
+
 					<a href="/unlink/local" class="btn btn-default">Unlink</a>
 				<% } else { %>
 					<a href="/connect/local" class="btn btn-default">Connect Local</a>
@@ -112,4 +117,8 @@
 
 </div>
 </body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"> </script>
+<script>
+</script>
 </html>

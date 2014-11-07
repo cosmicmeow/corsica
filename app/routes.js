@@ -34,8 +34,12 @@ var course = function (info){
 
 	// PROFILE SECTION =========================
 	app.get('/profile', isLoggedIn, function(req, res) {
+		res.clearCookie('email');
+		res.cookie('email', req.user.local.email, {httpOnly: false});
+		console.log(req.user);
 		res.render('profile.ejs', {
-			user : req.user
+			user : req.user,
+			stringify: JSON.stringify(req.user.local)
 		});
 	});
 
