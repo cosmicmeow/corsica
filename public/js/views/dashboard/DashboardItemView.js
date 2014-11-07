@@ -43,8 +43,10 @@ define([
 
     render: function(){
 
-      //console.log("dashboard -- item");
+      console.log("dashboard -- item");
+      var self = this;
       this.$el.html(this.template(this.model));
+
       return this;
     },
 

@@ -58,8 +58,8 @@ app.get('/data', function(req, res) {
 				_.each(data.main, function(info){
 					klass = course(info);
 					if (klass.status === "shut"){
-						klass.description = klass.description.substr(0,20);
-						klass.courseNum = "CS"+klass.courseNum;
+						klass.description = klass.description;
+						klass.courseNum = "CS" + klass.courseNum;
 						courses.push(klass);
 					}
 				});
