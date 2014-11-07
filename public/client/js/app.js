@@ -4,7 +4,6 @@ define([
   'underscore',
   'backbone',
   'router', // Request router.js
-  'utils/config',
   //'models/user',
   'views/home/HomeView',
   'views/static/AboutView',
@@ -19,7 +18,6 @@ define([
   Backbone,
   Router,
   //UserModel,
-  config,
   HomeView,
   AboutView,
   LoginView,
@@ -63,7 +61,7 @@ define([
     this.views.navbarView = new NavbarView();
     this.views.footerView = new FooterView();
 
-    Backbone.history.start({pushState: false, root: config.base_url});
+    Backbone.history.start({pushState: false, root: "/"});
 
     this.setupGlobalHandlers();
 
