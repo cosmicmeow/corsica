@@ -19,7 +19,7 @@ define([
     },
 
     logoutClick: function(){
-      if (window.location.href.indexOf("http://red411.herokuapp.com") > 1){
+      if (window.location.href.indexOf("http://red411.herokuapp.com") > -1){
         window.location.href = "http://red411.herokuapp.com/logout";
       } else {
         window.location.href = "http://localhost:3000/logout";
