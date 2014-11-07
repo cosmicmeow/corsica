@@ -90,7 +90,7 @@ define([
       console.log("ROUTER -- index");
 
       window.CorsicaApp.views.navbarView.render();
-      window.CorsicaApp.views.homeView.render();
+      window.CorsicaApp.views.dashboardView.render();
       window.CorsicaApp.views.footerView.render();
     },
 

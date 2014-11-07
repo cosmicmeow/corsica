@@ -5,13 +5,13 @@ define([
   'backbone',
   'router', // Request router.js
   //'models/user',
-  'views/navbar/NavbarView',
   'views/home/HomeView',
   'views/static/AboutView',
   'views/static/LoginView',
   'views/dashboard/DashboardView',
   'views/search/SearchView',
-  'views/footer/FooterView'
+  'views/footer/FooterView',
+  'views/navbar/NavbarView'
 ], function(
   $,
   _,
@@ -19,12 +19,12 @@ define([
   Router,
   //UserModel,
   HomeView,
-  NavbarView,
   AboutView,
   LoginView,
   DashboardView,
   SearchView,
-  FooterView
+  FooterView,
+  NavbarView
 ){
 
   /*
@@ -56,12 +56,12 @@ define([
     this.views.aboutView = new AboutView();
     this.views.homeView = new HomeView();
     this.views.loginView = new LoginView();
-    this.views.navbarView = new NavbarView();
-    this.views.footerView = new FooterView();
     this.views.dashboardView = new DashboardView();
     this.views.searchView = new SearchView();
+    this.views.navbarView = new NavbarView();
+    this.views.footerView = new FooterView();
 
-    Backbone.history.start({pushState: false, root: '/'});
+    Backbone.history.start({pushState: false, root: "/"});
 
     this.setupGlobalHandlers();
 

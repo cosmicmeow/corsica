@@ -40,16 +40,37 @@
   #accordion .panel-body .col-lg-12 {
     padding: 20px; }
 
-#login_view {
-  margin-top: 50px; }
-  #login_view .login_button {
-    text-align: center;
-    display: inline-block;
-    width: 250px;
-    height: 100px;
-    border: 1px solid #333;
-    line-height: 100px;
-    cursor: pointer; }
+#login_view #bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%; }
+#login_view #bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%; }
+#login_view a {
+  color: #BD2132; }
+#login_view a:hover {
+  color: #9d1120; }
+#login_view #loginbox {
+  position: relative;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 50px;
+  border: 2px solid #fff; }
+#login_view .btn-login {
+  color: #fff;
+  background-color: #BD2132; }
+#login_view .btn-login:hover {
+  color: #fff;
+  background-color: #9d1120; }
 
 #dashboard_view {
   margin-top: 50px; }
@@ -61,6 +82,9 @@
     padding: 0 10px 0; }
     #dashboard_view .message span {
       color: #a53e1a; }
+  #dashboard_view .waitlist:hover {
+    cursor: pointer;
+    color: #BD2132; }
   #dashboard_view .list .header {
     background-color: #fff;
     background-image: none;
