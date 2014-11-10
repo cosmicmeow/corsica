@@ -79,6 +79,7 @@ define([
       'login'     : 'login',
       'dashboard' : 'dashboard',
       'search'    : 'search',
+      'waitlist/:id'  : 'waitlist',
       '*path'     : 'default'
     },
 
@@ -118,6 +119,15 @@ define([
       window.CorsicaApp.views.dashboardView.render();
       window.CorsicaApp.views.footerView.render();
     },
+
+    waitlist: function(id){
+      console.log("ROUTER -- waitlist");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.waitlistView.render();
+      window.CorsicaApp.views.footerView.render();
+    },
+
     search: function(){
       console.log("ROUTER -- search");
 
@@ -130,7 +140,7 @@ define([
       console.log("ROUTER -- default", path);
 
       window.CorsicaApp.views.navbarView.render();
-      window.CorsicaApp.views.homeView.render();
+      window.CorsicaApp.views.dashboardView.render();
       window.CorsicaApp.views.footerView.render();
     }
   });

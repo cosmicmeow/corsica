@@ -9,6 +9,7 @@ define([
   'views/static/AboutView',
   'views/static/LoginView',
   'views/dashboard/DashboardView',
+  'views/dashboard/WaitlistView',
   'views/search/SearchView',
   'views/footer/FooterView',
   'views/navbar/NavbarView'
@@ -22,6 +23,7 @@ define([
   AboutView,
   LoginView,
   DashboardView,
+  WaitlistView,
   SearchView,
   FooterView,
   NavbarView
@@ -57,6 +59,7 @@ define([
     this.views.homeView = new HomeView();
     this.views.loginView = new LoginView();
     this.views.dashboardView = new DashboardView();
+    this.views.waitlistView = new WaitlistView();
     this.views.searchView = new SearchView();
     this.views.navbarView = new NavbarView();
     this.views.footerView = new FooterView();

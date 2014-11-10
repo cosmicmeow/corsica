@@ -52,6 +52,10 @@ define([
 
     waitlistDetail: function(){
       console.log("omg clicked", this.model);
+      window.CorsicaApp.router.navigate("/waitlist/" + this.model.crn, {trigger: true});
+
+      //window.CorsicaApp.views.waitlistView.render(this.model);
+      //window.location.href = "/client#waitlist";
     }
 
   });
