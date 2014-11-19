@@ -4,6 +4,7 @@ define([
   'underscore',
   'backbone',
   'router', // Request router.js
+  'collections/courses/CourseCollection',
   //'models/user',
   'views/home/HomeView',
   'views/static/AboutView',
@@ -18,6 +19,7 @@ define([
   _,
   Backbone,
   Router,
+  CourseCollection,
   //UserModel,
   HomeView,
   AboutView,
@@ -43,7 +45,7 @@ define([
 
   var App = function() {
     this.views = {};
-    //this.collections = {};
+    this.collections = {};
     //this.is_logged_in = false;
     //this.current_user = null;
   };
@@ -51,6 +53,9 @@ define([
   App.prototype.init = function() {
 
     this.router = new Router();
+
+    // Collections (Data sources)
+    this.collections.courseCollection = new CourseCollection();
 
     //this.currentUser = new UserModel();
 

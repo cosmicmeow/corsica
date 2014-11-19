@@ -124,7 +124,7 @@ define([
       console.log("ROUTER -- waitlist");
 
       window.CorsicaApp.views.navbarView.render();
-      window.CorsicaApp.views.waitlistView.render();
+      window.CorsicaApp.views.waitlistView.render(id);
       window.CorsicaApp.views.footerView.render();
     },
 

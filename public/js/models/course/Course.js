@@ -3,8 +3,9 @@ define([
   'backbone',
 ], function(_, Backbone) {
 
-  var ContributorModel = Backbone.Model.extend({
-     urlRoot: '/data',
+  var CourseModel = Backbone.Model.extend({
+     //urlRoot: '/waitlist',
+
      defaults: {
        status: '',
        capacity: '',
@@ -24,11 +25,21 @@ define([
        unknown4: '',
        unknown5: '',
        unknown6: '',
-       unknown7: ''
-    }
+       unknown7: '',
+       myModelId: null
+    },
+
+    urlRoot: '/waitlist'
+    /*
+    url : function() {
+      // Important! It's got to know where to send its REST calls. 
+      // In this case, POST to '/donuts' and PUT to '/donuts/:id'
+      return this.id ? '/waitlist/' + this.id : '/waitlist'; 
+    } 
+    */
   });
 
 
-  return ContributorModel;
+  return CourseModel;
 
 });

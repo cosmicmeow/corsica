@@ -16,15 +16,6 @@ define([
     //el: $("#course_list"),
     className: "course row",
     model: new Course(),
-    template: _.template(
-        '<div class="col-sm-5 waitlist">' +
-          '<span class="course_num">{{courseNum}} </span>' +
-          '<span class="course_name">{{description}} </span>' +
-        '</div>' +
-        '<div class="col-sm-1"><span class="course_crn">{{crn}}</span></div>' +
-        '<div class="col-sm-2"><span class="course_instructor">{{i_user}}</span></div>' +
-        '<div class="col-sm-4"><span class="course_stat">{{capacity}}</span></div>'
-    ),
 
     events: {
       // This delegates event handlers.
