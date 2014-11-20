@@ -99,7 +99,7 @@ define([
             }
           });
              //Stanley was here
-            $('.username').text(foo.email);
+            $('.username').text(foo.firstName + " " + foo.lastName);
         });
 
       }});
@@ -112,7 +112,7 @@ define([
 
       var id = $(e.currentTarget).data("id");
       var model = window.CorsicaApp.collections.courseCollection.get(id);
-      var name = model.cid;
+      var name = model.get("crn");
 
       window.CorsicaApp.router.navigate("/waitlist/" + name, {trigger: true});
 

@@ -8,35 +8,45 @@ define([
   var WaitlistView = Backbone.View.extend({
     el: $("#page"),
 
-    render: function(cid){
-      //console.log(cid);
+    render: function(crn){
+
+      var self = this;
+
+      console.log(crn);
       var row;
 
-      //var body = this.$el.html(waitlistTemplate);
+      //console.log(cid);
 
+      window.CorsicaApp.collections.courseCollection.fetch({
+        success: function(collection) {
 
-      var model = window.CorsicaApp.collections.courseCollection.get(cid);
-      console.log(model);
-      var course_data = {
-        courseNum: model.get('courseNum'),
-        description: model.get('description'),
-        crn: model.get('crn'),
-        i_user: model.get('i_user'),
-        capacity: model.get('capacity'),
-        id: model.cid
-      };
+          collection.each(function(model) {
+            if (model.get("crn") === crn){
+              var course_data = {
+                courseNum: model.get('courseNum'),
+                description: model.get('description'),
+                crn: model.get('crn'),
+                i_user: model.get('i_user'),
+                capacity: model.get('capacity'),
+                id: model.cid
+              };
 
-      console.log(course_data);
-      // Create a new row
-      row = waitlistTemplate({
-        data: course_data
+              //console.log(course_data);
+              // Create a new row
+              row = waitlistTemplate({
+                data: course_data
+              });
+
+              // Add this new row to the screen
+              self.$el.html(row);
+              
+              //this.$el.html(waitlistTemplate);
+            }
+          });
+        }
       });
 
-      // Add this new row to the screen
-      this.$el.html(row);
-      
-      //this.$el.html(waitlistTemplate);
-    }
+    } // .render
 
   });
 

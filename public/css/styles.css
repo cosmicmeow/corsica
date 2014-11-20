@@ -1,3 +1,41 @@
+#waitlist_view {
+  margin-top: 50px; }
+  #waitlist_view .container {
+    height: 100%;
+    position: relative; }
+  #waitlist_view .content_team {
+    text-align: left;
+    position: absolute;
+    bottom: 20px; }
+  #waitlist_view .message {
+    color: #0f0f0f;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 40px;
+    padding: 10px;
+    line-height: 40px; }
+    #waitlist_view .message span {
+      color: #a53e1a; }
+  #waitlist_view .waitlist:hover {
+    cursor: pointer;
+    color: #BD2132; }
+  #waitlist_view .list .header {
+    background-color: #fff;
+    background-image: none;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    font-size: 30px; }
+  #waitlist_view .list .course.head {
+    background-color: #F5F0E7;
+    font-size: 20px;
+    border: 0; }
+  #waitlist_view .list .course {
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px; }
+
 #navbar .navbar-red {
   background-color: #930E00; }
 #navbar .navbar-red a {
