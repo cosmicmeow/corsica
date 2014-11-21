@@ -7,7 +7,7 @@ var course = function (info){
 		capacity: info[1],
 		avaliableSeats: info[2],
 		prop: info[3],
-		courseNum: info[4],
+		courseNum: info[4].toUpperCase(),
 		crn: info[5],
 		note: info[6],
 		description: info[7],

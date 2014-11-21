@@ -14,12 +14,10 @@ soup = BeautifulSoup(content)
 courses = []
 
 for course in soup.find_all('div', class_="courseblock"):
-    newCourse = []
-    newCourse.append(course.find('span', class_="coursecode").get_text())
-    newCourse.append(course.find('span', class_="coursetitle").get_text())
-    newCourse.append(course.find('span', class_="coursehours").get_text())
-    newCourse.append(course.find('p', class_="courseblockdesc").get_text())
-    courses.append(newCourse);
+    courses.append({"code" : course.find('span', class_="coursecode").get_text().encode('ascii', 'ignore'),
+    				"title" : course.find('span', class_="coursetitle").get_text(),
+    				"hours" : course.find('span', class_="coursehours").get_text(),
+    				"description" : course.find('p', class_="courseblockdesc").get_text()})
 
 
 dump = json.dumps(courses, sort_keys=True,

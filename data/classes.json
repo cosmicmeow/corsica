@@ -1,908 +1,908 @@
 [
-    [
-        "CS\u00a0101",
-        "Computers: An Introduction",
-        "3 Credits",
-        "\nLecture 3 hours, recitation 1 hour; 3 credits. Laboratory work required.  An introductory course about computers and how they work.  Students need no prior experience with computers.  Students will receive instruction and hands-on experience with operating system, word processing, electronic spreadsheet, graphic presentation, and other software available in the university computer labs.\n"
-    ],
-    [
-        "CS\u00a0102",
-        "Introduction to Networks and the Internet",
-        "3 Credits",
-        "\nLecture 3 hours; recitation 1 hour; 3 credits.  Laboratory work required.  Introduction to networked computer systems  that have access to the Internet with its vast information.  Emphasis on a computer network's architecture, the University's network, electronic mail, World Wide Web, WWW browsers, and gaining access to information that resides on computer systems throughout the world.  Knowledge of how to effectively use the Internet and the understanding of how and why it works are critical elements.\n"
-    ],
-    [
-        "CS\u00a0106",
-        "Intermediate Wordprocessing",
-        "1 Credit",
-        "\nLecture 1 hour; 1 credit.  Intermediate coverage of wordprocessing to produce professional quality documents and reports. Computer-based training and a project-based approach teach students to solve the realistic problems of organization, formatting and display as they practice and learn the features of MicrosoftWord.\n"
-    ],
-    [
-        "CS\u00a0107",
-        "Intermediate Spreadsheets",
-        "1 Credit",
-        "\nLecture 1 hour; 1 credit.  An introduction to data management and analysis using spreadsheets.  No prior computer experience required.  Computer-based training using a project-based approach teaches students to solve realistic problems as they practice and learn the features in Microsoft Excel.\n"
-    ],
-    [
-        "CS\u00a0108",
-        "Intermediate Presentation Software",
-        "1 Credit",
-        "\nLecture 1 hour; 1 credit.  An intermediate course in utilizing presentation software to produce quality slideshows. Computer-based approach teaches students to solve realistic problems as they practice and learn the features of Microsoft PowerPoint.\n"
-    ],
-    [
-        "CS\u00a0110",
-        "Introduction to Computer Science",
-        "1 Credit",
-        "\nLecture 1 hour; 1 credit. Available for pass/fail grading only.  Introduction to the Computer Science Department, College of Sciences, Old Dominion University, and to the profession of computer science.  This course provides students with a broad introduction to the scientific research efforts of computer science and the applications using those research efforts.  Required for incoming computer science majors.\n"
-    ],
-    [
-        "CS\u00a0120G",
-        "Introduction to Information Literacy and Research",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Students will learn to locate, manage, critically evaluate and use information for problem solving, research and decision making.  Includes collaborative tools for document development and office productivity tools for presentation.  Information security, laws and etiquette related to use and access of information are covered.\n"
-    ],
-    [
-        "CS\u00a0121G",
-        "Introduction to Information Literacy and Research for Scientists",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Students will learn to locate, manage, critically evaluate and use information for scientific problem solving and research.  Includes mathematical tools for data analysis and presentation and office and collaborative tools, as well.  Information security, laws and etiquette related to use and access of information are covered.\n"
-    ],
-    [
-        "CS\u00a0126G",
-        "Honors: Introduction to Information Literacy and Research",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Open only to students in the Honors College.  A special honors version of CS\u00a0120G.\n"
-    ],
-    [
-        "CS\u00a0133",
-        "Introduction to Programming in Java",
-        "4 Credits",
-        "\nLaboratory work required.  Introduction to computer-based problem solving and programming in Java.  Topics include problem solving methodologies, program design, algorithm development, and testing.  Java language concepts include variables, data types and expressions, assignment, control-flow statements, functions, arrays, and classes.  Algorithms covered include sorting, searching, and linked list manipulations.  Prerequisite:  MATH\u00a0102M or MATH\u00a0103M.\n"
-    ],
-    [
-        "CS\u00a0150",
-        "Problem Solving and Programming I",
-        "4 Credits",
-        "\nLaboratory work required.  Introduction to computer-based problem solving and programming in C++. Topics include problem solving methodologies, program design, algorithm development, and testing. C++ language concepts include variables, data types and expressions, assignment, control-flow statements, functions, arrays, pointers, structs, and classes.    Prerequisite:  MATH\u00a0102M or MATH\u00a0103M or equivalent.\n"
-    ],
-    [
-        "CS\u00a0170",
-        "Introduction to Computer Architecture I",
-        "3 Credits",
-        "\nFundamentals of the architecture and operation of modern computers.  Basic computer logic: logic equations; gates; combinatorial logic.  Basic computer arithmetic:  binary numbers; floating point representation.  System hierarchy, overview of a computer; integrated circuit technology.  Performance: metrics; choosing benchmarks; Amdahl's law.  Instruction Sets and Operations: assembly language; machine language; examples of other instruction sets.  Prerequisite:  MATH\u00a0102M or MATH\u00a0103M and a grade of C or better in CS\u00a0150.\n"
-    ],
-    [
-        "CS\u00a0195",
-        "Topics",
-        "1-3 Credits",
-        "\nSpecial topics in computer science that are not part of the current curriculum at the freshman/sophomore level.\n"
-    ],
-    [
-        "CS\u00a0250",
-        "Problem Solving and Programming II",
-        "4 Credits",
-        "\nLecture 3 hours; laboratory 2.5 hours;  4 credits.   Prerequisites:  MATH\u00a0162M and a grade of C or better in CS\u00a0150. Corequisite: CS\u00a0252. Laboratory work required. Design issues arising in software systems and C++ programming techniques aiding in their solution. Topics include the software life cycle, methods of functional decomposition, design documentation, abstract data types and classes, common data structures, dynamic data structures, algorithmic patterns, and testing and debugging techniques.  Term project required.\n"
-    ],
-    [
-        "CS\u00a0252",
-        "Introduction to Unix for Programmers",
-        "1 Credit",
-        "\nLaboratory work required.  Available for pass/fail grading only.  An introduction to Unix with emphasis on the skills necessary to be a productive programmer in Unix, Linux, and related environments.  Topics include command line shells, files and directories, editing, compiling and common command line utilities. Prerequisites: A grade of C or better in CS\u00a0150.\n"
-    ],
-    [
-        "CS\u00a0270",
-        "Introduction to Computer Architecture II",
-        "3 Credits",
-        "\nFundamentals of the architecture and operation of modern computers. Building an ALU. The cache-Ram interaction. The virtual memory system. The Fetch/Execute cycle. Implementing a set of the ALU, Load/Store and Branch instructions in a single cycle implementation. Basics of microprogramming. Design of the control unit. A pipelined implementation. Multicores, multiprocessors and clusters. Prerequisites: A grade of C or better in CS\u00a0170 and in either CS\u00a0150 or CS\u00a0333.\n"
-    ],
-    [
-        "CS\u00a0295",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits.  Special topics in computer science which are not part of the current curriculum at the freshman/sophomore level.\n"
-    ],
-    [
-        "CS\u00a0300T",
-        "Computers in Society",
-        "3 Credits",
-        "\nLecture 3 hours, 3 credits.  Prerequisite:  ENGL\u00a0110C.  Covers changes in the world's society due to continuing implementation of computing technologies.  Evaluation of technological expansions in areas of governments, business/industry, education, medicine, transportation, communication and entertainment.  Topics include: intellectual property, software piracy, computer crimes and ethics.  Students must research a societal topic and present in written and oral forms.\n"
-    ],
-    [
-        "CS\u00a0312",
-        "Internet Concepts",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite: CS\u00a0252.  Laboratory work required.  An in-depth introduction to the Internet and the World Wide Web for CS or similar majors as a basis for more advanced studies in Web programming.  Topics include: historical and current development of the Internet Web document publishing.  Internet design, communication, and application protocols and the tools that use them.  Internet search tools and their design.  Internet issues such as netiquette, copyright, spam, computer viruses, cookies, security, and future of the Internet.\n"
-    ],
-    [
-        "CS\u00a0330",
-        "Object-Oriented Programming and Design",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisites: MATH\u00a0163, CS\u00a0252 and a grade of C or better in CS\u00a0250 or CS\u00a0333.  Laboratory work required.  The techniques and idioms of object-oriented programming in C++ and Java.  Methods of object-oriented analysis and design with the Unified Modeling Language.  Multi-thread programs and synchronization.\n"
-    ],
-    [
-        "CS\u00a0333",
-        "Programming and Problem Solving in C++",
-        "4 Credits",
-        "\nLecture 4 hours; 4 credits.  Prerequisites: MATH\u00a0163 and a grade of C or better in CS\u00a0150 (or an equivalent course in a high level language).  Laboratory work required.  Corequisite: CS\u00a0252.  Topics include C++ syntax and semantics, principles of  design and basic software engineering skills.  This course satisfies the requirements of both CS\u00a0150 and 250.  It is intended for the student who has already been introduced to programming, possibly in another language.  This web-based course requires considerable maturity and independent responsibility on the part of the student.\n"
-    ],
-    [
-        "CS\u00a0334",
-        "Computer Architecture Fundamentals",
-        "4 Credits",
-        "\nLecture 4 hours; 4 credits.  Prerequisites: MATH\u00a0163 and a grade of C or better in CS\u00a0150 (or an equivalent course in a high level language).  Topics include: number representation, base conversion, Boolean algebra, combinatorial circuits, arithmetic units, registers, memory, hardwired and microprogrammed control units, architecture of typical microcomputers, and the development of systems from basic components.  The performance of competing architectures will be a major concern.  This course satisfies the requirements of both CS\u00a0170 and 270.  This web-based course requires considerable maturity and independent responsibility on the part of the student.\n"
-    ],
-    [
-        "CS\u00a0350",
-        "Introduction to Software Engineering",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite:   A grade of C or better in CS\u00a0330 or CS\u00a0361.  Laboratory work required. Topics include: use of a defined software process (such as PSP), software costing methods, software metrics, quality assurance, inspection teams, testing methodologies, schedules and budgets, and configuration management.  The course requires each student to participate as a member of a team in a significant team project.  Each student will be required to demonstrate proficiency in several software development tools.\n"
-    ],
-    [
-        "CS\u00a0355",
-        "Principles of Programming Languages",
-        "3 Credits",
-        "\nSurvey of significant features of programming languages. Language types including imperative, functional, logical, and object-oriented are covered. Concepts include lexical and syntactic analysis, type systems, flow control, modularity, and parallel programming. Small programs in several languages required. Laboratory work required. Prerequisites: CS\u00a0252 and a grade of C or better in CS\u00a0250 or CS\u00a0333.\n"
-    ],
-    [
-        "CS\u00a0361",
-        "Advanced Data Structures and Algorithms",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.   Prerequisites: MATH\u00a0163, CS\u00a0252 and a grade of C or better in CS\u00a0250 or 333.  Laboratory work required. Common abstract data types, including vectors, lists, stacks, queues, sets, maps, heaps, and graphs.  Standard C++ interfaces for these ADTs.  Generic programming via iterators and templates.  Choosing data structures and algorithms to implement ADTs, via analysis of their time and space complexity.\n"
-    ],
-    [
-        "CS\u00a0367",
-        "Cooperative Education",
-        "1-3 Credits",
-        "\n1-3 credits. Prerequisite:  approval by the CS Department and Career Management in accordance with the policy for granting credit for Cooperative Education programs.  Available for pass/fail grading only.  Student participation for credit based on the academic relevance of the work experience, criteria, and evaluative procedures as formally determined by the department and Career Management prior to the semester in which the work experience is to take place. Written report required.  (qualifies as a CAP experience).\n"
-    ],
-    [
-        "CS\u00a0368",
-        "Computer Science Internship",
-        "1-3 Credits",
-        "\n3 credits.  Prerequisite:  approval by CS Department and Career Management.  Available for pass/fail grading only.  Academic requirements will be established by the department and will vary with the amount of credit desired.  Allows students to gain short duration career-related experience.  An academic project may be required by the department to enhance the value of the educational experience.  Written report required.  (qualifies as a CAP experience).\n"
-    ],
-    [
-        "CS\u00a0381",
-        "Introduction to Discrete Structures",
-        "3 Credits",
-        "\nTopics include propositional and predicate logic, rules of inference, methods of proof, set operations, functions, complexity of algorithms, growth of functions, induction, counting, relations, equivalence relations and graphs. Prerequisites: MATH\u00a0163 and a grade of C or better in CS\u00a0150 or CS\u00a0333.\n"
-    ],
-    [
-        "CS\u00a0382",
-        "Introduction to JAVA",
-        "1 Credit",
-        "\nLecture, 1 hour; 1 credit.  Prerequisites:  A grade of C or better in CS\u00a0250 or CS\u00a0333.  Laboratory work required.  An introduction to the Java programming language for students who are familiar with programming in C++.  Topics include basic language syntax, data structures, control flow, classes, exception handling, and basic elements of the Java API.  This web-based class requires independent responsibility and online communication skills on the part of the student.\n"
-    ],
-    [
-        "CS\u00a0390",
-        "Introduction to Theoretical Computer Science",
-        "3 Credits",
-        "\nElementary study of theoretical aspects of computer science. Topics in formal languages and automata theory are covered including regular languages, regular expressions, finite automata, context-free languages, pushdown automata, grammars, Turing machines, and unsolvable problems. Prerequisites: A grade of C or better in CS\u00a0381 and CS\u00a0250 or CS\u00a0333.\n"
-    ],
-    [
-        "CS\u00a0395",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits.  Prerequisite:  permission of the instructor.\n"
-    ],
-    [
-        "CS 410/510",
-        "Professional Workforce Development I",
-        "3 Credits",
-        "\nLecture 3 hours; recitation 1 hour; 3 credits.   Prerequisites:  A grade of C or better in CS\u00a0300T and CS\u00a0350. Laboratory work required.   Provides students with challenges of business environments in developing a technology based project.  Students identify a societal problem, identify solutions, define project solutions, develop project objectives, conduct feasibility analysis, establish organizational group structure to meet project objectives and develop formal specifications.  Students make formal technical project presentations and develop web documentation. Students prepare a draft grant proposal.\n"
-    ],
-    [
-        "CS 411W/511",
-        "Professional Workforce Development II",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite: A grade of C or better in ENGL\u00a0211C or 221C or 231C and a grade of C or better in CS\u00a0330 and 410.  Laboratory work required.   Students write professional and non-technical documents and continue the development of the project defined in CS\u00a0410.  Written work is reviewed and returned for corrective rewriting.  Students will design and develop a project prototype, and demonstrate the prototype to a formal panel along with delivering the formal product specifications and a draft formal grant proposal. (qualifies as a CAP experience)  (This is a writing intensive course.).\n"
-    ],
-    [
-        "CS 417/517",
-        "Computational Methods and Software",
-        "3 Credits",
-        "\nLaboratory work required.  Algorithms and software for fundamental problems in scientific computing.  Topics: properties of floating point arithmetic, linear systems of equations, matrix factorizations, stability of algorithms, conditioning of problems, least-squares problems, eigenvalue computations, numerical integration and differentiation, nonlinear equations, iterative solution of linear systems. Prerequisites: MATH\u00a0316 and a grade of C or better in CS\u00a0250 or CS\u00a0333.\n"
-    ],
-    [
-        "CS 418/518",
-        "Web Programming",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisites: A grade of C or better in CS\u00a0312 and 330.  Laboratory work required. Overview of Internet and World Wide Web; web servers and security, HTTP protocol; web application and design; server side scripts and database integration, and programming for the Web.\n"
-    ],
-    [
-        "CS 431/531",
-        "Web Server Design",
-        "3 Credits",
-        "\nLaboratory work required. Extensive coverage of the hypertext transfer protocol (HTTP), specifications and commentary (IETF RFCs), and implications for servers and clients. Students will develop a web server providing common HTTP functionality and implementing all HTTP (including unsafe and conditional) methods, content negotiation, transfer and content encoding, basic & digest authentication, and server-side execution of programs (i.e., dynamic resources). Frequent in-class demonstrations of progress and protocol conformance will be required. Prerequisites: CS\u00a0150, familiarity with Internet and network (including socket) programming.\n"
-    ],
-    [
-        "CS 441/541",
-        "App Development for Smart Devices",
-        "3 Credits",
-        "\nLaboratory work required. Project-oriented coverage of the principles of application design and development for Android platform smart devices. Topics include user interface; input methods; data handling; network techniques; localization and sensing. Students are required to produce a professional-quality mobile application.  Prerequisite:  CS\u00a0330 or CS\u00a0382.\n"
-    ],
-    [
-        "CS 450/550",
-        "Database Concepts",
-        "3 Credits",
-        "\nLaboratory work required. Three level database architecture. The relational database model and relational algebra. SQL and its use in database procedures and with conventional programming languages.  Entity relationship modeling. Functional dependencies and normalization. Transactions, concurrency and recovery. Prerequisites: A grade of C or better in CS\u00a0381 and either CS\u00a0330 or CS\u00a0361.\n"
-    ],
-    [
-        "CS 451/551",
-        "Software Engineering Survey",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite:  A grade of C or better in CS\u00a0330 or 361.  Laboratory work required. Evaluation of software development methodologies.  Topics include:  software life cycle models, software specification and design methodologies, informal specification techniques, formal specifications, design tools, software analysis, quality assurance, life cycle management, software costing models and complexity.\n"
-    ],
-    [
-        "CS 454/554",
-        "Network Management",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.   Prerequisite: A grade of C or better in CS\u00a0455.  Laboratory work required. The administration of computer networks and their interaction with wide area networks:  network  topologies for local and wide area networks, common protocols and services, management of distributed file services, routing and configuration, security, monitoring and trouble-shooting.\n"
-    ],
-    [
-        "CS 455/555",
-        "Introduction to Networks and Communications",
-        "3 Credits",
-        "\nInternet and the 5-layered protocol architecture for the Internet, applications built on top of data networks, specifically the Internet, the web, the transport layer, TCP and UDP protocols, the network layer, the data link layer, also some of the technologies for the physical layer. Prerequisites: CS\u00a0250 or CS\u00a0333, CS\u00a0252, CS\u00a0270.\n"
-    ],
-    [
-        "CS 456/556",
-        "Database Administration I",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0381 and either CS\u00a0330 or 361.  Laboratory work required.  Programming in SQL and PL/SQL and hands-on development of DBA administration skills in the ORACLE database environment.  Creating database objects, querying and manipulating, and PL/SQL programming constructs.  Setup and administer databases.  Create, organize, and manage database files, users, privileges and other resources.\n"
-    ],
-    [
-        "CS 457/557",
-        "Database Administration II",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0456/556.  Laboratory work required. Advanced DBA administration skills in the Oracle database environment.  Topics in planning and implementing backup and recovery of the database.  Performance optimization and tuning of database and applications including memory and disk structures.  Configuration and maintenance of clients and servers in a network environment.\n"
-    ],
-    [
-        "CS 458/558",
-        "Unix System Administration",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite: experience with UNIX.  Laboratory work required.  Aspects of administering a SOLARIS/UNIX operating system in a networked environment are covered.  Topics covered include installation, file system management, backup procedures, process control, user administration, device management, Network File Systems (NFS), Network Information Systems (NIS), UNIX security, Domain Name Services (DNS), and integration with other operating systems.\n"
-    ],
-    [
-        "CS 460/560",
-        "Computer Graphics",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite:  A grade of C or better in CS\u00a0361.  Laboratory work required.  An introduction to graphical systems and methods.  Topics include basic primitives, windowing, transformations, hardware, interaction devices, 3-D graphics, curved surfaces, solids, and realism techniques such as visible surface, lighting, shadows, and surface detail.  Requires project involving OpenGL programming.\n"
-    ],
-    [
-        "CS 462/562",
-        "Cybersecurity Fundamentals",
-        "3 Credits",
-        "\nThe course introduces the basic components and concepts needed for understanding cybersecurity.  These include basics and security vulnerabilities of networks, operating systems, databases, and distributed systems.  In addition, some fundamentals of security enforcement will be introduced and discussed.  Prerequisite:  CS\u00a0270.\n"
-    ],
-    [
-        "CS 463/563",
-        "Cryptography for Cybersecurity",
-        "3 Credits",
-        "\nMathematical foundations including information theory, number theory, factoring, and prime number generation; Cryptographic protocols including basic building blocks and protocols; Cryptographic techniques including key generation and key management, and applications; Cryptographic algorithms--DES, AES, Stream Ciphers, Hash functions, digital signatures, etc.  Prerequisite:  CS\u00a0270.\n"
-    ],
-    [
-        "CS 464/564",
-        "Networked Systems Security",
-        "3 Credits",
-        "\nAuthentication in cyber systems including password-based, address-based, biometrics-based, and SSO systems; Authorization and accounting in cyber systems; Securing wired and wireless networks; Secured applications including secure e-mail services, secure web services, and secure e-commerce applications; Security and privacy in cloud environments.  Prerequisite:  CS\u00a0463 or CS\u00a0563.\n"
-    ],
-    [
-        "CS 465/565",
-        "Information Assurance",
-        "3 Credits",
-        "\nIntroduction to information assurance.  Metrics, planning and deployment; identity and trust technologies; verification and evaluation, incident response; human factors; regulation, policy languages, and enforcement; legal, ethical, and social implications; privacy and security trade-offs; system survivability; intrusion detection; fault and security management.  Prerequisites:  CS\u00a0462 or familiarity with computer security area.\n"
-    ],
-    [
-        "CS\u00a0471",
-        "Operating Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisites: A grade of C or better in CS\u00a0270 and 361.  Laboratory work required. Operating system structures.  Multiprogramming and multiprocessing.  Process management.  Memory and other resource management.  Storage management, I/O systems, distributed systems.  Protection and security.  The concepts will be illustrated through example systems such as Unix and Windows.\n"
-    ],
-    [
-        "CS\u00a0472",
-        "Network and Systems Security",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0361.  Laboratory work required. Basic protocols, techniques and programming issues to secure network and computer systems.  Topics include: cryptographic algorithms and concepts (Secret Key Cryptography, Hashes and Message Digests,  Public Key and Authentication); Security Standards (Kerberos, Public Key Infrastructure, IPsec, SSL/TLS); Security applications (PEM, S/MIME, PGP, HTTP, Firewalls); Hands-on programming using OpenSSL.\n"
-    ],
-    [
-        "CS 475/575",
-        "Introduction to Computer Simulation",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisites:  STAT\u00a0330 and a grade of C or better in CS\u00a0330 or 361. Laboratory work required.  Efficient implementation methods.  Time management.  Planning and design of simulation experiments.  Statistical issues in simulation.  Generation of random numbers and stochastic variates.  Programming with graphically- and text-based simulation languages.  Verification and validation of simulation models.  Distributed simulation.  Special topics such as HLA will be discussed.\n"
-    ],
-    [
-        "CS 476/576",
-        "Systems Programming",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisites:  A grade of C or better in CS\u00a0330 and 361.  Laboratory work required.  This course is to help students fully understand and utilize the internal workings and capabilities provided by modern computing, networking and programming environments.  Topics include: Shell Script Programming, X Windows (Xlib and Motif), UNIX internals (I/O, Processes, Threads, IPC and Signals), Network Programming (UDP/TCP Sockets and Multicasting) and Java Systems Programming (SWING, Multithreading and Networking).\n"
-    ],
-    [
-        "CS 478/578",
-        "Computational Geometry, Methods and Applications",
-        "3 Credits",
-        "\nThe discipline of Computational Geometry is devoted to the study of algorithms which are formulated in terms of spatially embedded arrangements of objects, such as points, lines, surfaces, and solids. This course covers fundamental algorithms including convex hulls, polygon triangulations, point location, Voronoi diagrams, Delaunaytriangulations, binary space partitions, quadtrees, and other topics.  Prerequisites:  CS\u00a0361 and MATH\u00a0211.\n"
-    ],
-    [
-        "CS 480/580",
-        "Introduction to Artificial Intelligence",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite:  A grade of C or better in CS\u00a0361. Laboratory work required.  Introduction to concepts, principles, challenges, and research in major areas of AI.  Areas of discussion include: natural language and vision processing, machine learning, machine logic and reasoning, robotics, expert and mundane systems.\n"
-    ],
-    [
-        "CS 486/586",
-        "Introduction to Parallel Computing",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisites:  MATH\u00a0316; knowledge of a high level language.  Laboratory work required.  The motivation for and successes of parallel computing.  A taxonomy of commercially available parallel computers.  Strategies for parallel decompositions.  Parallel performance metrics.  Parallel algorithms and their relation to corresponding serial algorithms. Numerous examples from scientific computing, mainly in linear algebra and differential equations.  Implementations using public-domain network libraries on workstation clusters and computers.\n"
-    ],
-    [
-        "CS\u00a0487",
-        "Applied Parallel Computing",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisites:  A grade of C or better in CS\u00a0270 and either CS\u00a0361 or CS\u00a0330. (CS\u00a0417 or linear algebra is recommended.)  Laboratory work required.  Fundamental concepts of parallel computing:  Machine models, architectures, parallel topologies and languages, parallel algorithm design and parallel programming, architecture independent message passing interface (MPI) communication library, and scaled-speedup.  Group project required.\n"
-    ],
-    [
-        "CS 488/588",
-        "Principles of Compiler Construction",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite:  A grade of C or better in CS\u00a0361.  Laboratory work required.  Theoretical and practical aspects of compiler design and implementation.  Topics will include lexical analysis, parsing, translation, code generation, optimization, and error handling.\n"
-    ],
-    [
-        "CS 495/595",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\nSpecial topics.  Prerequisite: permission of the instructor.\n"
-    ],
-    [
-        "CS 497/597",
-        "Independent Study in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits. Prerequisite:  permission of the instructor.  Independent study under the direction of an instructor.\n"
-    ],
-    [
-        "CS\u00a0510",
-        "Professional Workforce Development I",
-        "3 Credits",
-        "\nLecture 3 hours; recitation 1 hour; 3 credits.   Laboratory work required.   Provides students with challenges of business environments in developing a technology based project.  Students identify a societal problem, identify solutions, define project solutions, develop project objectives, conduct feasibility analysis, establish organizational group structure to meet project objectives and develop formal specifications.  Students make formal technical project presentations and develop web documentation. Students prepare a draft grant proposal.\n"
-    ],
-    [
-        "CS\u00a0511",
-        "Professional Workforce Development II",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.   Students write professional and non-technical documents and continue the development of the project defined in CS\u00a0410.  Written work is reviewed and returned for corrective rewriting.  Students will design and develop a project prototype, and demonstrate the prototype to a formal panel along with delivering the formal product specifications and a draft formal grant proposal. (qualifies as a CAP experience) (This is a writing intensive course.).\n"
-    ],
-    [
-        "CS\u00a0517",
-        "Computational Methods and Software",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.   Laboratory work required.  Algorithms and software for fundamental problems in scientific computing.  Topics: properties of floating point arithmetic, linear systems of equations, matrix factorizations, stability of algorithms, conditioning of problems, least-squares problems, eigenvalue computations, numerical integration and differentiation, nonlinerar equations, iterative solution of linear systems.\n"
-    ],
-    [
-        "CS\u00a0518",
-        "Web Programming",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required. Overview of Internet and World Wide Web; web servers and security, HTTP protocol; web application and design; server side scripts and database integration, and programming for the Web.\n"
-    ],
-    [
-        "CS\u00a0531",
-        "Web Server Design",
-        "3 Credits",
-        "\nLaboratory work required. Extensive coverage of the hypertext transfer protocol (HTTP), specifications and commentary (IETF RFCs), and implications for servers and clients. Students will develop a web server providing common HTTP functionality and implementing all HTTP (including unsafe and conditional) methods, content negotiation, transfer and content encoding, basic & digest authentication, and server-side execution of programs (i.e., dynamic resources). Frequent in-class demonstrations of progress and protocol conformance will be required. Prerequisites: Familiarity with Internet and network (including socket) programming.\n"
-    ],
-    [
-        "CS\u00a0541",
-        "App Development for Smart Devices",
-        "3 Credits",
-        "\nLaboratory work required. Project-oriented coverage of the principles of application design and development for Android platform smart devices. Topics include user interface; input methods; data handling; network techniques; localization and sensing. Students are required to produce a professional-quality mobile application. Prerequisites: Knowledge of Java.\n"
-    ],
-    [
-        "CS\u00a0550",
-        "Database Concepts",
-        "3 Credits",
-        "\nLaboratory work required. Three level database architecture. The relational database model and relational algebra. SQL and its use in database procedures and with conventional programming languages. Entity relationship modeling.  Functional dependencies and normalization. Transactions, concurrency and recovery. Prerequisites: Familiarity with elementary set theory, propositional logic, and any two programming languages are expected; a course in finite mathematics or discrete structures is recommended.\n"
-    ],
-    [
-        "CS\u00a0551",
-        "Software Engineering Survey",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Laboratory work required. Evaluation of software development methodologies.  Topics include:  software life cycle models, software specification and design methodologies, informal specification techniques, formal specifications, design tools, software analysis, quality assurance, life cycle management, software costing models and complexity.\n"
-    ],
-    [
-        "CS\u00a0554",
-        "Network Management",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.   Laboratory work required. The administration of computer networks and their interaction with wide area networks:  network  topologies for local and wide area networks, common protocols and services, management of distributed file services, routing and configuration, security, monitoring and trouble-shooting.\n"
-    ],
-    [
-        "CS\u00a0555",
-        "Introduction to Networks and Communications",
-        "3 Credits",
-        "\nInternet and the 5-layered protocol architecture for the Internet, applications built on top of data networks, specifically the Internet, the web, the transport layer, TCP and UDP protocols, the network layer, the data link layer, also some of the technologies for the physical layer. Prerequisites: Familiarity with C++ or Java programming for Unix systems.\n"
-    ],
-    [
-        "CS\u00a0556",
-        "Database Administration I",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  Programming in SQL and PL/SQL and hands-on development of DBA administration skills in the ORACLE database environment.  Creating database objects, querying and manipulating, and PL/SQL programming constructs.  Setup and administer databases.  Create, organize, and manage database files, users, privileges and other resources.\n"
-    ],
-    [
-        "CS\u00a0557",
-        "Database Administration II",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0556.  Laboratory work required. Advanced DBA administration skills in the Oracle database environment.  Topics in planning and implementing backup and recovery of the database.  Performance optimization and tuning of database and applications including memory and disk structures.  Configuration and maintenance of clients and servers in a network environment.\n"
-    ],
-    [
-        "CS\u00a0558",
-        "Unix System Administration",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite: experience with UNIX.  Laboratory work required.  Aspects of administering a SOLARIS/UNIX operating system in a networked environment are covered.  Topics covered include installation, file system management, backup procedures, process control, user administration, device management, Network File Systems (NFS), Network Information Systems (NIS), UNIX security, Domain Name Services (DNS), and integration with other operating systems.\n"
-    ],
-    [
-        "CS\u00a0560",
-        "Computer Graphics",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Laboratory work required.  An introduction to graphical systems and methods.  Topics include basic primitives, windowing, transformations, hardware, interaction devices, 3-D graphics, curved surfaces, solids, and realism techniques such as visible surface, lighting, shadows, and surface detail.  Requires project involving OpenGL programming.\n"
-    ],
-    [
-        "CS\u00a0562",
-        "Cybersecurity Fundamentals",
-        "3 Credits",
-        "\nThe course introduces the basic components and concepts needed for understanding cybersecurity.  These include basics and security vulnerabilities of networks, operating systems, databases, and distributed systems.  In addition, some fundamentals of security enforcement will be introduced and discussed.\n"
-    ],
-    [
-        "CS\u00a0563",
-        "Cryptography for Cybersecurity",
-        "3 Credits",
-        "\nMathematical foundations including information theory, number theory, factoring, and prime number generation; Cryptographic protocols including basic building blocks and protocols; Cryptographic techniques including key generation and key management, and applications; Cryptographic algorithms--DES, AES, Stream Ciphers, Hash functions, digital signatures, etc.  Prerequisite:  CS\u00a0270.\n"
-    ],
-    [
-        "CS\u00a0564",
-        "Networked Systems Security",
-        "3 Credits",
-        "\nAuthentication in cyber systems including password-based, address-based, biometrics-based, and SSO systems; Authorization and accounting in cyber systems; Securing wired and wireless networks; Secured applications including secure e-mail services, secure web services, and secure e-commerce applications; Security and privacy in cloud environments.\n"
-    ],
-    [
-        "CS\u00a0565",
-        "Information Assurance",
-        "3 Credits",
-        "\nIntroduction to information assurance.  Metrics, planning and deployment; identity and trust technologies; verification and evaluation, incident response; human factors; regulation, policy languages, and enforcement; legal, ethical, and social implications; privacy and security trade-offs; system survivability; intrusion detection; fault and security management.  Prerequisites: CS\u00a0562 or familiarity with computer security area.\n"
-    ],
-    [
-        "CS\u00a0575",
-        "Introduction to Computer Simulation",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Efficient implementation methods.  Time management.  Planning and design of simulation experiments.  Statistical issues in simulation.  Generation of random numbers and stochastic variates.  Programming with graphically- and text-based simulation languages.  Verification and validation of simulation models.  Distributed simulation.  Special topics such as HLA will be discussed.\n"
-    ],
-    [
-        "CS\u00a0576",
-        "Systems Programming",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  This course is to help students fully understand and utilize the internal workings and capabilities provided by modern computing, networking and programming environments.  Topics include: Shell Script Programming, X Windows (Xlib and Motif), UNIX internals (I/O, Processes, Threads, IPC and Signals), Network Programming (UDP/TCP Sockets and Multicasting) and Java Systems Programming (SWING, Multithreading and Networking).\n"
-    ],
-    [
-        "CS\u00a0578",
-        "Computational Geometry, Methods and Applications",
-        "3 Credits",
-        "\nThe discipline of Computational Geometry is devoted to the study of algorithms which are formulated in terms of spatially embedded arrangements of objects, such as points, lines, surfaces, and solids. This course covers fundamental algorithms including convex hulls, polygon triangulations, point location, Voronoi diagrams, Delaunaytriangulations, binary space partitions, quadtrees, and other topics.\n"
-    ],
-    [
-        "CS\u00a0580",
-        "Introduction to Artificial Intelligence",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  Introduction to concepts, principles, challenges, and research in major areas of AI.  Areas of discussion include: natural language and vision processing, machine learning, machine logic and reasoning, robotics, expert and mundane systems.\n"
-    ],
-    [
-        "CS\u00a0586",
-        "Introduction to Parallel Computing",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  The motivation for and successes of parallel computing.  A taxonomy of commercially available parallel computers.  Strategies for parallel decompositions.  Parallel performance metrics.  Parallel algorithms and their relation to corresponding serial algorithms. Numerous examples from scientific computing, mainly in linear algebra and differential equations.  Implementations using public-domain network libraries on workstation clusters and computers.\n"
-    ],
-    [
-        "CS\u00a0588",
-        "Principles of Compiler Construction",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  Theoretical and practical aspects of compiler design and implementation.  Topics will include lexical analysis, parsing, translation, code generation, optimization, and error handling.\n"
-    ],
-    [
-        "CS\u00a0595",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\nSpecial topics.\n"
-    ],
-    [
-        "CS\u00a0597",
-        "Independent Study in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits. Prerequisite:  permission of the instructor.  Independent study under the direction of an instructor.\n"
-    ],
-    [
-        "CS\u00a0600",
-        "Algorithms and Data Structures",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Design of efficient algorithms and the mathematical analysis of their performance.  Topics to be covered include:  mathematical preliminaries, sorting and order statistics, advanced data structures, linear programming, exploring graphs, parallel algorithms, randomized algorithms, transformation of the domain, and NP-completeness.  (offered fall).\n"
-    ],
-    [
-        "CS\u00a0635",
-        "Parallel Computer Architecture",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0665.  This is a first course in parallel architecture, with an emphasis on the description and evaluation of commercially available machines.  Topics to be covered include:  parallelization and performance metrics, scalability and the \"laws\" of Amdahl and Gustavson, computational similarity, models of computation, parallelization paradigms, networkcharacteristics and topology, communication calculus and templates, pipelining and parallelism, processor types, memory hierarchy, cache coherence protocols, latency-hiding mechanisms, routing algorithms, and languages and libraries to support parallel architecture.\n"
-    ],
-    [
-        "CS\u00a0656",
-        "Database Methodology",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Prerequisite: CS\u00a0550. Laboratory work required.  Analysis, design and implementation of databases and database applications using modern software engineering methods. Database CASE tools.  Analysis using process, function, and dataflow analysis in conjunction with entity relationship modeling.  Database diagrams and database design.  Application suite design and high level design of applications.  Refining implementations.\n"
-    ],
-    [
-        "CS\u00a0660",
-        "3D Computer Graphics",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0560.  Laboratory work required.  The mathematical tools needed for the geometrical aspects of 3D computer graphics.  Fundamentals: homogeneous coordinates, transformations and perspective.  Theory of parametric and implicit curve and surface models: polar forms, Bezier arcs and de Casteljau subdivision, continuity constraints, B-splines, tensor product, and triangular patch surfaces.  Representations of solids and conversions among them.  Beometric algorithms for graphics problems, with applications to ray tracing, hidden surface elimination, etc.\n"
-    ],
-    [
-        "CS\u00a0665",
-        "Computer Architecture",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  A detailed and quantitative study of the architecture of modern uni-processor computers.  The major components are:  the technology drivers, performance measures, instruction sets (including 80X86, VAX, and a generic RISC which is very similar to the MIPS series), processor implementation, advanced pipelining and superscalar features, cache and memory design,  and I/O.  The emphasis is on obtaining quantitative measures of performance, describing interactions of the various components, studying trade-offs between the components in commercial processors, and integration into a complete computer system including interaction of the software and hardware.  (offered spring).\n"
-    ],
-    [
-        "CS\u00a0667",
-        "Cooperative Education",
-        "1-3 Credits",
-        "\n"
-    ],
-    [
-        "CS\u00a0669",
-        "Practicum",
-        "1-3 Credits",
-        "\n"
-    ],
-    [
-        "CS\u00a0690",
-        "Colloquium",
-        "1 Credit",
-        "\nLecture 1 hour; 1 credit.  A one-hour weekly lecture given by faculty from Old Dominion and other institutions.\n"
-    ],
-    [
-        "CS\u00a0695",
-        "Topics",
-        "1-3 Credits",
-        "\n"
-    ],
-    [
-        "CS\u00a0697",
-        "Independent Study in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits. Prerequisite:  permission of the instructor.\n"
-    ],
-    [
-        "CS\u00a0698",
-        "Masters Project",
-        "3 Credits",
-        "\n3 credits.  Departmental permission required.\n"
-    ],
-    [
-        "CS\u00a0699",
-        "Thesis Research",
-        "3 Credits",
-        "\n3 credits.  Departmental permission required.\n"
-    ],
-    [
-        "CS\u00a0710",
-        "Applied Algorithms",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0600. Laboratory work required.  The course will involve solving two or three comprehensive projects anchored in computer science and engineering.  Possible topics for projects include: computational issues in network design and analysis; scheduling problems and applications; digital geometry and pattern recognition; image processing and computer vision applications; robotics.  The basic thrust is to demonstrate the usefulness and power of algorithm design and analysis in solving real-life problems.\n"
-    ],
-    [
-        "CS\u00a0711",
-        "Software Validation",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  The most common path to improved confidence in a program is via testing.  This course explores divergent and sometimes conflicting approaches to conducting testing and to measuring the resulting confidence.  Topics include the theoretical basis for testing, common testing methods, statistical measures of program reliability, and the relationship between correctness and reliability.\n"
-    ],
-    [
-        "CS\u00a0712",
-        "Stochastic Modeling",
-        "3 Credits",
-        "\nStochastic processes are ways of quantifying the dynamic relationship of sequences of random events.  This course will expose the participants to standard concepts and methods of stochastic modeling, as well as the rich diversity of applications.  Topics include, but not limited to, Markov chains in discrete and continuous time, Poisson processes, renewal theory and branching processes.\n"
-    ],
-    [
-        "CS\u00a0713",
-        "Modeling and Simulation in Computational Biology",
-        "3 Credits",
-        "\nThis course covers current problems and state of computations in bimolecular modeling, molecular mechanics including force field origin, composition, and evaluation techniques, and simulation techniques including conformational sampling, geometry optimization, molecular dynamics and Brownian dynamics.\n"
-    ],
-    [
-        "CS\u00a0714",
-        "Monte Carlo Simulation",
-        "3 Credits",
-        "\nThis course serves to illustrate important principles in Monte Carlo simulation methods and to demonstrate their power in applications.  The course covers Metropolis-Hastings algorithm, Gibbs sampler, Markov Chain Monte Carlo, acceptance-rejection method, Monte Carlo integration, quasi-Monte Carlo, random walk, and random number generation.\n"
-    ],
-    [
-        "CS\u00a0715",
-        "Medical Image Computing and Simulation",
-        "3 Credits",
-        "\nThis course combines the theory and practices in medical imaging computing with emphasis on Image Guided Therapy (IGT).  Topics include rigid registration, approximation/interpolation, segmentation, no-rigid registration, image-to-mesh conversion, real time parallel computing, software development for medical applications and solution of large sparse linear systems.\n"
-    ],
-    [
-        "CS\u00a0716",
-        "Communication Networks Simulation and Evaluation",
-        "3 Credits",
-        "\nThis course introduces the foundations and the application of computer network simulations. Topics include the modeling of real-world networks with specific devices and protocols, the identification of key performance parameters, the test of performance and the verification and optimization using comparisons of measured and simulated data.\n"
-    ],
-    [
-        "CS\u00a0717",
-        "Bioinformatics I  NonCS",
-        "3 Credits",
-        "\nLecture, 3 hours; 3 credits.  Prerequisite: permission of instructor.  This is a bioinformatics course for non-CS majors.  It introduces the fundamental topics in bioinformatics:  introduction to molecular biology, pair-wise sequence alignment, database search methods such as FASTA and BLAST, multiple sequence alignment, genome scale alignment, protein secondary structure prediction and protein tertiary structure prediction.\n"
-    ],
-    [
-        "CS\u00a0722",
-        "Machine Learning",
-        "3 Credits",
-        "\nThis course presents both the foundational and the practical aspects of modeling, analyzing, and mining of computerized data sets, including classification, regression, clustering, semi-supervised learning, structured sparsity learning, etc.  The course assignments are designed to contain both theoretical and programming components in order to train students to gain hands-on-experience.\n"
-    ],
-    [
-        "CS\u00a0723",
-        "Introduction to Bioinformatics",
-        "3 Credits",
-        "\nThis course introduces the fundamental knowledge in bioinformatics and the current advances in selected directions.  The topics include:  fundamental concepts and experimental techniques in molecular biology, computational methods in genomic sequence comparison and analysis, and computational methods in molecular structural modeling.\n"
-    ],
-    [
-        "CS\u00a0724",
-        "High Performance Computing with GPU for Large Scale Simulation",
-        "3 Credits",
-        "\nThis course introduces parallel programming principles and has emphasis on hands-on programming and deploying high-performance computing applications for different science and engineering disciplines. Topics includes programming on NVIDIA GPU, efficient GPU accelerated implementation of: (a) computation intensive kernels (b) few sample large scale financial and molecular dynamics simulations, and (c) large scale data analytics and mining.\n"
-    ],
-    [
-        "CS\u00a0725",
-        "Information Visualization",
-        "3 Credits",
-        "\nThis course covers the theory and application of information visualization.  Research on graph design, visual perception, cognition, and interaction will be covered.  Research and practical techniques for the display of graphs, networks, hierarchies, text, and complex multivariate data will be addressed.  Course projects will require the development of interactive web-based visualizations.\n"
-    ],
-    [
-        "CS\u00a0726",
-        "Application of Graphs in Bioinformatics",
-        "3 Credits",
-        "\nThis course links the fundamental concepts and algorithms of graphs with the actual biological problems.  Various biological problems will be selected to discuss the formulation of the graph, the graph algorithms, and the performance analysis.\n"
-    ],
-    [
-        "CS\u00a0734",
-        "Introduction to Information Retrieval",
-        "3 Credits",
-        "\nLaboratory work required. Theory and engineering of information retrieval in the context of developing web-based search engines. Topics include issues related to crawling, ranking, query processing, retrieval models, evaluation, clustering, machine learning, and other aspects related to building web search engines. Students will perform a mix of hands-on development and coding, as well as theoretical exploration of the research literature.\n"
-    ],
-    [
-        "CS\u00a0744",
-        "Performance Evaluation of Computer Systems and Networks",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  The course will introduce some of the commonly used techniques in the performance evaluation of computing systems.  Students will be exposed to a variety of analytical and simulation tools used in this field.  The applicability of the techniques will be illustrated through case studies.\n"
-    ],
-    [
-        "CS\u00a0751",
-        "Introduction to Digital Libraries",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.   Digital Libraries (DLs) are an increasingly popular research area that encompass more than traditional information retrieval or database methods and techniques.  The course will cover a brief history of DL development, with emphasis on World Wide Web implementations.  Case studies will be performed on various DLs.  The class will focus heavily on project work.  At the end of the course, students will be prepared to develop, evaluate, or apply digital library technologies in their work environment.  Topics include: Repositories; Distributed Searching; Metadata Harvesting; Preservation, Reference Linking and Citation Analysis.\n"
-    ],
-    [
-        "CS\u00a0752",
-        "Wireless Communications and Mobile Computing",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course looks at fundamental issues in the area of wireless networks and mobile computing.  The course material is organized around the following broad themes: Basics of mobile and wireless communications; Cellular communications:  Bandwidth allocation and reservation, Location management, Call admission strategies and QoS issues: Mobile IP and Mobile TCP; Mobile Ad-Hoc NETworks (MANET): Routing, Multimedia and QoS support; Sensor networks.\n"
-    ],
-    [
-        "CS\u00a0771",
-        "Advanced Operating Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course covers principles, design decisions, design techniques, policies, and mechanisms in the design and implementation of general-purpose multiprogramming and distributed operating systems.  Topics to be covered include:  concurrency, interprocess communication, threads, access control, protection and authentication, multiprocessor operating systems.\n"
-    ],
-    [
-        "CS\u00a0772",
-        "Network Security: Concepts, Protocols and Programming",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course deals with the basic protocols, techniques and programming issues to secure internet applications and traffic.  Topics include: Cryptographic algorithms tools and concepts; Secure Socket Layer (SSL), Transport Layer Security (TLS) and IPSec protocols; Securing Internet Applications: HTTP, SMTP, UDP and multicast; Hands on socket programming using C and Java.\n"
-    ],
-    [
-        "CS\u00a0773",
-        "Data Mining and Security",
-        "3 Credits",
-        "\nIntroduction to data mining; Algorithms including naive Bayes, Decision Trees and Rules, Association Rules, Linear classification, and Clustering; Cross validation, Lift charts, ROC Curves; SVM, Bayesian networks, K-means clustering; Data transformation; PCA; Ensemble Learning; Application of data mining to security and privacy including authentication, authorization, and intrusion detection; Privacy-preserving data mining. Prerequisite: CS\u00a0471 and CS\u00a0455 or CS\u00a0555.\n"
-    ],
-    [
-        "CS\u00a0775",
-        "Distributed Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. This course deals with the design issues in distributed computing systems and will discuss the motivation for building distributed systems, various algorithms and protocols proposed in literature for system operability, and some of the experimental distributed systems that have been built in the last few years.  Special attention will be paid to the fault-tolerant and performance aspects of these systems.  The project component of this course will enable students to get hands-on experience of implementing some of the distributed algorithms.\n"
-    ],
-    [
-        "CS\u00a0778",
-        "Networked Multimedia Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course will introduce some of the technical foundations for capturing, transmitting, presentation and storage of continuous multimedia.  Students will explore the applications of multimedia and techniques in some areas such as group collaboration and network based education.  Topics covered include: Architectures and issues for distributed Multimedia Systems Support for real-time multimedia applications, quality-of-service, synchronization, and presentation of multiple multimedia streams.\n"
-    ],
-    [
-        "CS\u00a0779",
-        "Design of Network Protocols",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Understanding the design, implementation and performance of network protocols using  TCP/IP protocol suite as a case study.  The students will have hands-on experience on low-level tools and will access and study the source code of these protocols and writing networking software applications.  Topics include:  socket interface, IPv4 and IPv6, routing, UDP, multicasting and IGMP, TCP specification, implementation and performance.\n"
-    ],
-    [
-        "CS\u00a0791",
-        "Graduate Seminar",
-        "1-3 Credits",
-        "\n1-3 credits.  Prerequisite: permission of the instructor.\n"
-    ],
-    [
-        "CS\u00a0795",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\nTopics in computer science.\n"
-    ],
-    [
-        "CS\u00a0796",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits. Prerequisite: permission of the instructor.\n"
-    ],
-    [
-        "CS\u00a0810",
-        "Applied Algorithms",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0600. Laboratory work required.  The course will involve solving two or three comprehensive projects anchored in computer science and engineering.  Possible topics for projects include: computational issues in network design and analysis; scheduling problems and applications; digital geometry and pattern recognition; image processing and computer vision applications; robotics.  The basic thrust is to demonstrate the usefulness and power of algorithm design and analysis in solving real-life problems.\n"
-    ],
-    [
-        "CS\u00a0811",
-        "Software Validation",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Laboratory work required.  The most common path to improved confidence in a program is via testing.  This course explores divergent and sometimes conflicting approaches to conducting testing and to measuring the resulting confidence.  Topics include the theoretical basis for testing, common testing methods, statistical measures of program reliability, and the relationship between correctness and reliability.\n"
-    ],
-    [
-        "CS\u00a0812",
-        "Stochastic Modeling",
-        "3 Credits",
-        "\nStochastic processes are ways of quantifying the dynamic relationship of sequences of random events.  This course will expose the participants to standard concepts and methods of stochastic modeling, as well as the rich diversity of applications.  Topics include, but not limited to, Markov chains in discrete and continuous time, Poisson processes, renewal theory and branching processes.\n"
-    ],
-    [
-        "CS\u00a0813",
-        "Modeling and Simulation in Computational Biology",
-        "3 Credits",
-        "\nThis course covers current problems and state of computations in bimolecular modeling, molecular mechanics including force field origin, composition, and evaluation techniques, and simulation techniques including conformational sampling, geometry optimization, molecular dynamics and Brownian dynamics.\n"
-    ],
-    [
-        "CS\u00a0814",
-        "Monte Carlo Simulation",
-        "3 Credits",
-        "\nThis course serves to illustrate important principles in Monte Carlo simulation methods and to demonstrate their power in applications.  The course covers Metropolis-Hastings algorithm, Gibbs sampler, Markov Chain Monte Carlo, acceptance-rejection method, Monte Carlo integration, quasi-Monte Carlo, random walk, and random number generation.\n"
-    ],
-    [
-        "CS\u00a0815",
-        "Medical Image Computing and Simulation",
-        "3 Credits",
-        "\nThis course combines the theory and practices in medical imaging computing with emphasis on Image Guided Therapy (IGT).  Topics include rigid registration, approximation/interpolation, segmentation, no-rigid registration, image-to-mesh conversion, real time parallel computing, software development for medical applications and solution of large sparse linear systems.\n"
-    ],
-    [
-        "CS\u00a0816",
-        "Communication Networks Simulation and Evaluation",
-        "3 Credits",
-        "\nThis course introduces the foundations and the application of computer network simulations. Topics include the modeling of real-world networks with specific devices and protocols, the identification of key performance parameters, the test of performance and the verification and optimization using comparisons of measured and simulated data.\n"
-    ],
-    [
-        "CS\u00a0822",
-        "Machine Learning",
-        "3 Credits",
-        "\nThis course presents both the foundational and the practical aspects of modeling, analyzing, and mining of computerized data sets, including classification, regression, clustering, semi-supervised learning, structured sparsity learning, etc.  The course assignments are designed to contain both theoretical and programming components in order to train students to gain hands-on-experience.\n"
-    ],
-    [
-        "CS\u00a0823",
-        "Introduction to Bioinformatics",
-        "3 Credits",
-        "\nThis course introduces the fundamental knowledge in bioinformatics and the current advances in selected directions.  The topics include:  fundamental concepts and experimental techniques in molecular biology, computational methods in genomic sequence comparison and analysis, and computational methods in molecular structural modeling.\n"
-    ],
-    [
-        "CS\u00a0824",
-        "High Performance Computing with GPU for Large Scale Simulation",
-        "3 Credits",
-        "\nThis course introduces parallel programming principles and has emphasis on hands-on programming and deploying high-performance computing applications for different science and engineering disciplines. Topics includes programming on NVIDIA GPU, efficient GPU accelerated implementation of: (a) computation intensive kernels (b) few sample large scale financial and molecular dynamics simulations, and (c) large scale data analytics and mining.\n"
-    ],
-    [
-        "CS\u00a0825",
-        "Information Visualization",
-        "3 Credits",
-        "\nThis course covers the theory and application of information visualization.  Research on graph design, visual perception, cognition, and interaction will be covered.  Research and practical techniques for the display of graphs, networks, hierarchies, text, and complex multivariate data will be addressed.  Course projects will require the development of interactive web-based visualizations.\n"
-    ],
-    [
-        "CS\u00a0826",
-        "Application of Graphs in Bioinformatics",
-        "3 Credits",
-        "\nThis course links the fundamental concepts and algorithms of graphs with the actual biological problems.  Various biological problems will be selected to discuss the formulation of the graph, the graph algorithms, and the performance analysis.\n"
-    ],
-    [
-        "CS\u00a0834",
-        "Introduction to Information Retrieval",
-        "3 Credits",
-        "\nLaboratory work required. Theory and engineering of information retrieval in the context of developing web-based search engines. Topics include issues related to crawling, ranking, query processing, retrieval models, evaluation, clustering, machine learning, and other aspects related to building web search engines. Students will perform a mix of hands-on development and coding, as well as theoretical exploration of the research literature.\n"
-    ],
-    [
-        "CS\u00a0844",
-        "Performance Evaluation of Computer Systems and Networks",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  The course will introduce some of the commonly used techniques in the performance evaluation of computing systems.  Students will be exposed to a variety of analytical and simulation tools used in this field.  The applicability of the techniques will be illustrated through case studies.\n"
-    ],
-    [
-        "CS\u00a0851",
-        "Introduction to Digital Libraries",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.   Digital Libraries (DLs) are an increasingly popular research area that encompass more than traditional information retrieval or database methods and techniques.  The course will cover a brief history of DL development, with emphasis on World Wide Web implementations.  Case studies will be performed on various DLs.  The class will focus heavily on project work.  At the end of the course, students will be prepared to develop, evaluate, or apply digital library technologies in their work environment.  Topics include: Repositories; Distributed Searching; Metadata Harvesting; Preservation, Reference Linking and Citation Analysis.\n"
-    ],
-    [
-        "CS\u00a0852",
-        "Wireless Communications and Mobile Computing",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course looks at fundamental issues in the area of wireless networks and mobile computing.  The course material is organized around the following broad themes: Basics of mobile and wireless communications; Cellular communications:  Bandwidth allocation and reservation, Location management, Call admission strategies and QoS issues: Mobile IP and Mobile TCP; Mobile Ad-Hoc NETworks (MANET): Routing, Multimedia and QoS support; Sensor networks.\n"
-    ],
-    [
-        "CS\u00a0871",
-        "Advanced Operating Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course covers principles, design decisions, design techniques, policies, and mechanisms in the design and implementation of general-purpose multiprogramming and distributed operating systems.  Topics to be covered include:  concurrency, interprocess communication, threads, access control, protection and authentication, multiprocessor operating systems.\n"
-    ],
-    [
-        "CS\u00a0872",
-        "Network Security: Concepts, Protocols and Programming",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course deals with the basic protocols, techniques and programming issues to secure internet applications and traffic.  Topics include: Cryptographic algorithms tools and concepts; Secure Socket Layer (SSL), Transport Layer Security (TLS) and IPSec protocols; Securing Internet Applications: HTTP, SMTP, UDP and multicast; Hands on socket programming using C and Java.\n"
-    ],
-    [
-        "CS\u00a0873",
-        "Data Mining and Security",
-        "3 Credits",
-        "\nIntroduction to data mining; Algorithms including naive Bayes, Decision Trees and Rules, Association Rules, Linear classification, and Clustering; Cross validation, Lift charts, ROC Curves; SVM, Bayesian networks, K-means clustering; Data transformation; PCA; Ensemble Learning; Application of data mining to security and privacy including authentication, authorization, and intrusion detection; Privacy-preserving data mining. Prerequisite: CS\u00a0471 and CS\u00a0455 or CS\u00a0555.\n"
-    ],
-    [
-        "CS\u00a0875",
-        "Distributed Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits. This course deals with the design issues in distributed computing systems and will discuss the motivation for building distributed systems, various algorithms and protocols proposed in literature for system operability, and some of the experimental distributed systems that have been built in the last few years.  Special attention will be paid to the fault-tolerant and performance aspects of these systems.  The project component of this course will enable students to get hands-on experience of implementing some of the distributed algorithms.\n"
-    ],
-    [
-        "CS\u00a0878",
-        "Networked Multimedia Systems",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  This course will introduce some of the technical foundations for capturing, transmitting, presentation and storage of continuous multimedia.  Students will explore the applications of multimedia and techniques in some areas such as group collaboration and network based education.  Topics covered include: Architectures and issues for distributed Multimedia Systems Support for real-time multimedia applications, quality-of-service, synchronization, and presentation of multiple multimedia streams.\n"
-    ],
-    [
-        "CS\u00a0879",
-        "Design of Network Protocols",
-        "3 Credits",
-        "\nLecture 3 hours; 3 credits.  Understanding the design, implementation and performance of network protocols using  TCP/IP protocol suite as a case study.  The students will have hands-on experience on low-level tools and will access and study the source code of these protocols and writing networking software applications.  Topics include:  socket interface, IPv4 and IPv6, routing, UDP, multicasting and IGMP, TCP specification, implementation and performance.\n"
-    ],
-    [
-        "CS\u00a0891",
-        "Graduate Seminar",
-        "1-3 Credits",
-        "\n1-3 credits.  Prerequisite: permission of the instructor.\n"
-    ],
-    [
-        "CS\u00a0895",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\nTopics in computer science.\n"
-    ],
-    [
-        "CS\u00a0896",
-        "Topics in Computer Science",
-        "1-3 Credits",
-        "\n1-3 credits. Prerequisite: permission of the instructor.\n"
-    ],
-    [
-        "CS\u00a0899",
-        "Doctoral Dissertation",
-        "1-9 Credits",
-        "\n1-9 credits.  Departmental permission required.\n"
-    ],
-    [
-        "CS\u00a0999",
-        "Computer Science 999",
-        "1 Credit",
-        "\n1 credit.  A one-hour pass/fail registration required of all graduate students to maintain active status during the final semester prior to graduation.  After successfully passing the candidacy examination, all doctoral students are required to be registered for at least one graduate credit each term until the degree is complete.\n"
-    ]
+    {
+        "code": "CS101",
+        "description": "\nLecture 3 hours, recitation 1 hour; 3 credits. Laboratory work required.  An introductory course about computers and how they work.  Students need no prior experience with computers.  Students will receive instruction and hands-on experience with operating system, word processing, electronic spreadsheet, graphic presentation, and other software available in the university computer labs.\n",
+        "hours": "3 Credits",
+        "title": "Computers: An Introduction"
+    },
+    {
+        "code": "CS102",
+        "description": "\nLecture 3 hours; recitation 1 hour; 3 credits.  Laboratory work required.  Introduction to networked computer systems  that have access to the Internet with its vast information.  Emphasis on a computer network's architecture, the University's network, electronic mail, World Wide Web, WWW browsers, and gaining access to information that resides on computer systems throughout the world.  Knowledge of how to effectively use the Internet and the understanding of how and why it works are critical elements.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Networks and the Internet"
+    },
+    {
+        "code": "CS106",
+        "description": "\nLecture 1 hour; 1 credit.  Intermediate coverage of wordprocessing to produce professional quality documents and reports. Computer-based training and a project-based approach teach students to solve the realistic problems of organization, formatting and display as they practice and learn the features of MicrosoftWord.\n",
+        "hours": "1 Credit",
+        "title": "Intermediate Wordprocessing"
+    },
+    {
+        "code": "CS107",
+        "description": "\nLecture 1 hour; 1 credit.  An introduction to data management and analysis using spreadsheets.  No prior computer experience required.  Computer-based training using a project-based approach teaches students to solve realistic problems as they practice and learn the features in Microsoft Excel.\n",
+        "hours": "1 Credit",
+        "title": "Intermediate Spreadsheets"
+    },
+    {
+        "code": "CS108",
+        "description": "\nLecture 1 hour; 1 credit.  An intermediate course in utilizing presentation software to produce quality slideshows. Computer-based approach teaches students to solve realistic problems as they practice and learn the features of Microsoft PowerPoint.\n",
+        "hours": "1 Credit",
+        "title": "Intermediate Presentation Software"
+    },
+    {
+        "code": "CS110",
+        "description": "\nLecture 1 hour; 1 credit. Available for pass/fail grading only.  Introduction to the Computer Science Department, College of Sciences, Old Dominion University, and to the profession of computer science.  This course provides students with a broad introduction to the scientific research efforts of computer science and the applications using those research efforts.  Required for incoming computer science majors.\n",
+        "hours": "1 Credit",
+        "title": "Introduction to Computer Science"
+    },
+    {
+        "code": "CS120G",
+        "description": "\nLecture 3 hours; 3 credits. Students will learn to locate, manage, critically evaluate and use information for problem solving, research and decision making.  Includes collaborative tools for document development and office productivity tools for presentation.  Information security, laws and etiquette related to use and access of information are covered.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Information Literacy and Research"
+    },
+    {
+        "code": "CS121G",
+        "description": "\nLecture 3 hours; 3 credits.  Students will learn to locate, manage, critically evaluate and use information for scientific problem solving and research.  Includes mathematical tools for data analysis and presentation and office and collaborative tools, as well.  Information security, laws and etiquette related to use and access of information are covered.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Information Literacy and Research for Scientists"
+    },
+    {
+        "code": "CS126G",
+        "description": "\nLecture 3 hours; 3 credits. Open only to students in the Honors College.  A special honors version of CS\u00a0120G.\n",
+        "hours": "3 Credits",
+        "title": "Honors: Introduction to Information Literacy and Research"
+    },
+    {
+        "code": "CS133",
+        "description": "\nLaboratory work required.  Introduction to computer-based problem solving and programming in Java.  Topics include problem solving methodologies, program design, algorithm development, and testing.  Java language concepts include variables, data types and expressions, assignment, control-flow statements, functions, arrays, and classes.  Algorithms covered include sorting, searching, and linked list manipulations.  Prerequisite:  MATH\u00a0102M or MATH\u00a0103M.\n",
+        "hours": "4 Credits",
+        "title": "Introduction to Programming in Java"
+    },
+    {
+        "code": "CS150",
+        "description": "\nLaboratory work required.  Introduction to computer-based problem solving and programming in C++. Topics include problem solving methodologies, program design, algorithm development, and testing. C++ language concepts include variables, data types and expressions, assignment, control-flow statements, functions, arrays, pointers, structs, and classes.    Prerequisite:  MATH\u00a0102M or MATH\u00a0103M or equivalent.\n",
+        "hours": "4 Credits",
+        "title": "Problem Solving and Programming I"
+    },
+    {
+        "code": "CS170",
+        "description": "\nFundamentals of the architecture and operation of modern computers.  Basic computer logic: logic equations; gates; combinatorial logic.  Basic computer arithmetic:  binary numbers; floating point representation.  System hierarchy, overview of a computer; integrated circuit technology.  Performance: metrics; choosing benchmarks; Amdahl's law.  Instruction Sets and Operations: assembly language; machine language; examples of other instruction sets.  Prerequisite:  MATH\u00a0102M or MATH\u00a0103M and a grade of C or better in CS\u00a0150.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Computer Architecture I"
+    },
+    {
+        "code": "CS195",
+        "description": "\nSpecial topics in computer science that are not part of the current curriculum at the freshman/sophomore level.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics"
+    },
+    {
+        "code": "CS250",
+        "description": "\nLecture 3 hours; laboratory 2.5 hours;  4 credits.   Prerequisites:  MATH\u00a0162M and a grade of C or better in CS\u00a0150. Corequisite: CS\u00a0252. Laboratory work required. Design issues arising in software systems and C++ programming techniques aiding in their solution. Topics include the software life cycle, methods of functional decomposition, design documentation, abstract data types and classes, common data structures, dynamic data structures, algorithmic patterns, and testing and debugging techniques.  Term project required.\n",
+        "hours": "4 Credits",
+        "title": "Problem Solving and Programming II"
+    },
+    {
+        "code": "CS252",
+        "description": "\nLaboratory work required.  Available for pass/fail grading only.  An introduction to Unix with emphasis on the skills necessary to be a productive programmer in Unix, Linux, and related environments.  Topics include command line shells, files and directories, editing, compiling and common command line utilities. Prerequisites: A grade of C or better in CS\u00a0150.\n",
+        "hours": "1 Credit",
+        "title": "Introduction to Unix for Programmers"
+    },
+    {
+        "code": "CS270",
+        "description": "\nFundamentals of the architecture and operation of modern computers. Building an ALU. The cache-Ram interaction. The virtual memory system. The Fetch/Execute cycle. Implementing a set of the ALU, Load/Store and Branch instructions in a single cycle implementation. Basics of microprogramming. Design of the control unit. A pipelined implementation. Multicores, multiprocessors and clusters. Prerequisites: A grade of C or better in CS\u00a0170 and in either CS\u00a0150 or CS\u00a0333.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Computer Architecture II"
+    },
+    {
+        "code": "CS295",
+        "description": "\n1-3 credits.  Special topics in computer science which are not part of the current curriculum at the freshman/sophomore level.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS300T",
+        "description": "\nLecture 3 hours, 3 credits.  Prerequisite:  ENGL\u00a0110C.  Covers changes in the world's society due to continuing implementation of computing technologies.  Evaluation of technological expansions in areas of governments, business/industry, education, medicine, transportation, communication and entertainment.  Topics include: intellectual property, software piracy, computer crimes and ethics.  Students must research a societal topic and present in written and oral forms.\n",
+        "hours": "3 Credits",
+        "title": "Computers in Society"
+    },
+    {
+        "code": "CS312",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite: CS\u00a0252.  Laboratory work required.  An in-depth introduction to the Internet and the World Wide Web for CS or similar majors as a basis for more advanced studies in Web programming.  Topics include: historical and current development of the Internet Web document publishing.  Internet design, communication, and application protocols and the tools that use them.  Internet search tools and their design.  Internet issues such as netiquette, copyright, spam, computer viruses, cookies, security, and future of the Internet.\n",
+        "hours": "3 Credits",
+        "title": "Internet Concepts"
+    },
+    {
+        "code": "CS330",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisites: MATH\u00a0163, CS\u00a0252 and a grade of C or better in CS\u00a0250 or CS\u00a0333.  Laboratory work required.  The techniques and idioms of object-oriented programming in C++ and Java.  Methods of object-oriented analysis and design with the Unified Modeling Language.  Multi-thread programs and synchronization.\n",
+        "hours": "3 Credits",
+        "title": "Object-Oriented Programming and Design"
+    },
+    {
+        "code": "CS333",
+        "description": "\nLecture 4 hours; 4 credits.  Prerequisites: MATH\u00a0163 and a grade of C or better in CS\u00a0150 (or an equivalent course in a high level language).  Laboratory work required.  Corequisite: CS\u00a0252.  Topics include C++ syntax and semantics, principles of  design and basic software engineering skills.  This course satisfies the requirements of both CS\u00a0150 and 250.  It is intended for the student who has already been introduced to programming, possibly in another language.  This web-based course requires considerable maturity and independent responsibility on the part of the student.\n",
+        "hours": "4 Credits",
+        "title": "Programming and Problem Solving in C++"
+    },
+    {
+        "code": "CS334",
+        "description": "\nLecture 4 hours; 4 credits.  Prerequisites: MATH\u00a0163 and a grade of C or better in CS\u00a0150 (or an equivalent course in a high level language).  Topics include: number representation, base conversion, Boolean algebra, combinatorial circuits, arithmetic units, registers, memory, hardwired and microprogrammed control units, architecture of typical microcomputers, and the development of systems from basic components.  The performance of competing architectures will be a major concern.  This course satisfies the requirements of both CS\u00a0170 and 270.  This web-based course requires considerable maturity and independent responsibility on the part of the student.\n",
+        "hours": "4 Credits",
+        "title": "Computer Architecture Fundamentals"
+    },
+    {
+        "code": "CS350",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite:   A grade of C or better in CS\u00a0330 or CS\u00a0361.  Laboratory work required. Topics include: use of a defined software process (such as PSP), software costing methods, software metrics, quality assurance, inspection teams, testing methodologies, schedules and budgets, and configuration management.  The course requires each student to participate as a member of a team in a significant team project.  Each student will be required to demonstrate proficiency in several software development tools.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Software Engineering"
+    },
+    {
+        "code": "CS355",
+        "description": "\nSurvey of significant features of programming languages. Language types including imperative, functional, logical, and object-oriented are covered. Concepts include lexical and syntactic analysis, type systems, flow control, modularity, and parallel programming. Small programs in several languages required. Laboratory work required. Prerequisites: CS\u00a0252 and a grade of C or better in CS\u00a0250 or CS\u00a0333.\n",
+        "hours": "3 Credits",
+        "title": "Principles of Programming Languages"
+    },
+    {
+        "code": "CS361",
+        "description": "\nLecture 3 hours; 3 credits.   Prerequisites: MATH\u00a0163, CS\u00a0252 and a grade of C or better in CS\u00a0250 or 333.  Laboratory work required. Common abstract data types, including vectors, lists, stacks, queues, sets, maps, heaps, and graphs.  Standard C++ interfaces for these ADTs.  Generic programming via iterators and templates.  Choosing data structures and algorithms to implement ADTs, via analysis of their time and space complexity.\n",
+        "hours": "3 Credits",
+        "title": "Advanced Data Structures and Algorithms"
+    },
+    {
+        "code": "CS367",
+        "description": "\n1-3 credits. Prerequisite:  approval by the CS Department and Career Management in accordance with the policy for granting credit for Cooperative Education programs.  Available for pass/fail grading only.  Student participation for credit based on the academic relevance of the work experience, criteria, and evaluative procedures as formally determined by the department and Career Management prior to the semester in which the work experience is to take place. Written report required.  (qualifies as a CAP experience).\n",
+        "hours": "1-3 Credits",
+        "title": "Cooperative Education"
+    },
+    {
+        "code": "CS368",
+        "description": "\n3 credits.  Prerequisite:  approval by CS Department and Career Management.  Available for pass/fail grading only.  Academic requirements will be established by the department and will vary with the amount of credit desired.  Allows students to gain short duration career-related experience.  An academic project may be required by the department to enhance the value of the educational experience.  Written report required.  (qualifies as a CAP experience).\n",
+        "hours": "1-3 Credits",
+        "title": "Computer Science Internship"
+    },
+    {
+        "code": "CS381",
+        "description": "\nTopics include propositional and predicate logic, rules of inference, methods of proof, set operations, functions, complexity of algorithms, growth of functions, induction, counting, relations, equivalence relations and graphs. Prerequisites: MATH\u00a0163 and a grade of C or better in CS\u00a0150 or CS\u00a0333.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Discrete Structures"
+    },
+    {
+        "code": "CS382",
+        "description": "\nLecture, 1 hour; 1 credit.  Prerequisites:  A grade of C or better in CS\u00a0250 or CS\u00a0333.  Laboratory work required.  An introduction to the Java programming language for students who are familiar with programming in C++.  Topics include basic language syntax, data structures, control flow, classes, exception handling, and basic elements of the Java API.  This web-based class requires independent responsibility and online communication skills on the part of the student.\n",
+        "hours": "1 Credit",
+        "title": "Introduction to JAVA"
+    },
+    {
+        "code": "CS390",
+        "description": "\nElementary study of theoretical aspects of computer science. Topics in formal languages and automata theory are covered including regular languages, regular expressions, finite automata, context-free languages, pushdown automata, grammars, Turing machines, and unsolvable problems. Prerequisites: A grade of C or better in CS\u00a0381 and CS\u00a0250 or CS\u00a0333.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Theoretical Computer Science"
+    },
+    {
+        "code": "CS395",
+        "description": "\n1-3 credits.  Prerequisite:  permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS 410/510",
+        "description": "\nLecture 3 hours; recitation 1 hour; 3 credits.   Prerequisites:  A grade of C or better in CS\u00a0300T and CS\u00a0350. Laboratory work required.   Provides students with challenges of business environments in developing a technology based project.  Students identify a societal problem, identify solutions, define project solutions, develop project objectives, conduct feasibility analysis, establish organizational group structure to meet project objectives and develop formal specifications.  Students make formal technical project presentations and develop web documentation. Students prepare a draft grant proposal.\n",
+        "hours": "3 Credits",
+        "title": "Professional Workforce Development I"
+    },
+    {
+        "code": "CS 411W/511",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite: A grade of C or better in ENGL\u00a0211C or 221C or 231C and a grade of C or better in CS\u00a0330 and 410.  Laboratory work required.   Students write professional and non-technical documents and continue the development of the project defined in CS\u00a0410.  Written work is reviewed and returned for corrective rewriting.  Students will design and develop a project prototype, and demonstrate the prototype to a formal panel along with delivering the formal product specifications and a draft formal grant proposal. (qualifies as a CAP experience)  (This is a writing intensive course.).\n",
+        "hours": "3 Credits",
+        "title": "Professional Workforce Development II"
+    },
+    {
+        "code": "CS 417/517",
+        "description": "\nLaboratory work required.  Algorithms and software for fundamental problems in scientific computing.  Topics: properties of floating point arithmetic, linear systems of equations, matrix factorizations, stability of algorithms, conditioning of problems, least-squares problems, eigenvalue computations, numerical integration and differentiation, nonlinear equations, iterative solution of linear systems. Prerequisites: MATH\u00a0316 and a grade of C or better in CS\u00a0250 or CS\u00a0333.\n",
+        "hours": "3 Credits",
+        "title": "Computational Methods and Software"
+    },
+    {
+        "code": "CS 418/518",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisites: A grade of C or better in CS\u00a0312 and 330.  Laboratory work required. Overview of Internet and World Wide Web; web servers and security, HTTP protocol; web application and design; server side scripts and database integration, and programming for the Web.\n",
+        "hours": "3 Credits",
+        "title": "Web Programming"
+    },
+    {
+        "code": "CS 431/531",
+        "description": "\nLaboratory work required. Extensive coverage of the hypertext transfer protocol (HTTP), specifications and commentary (IETF RFCs), and implications for servers and clients. Students will develop a web server providing common HTTP functionality and implementing all HTTP (including unsafe and conditional) methods, content negotiation, transfer and content encoding, basic & digest authentication, and server-side execution of programs (i.e., dynamic resources). Frequent in-class demonstrations of progress and protocol conformance will be required. Prerequisites: CS\u00a0150, familiarity with Internet and network (including socket) programming.\n",
+        "hours": "3 Credits",
+        "title": "Web Server Design"
+    },
+    {
+        "code": "CS 441/541",
+        "description": "\nLaboratory work required. Project-oriented coverage of the principles of application design and development for Android platform smart devices. Topics include user interface; input methods; data handling; network techniques; localization and sensing. Students are required to produce a professional-quality mobile application.  Prerequisite:  CS\u00a0330 or CS\u00a0382.\n",
+        "hours": "3 Credits",
+        "title": "App Development for Smart Devices"
+    },
+    {
+        "code": "CS 450/550",
+        "description": "\nLaboratory work required. Three level database architecture. The relational database model and relational algebra. SQL and its use in database procedures and with conventional programming languages.  Entity relationship modeling. Functional dependencies and normalization. Transactions, concurrency and recovery. Prerequisites: A grade of C or better in CS\u00a0381 and either CS\u00a0330 or CS\u00a0361.\n",
+        "hours": "3 Credits",
+        "title": "Database Concepts"
+    },
+    {
+        "code": "CS 451/551",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite:  A grade of C or better in CS\u00a0330 or 361.  Laboratory work required. Evaluation of software development methodologies.  Topics include:  software life cycle models, software specification and design methodologies, informal specification techniques, formal specifications, design tools, software analysis, quality assurance, life cycle management, software costing models and complexity.\n",
+        "hours": "3 Credits",
+        "title": "Software Engineering Survey"
+    },
+    {
+        "code": "CS 454/554",
+        "description": "\nLecture 3 hours; 3 credits.   Prerequisite: A grade of C or better in CS\u00a0455.  Laboratory work required. The administration of computer networks and their interaction with wide area networks:  network  topologies for local and wide area networks, common protocols and services, management of distributed file services, routing and configuration, security, monitoring and trouble-shooting.\n",
+        "hours": "3 Credits",
+        "title": "Network Management"
+    },
+    {
+        "code": "CS 455/555",
+        "description": "\nInternet and the 5-layered protocol architecture for the Internet, applications built on top of data networks, specifically the Internet, the web, the transport layer, TCP and UDP protocols, the network layer, the data link layer, also some of the technologies for the physical layer. Prerequisites: CS\u00a0250 or CS\u00a0333, CS\u00a0252, CS\u00a0270.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Networks and Communications"
+    },
+    {
+        "code": "CS 456/556",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0381 and either CS\u00a0330 or 361.  Laboratory work required.  Programming in SQL and PL/SQL and hands-on development of DBA administration skills in the ORACLE database environment.  Creating database objects, querying and manipulating, and PL/SQL programming constructs.  Setup and administer databases.  Create, organize, and manage database files, users, privileges and other resources.\n",
+        "hours": "3 Credits",
+        "title": "Database Administration I"
+    },
+    {
+        "code": "CS 457/557",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0456/556.  Laboratory work required. Advanced DBA administration skills in the Oracle database environment.  Topics in planning and implementing backup and recovery of the database.  Performance optimization and tuning of database and applications including memory and disk structures.  Configuration and maintenance of clients and servers in a network environment.\n",
+        "hours": "3 Credits",
+        "title": "Database Administration II"
+    },
+    {
+        "code": "CS 458/558",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite: experience with UNIX.  Laboratory work required.  Aspects of administering a SOLARIS/UNIX operating system in a networked environment are covered.  Topics covered include installation, file system management, backup procedures, process control, user administration, device management, Network File Systems (NFS), Network Information Systems (NIS), UNIX security, Domain Name Services (DNS), and integration with other operating systems.\n",
+        "hours": "3 Credits",
+        "title": "Unix System Administration"
+    },
+    {
+        "code": "CS 460/560",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite:  A grade of C or better in CS\u00a0361.  Laboratory work required.  An introduction to graphical systems and methods.  Topics include basic primitives, windowing, transformations, hardware, interaction devices, 3-D graphics, curved surfaces, solids, and realism techniques such as visible surface, lighting, shadows, and surface detail.  Requires project involving OpenGL programming.\n",
+        "hours": "3 Credits",
+        "title": "Computer Graphics"
+    },
+    {
+        "code": "CS 462/562",
+        "description": "\nThe course introduces the basic components and concepts needed for understanding cybersecurity.  These include basics and security vulnerabilities of networks, operating systems, databases, and distributed systems.  In addition, some fundamentals of security enforcement will be introduced and discussed.  Prerequisite:  CS\u00a0270.\n",
+        "hours": "3 Credits",
+        "title": "Cybersecurity Fundamentals"
+    },
+    {
+        "code": "CS 463/563",
+        "description": "\nMathematical foundations including information theory, number theory, factoring, and prime number generation; Cryptographic protocols including basic building blocks and protocols; Cryptographic techniques including key generation and key management, and applications; Cryptographic algorithms--DES, AES, Stream Ciphers, Hash functions, digital signatures, etc.  Prerequisite:  CS\u00a0270.\n",
+        "hours": "3 Credits",
+        "title": "Cryptography for Cybersecurity"
+    },
+    {
+        "code": "CS 464/564",
+        "description": "\nAuthentication in cyber systems including password-based, address-based, biometrics-based, and SSO systems; Authorization and accounting in cyber systems; Securing wired and wireless networks; Secured applications including secure e-mail services, secure web services, and secure e-commerce applications; Security and privacy in cloud environments.  Prerequisite:  CS\u00a0463 or CS\u00a0563.\n",
+        "hours": "3 Credits",
+        "title": "Networked Systems Security"
+    },
+    {
+        "code": "CS 465/565",
+        "description": "\nIntroduction to information assurance.  Metrics, planning and deployment; identity and trust technologies; verification and evaluation, incident response; human factors; regulation, policy languages, and enforcement; legal, ethical, and social implications; privacy and security trade-offs; system survivability; intrusion detection; fault and security management.  Prerequisites:  CS\u00a0462 or familiarity with computer security area.\n",
+        "hours": "3 Credits",
+        "title": "Information Assurance"
+    },
+    {
+        "code": "CS471",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisites: A grade of C or better in CS\u00a0270 and 361.  Laboratory work required. Operating system structures.  Multiprogramming and multiprocessing.  Process management.  Memory and other resource management.  Storage management, I/O systems, distributed systems.  Protection and security.  The concepts will be illustrated through example systems such as Unix and Windows.\n",
+        "hours": "3 Credits",
+        "title": "Operating Systems"
+    },
+    {
+        "code": "CS472",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0361.  Laboratory work required. Basic protocols, techniques and programming issues to secure network and computer systems.  Topics include: cryptographic algorithms and concepts (Secret Key Cryptography, Hashes and Message Digests,  Public Key and Authentication); Security Standards (Kerberos, Public Key Infrastructure, IPsec, SSL/TLS); Security applications (PEM, S/MIME, PGP, HTTP, Firewalls); Hands-on programming using OpenSSL.\n",
+        "hours": "3 Credits",
+        "title": "Network and Systems Security"
+    },
+    {
+        "code": "CS 475/575",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisites:  STAT\u00a0330 and a grade of C or better in CS\u00a0330 or 361. Laboratory work required.  Efficient implementation methods.  Time management.  Planning and design of simulation experiments.  Statistical issues in simulation.  Generation of random numbers and stochastic variates.  Programming with graphically- and text-based simulation languages.  Verification and validation of simulation models.  Distributed simulation.  Special topics such as HLA will be discussed.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Computer Simulation"
+    },
+    {
+        "code": "CS 476/576",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisites:  A grade of C or better in CS\u00a0330 and 361.  Laboratory work required.  This course is to help students fully understand and utilize the internal workings and capabilities provided by modern computing, networking and programming environments.  Topics include: Shell Script Programming, X Windows (Xlib and Motif), UNIX internals (I/O, Processes, Threads, IPC and Signals), Network Programming (UDP/TCP Sockets and Multicasting) and Java Systems Programming (SWING, Multithreading and Networking).\n",
+        "hours": "3 Credits",
+        "title": "Systems Programming"
+    },
+    {
+        "code": "CS 478/578",
+        "description": "\nThe discipline of Computational Geometry is devoted to the study of algorithms which are formulated in terms of spatially embedded arrangements of objects, such as points, lines, surfaces, and solids. This course covers fundamental algorithms including convex hulls, polygon triangulations, point location, Voronoi diagrams, Delaunaytriangulations, binary space partitions, quadtrees, and other topics.  Prerequisites:  CS\u00a0361 and MATH\u00a0211.\n",
+        "hours": "3 Credits",
+        "title": "Computational Geometry, Methods and Applications"
+    },
+    {
+        "code": "CS 480/580",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite:  A grade of C or better in CS\u00a0361. Laboratory work required.  Introduction to concepts, principles, challenges, and research in major areas of AI.  Areas of discussion include: natural language and vision processing, machine learning, machine logic and reasoning, robotics, expert and mundane systems.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Artificial Intelligence"
+    },
+    {
+        "code": "CS 486/586",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisites:  MATH\u00a0316; knowledge of a high level language.  Laboratory work required.  The motivation for and successes of parallel computing.  A taxonomy of commercially available parallel computers.  Strategies for parallel decompositions.  Parallel performance metrics.  Parallel algorithms and their relation to corresponding serial algorithms. Numerous examples from scientific computing, mainly in linear algebra and differential equations.  Implementations using public-domain network libraries on workstation clusters and computers.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Parallel Computing"
+    },
+    {
+        "code": "CS487",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisites:  A grade of C or better in CS\u00a0270 and either CS\u00a0361 or CS\u00a0330. (CS\u00a0417 or linear algebra is recommended.)  Laboratory work required.  Fundamental concepts of parallel computing:  Machine models, architectures, parallel topologies and languages, parallel algorithm design and parallel programming, architecture independent message passing interface (MPI) communication library, and scaled-speedup.  Group project required.\n",
+        "hours": "3 Credits",
+        "title": "Applied Parallel Computing"
+    },
+    {
+        "code": "CS 488/588",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite:  A grade of C or better in CS\u00a0361.  Laboratory work required.  Theoretical and practical aspects of compiler design and implementation.  Topics will include lexical analysis, parsing, translation, code generation, optimization, and error handling.\n",
+        "hours": "3 Credits",
+        "title": "Principles of Compiler Construction"
+    },
+    {
+        "code": "CS 495/595",
+        "description": "\nSpecial topics.  Prerequisite: permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS 497/597",
+        "description": "\n1-3 credits. Prerequisite:  permission of the instructor.  Independent study under the direction of an instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Independent Study in Computer Science"
+    },
+    {
+        "code": "CS510",
+        "description": "\nLecture 3 hours; recitation 1 hour; 3 credits.   Laboratory work required.   Provides students with challenges of business environments in developing a technology based project.  Students identify a societal problem, identify solutions, define project solutions, develop project objectives, conduct feasibility analysis, establish organizational group structure to meet project objectives and develop formal specifications.  Students make formal technical project presentations and develop web documentation. Students prepare a draft grant proposal.\n",
+        "hours": "3 Credits",
+        "title": "Professional Workforce Development I"
+    },
+    {
+        "code": "CS511",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.   Students write professional and non-technical documents and continue the development of the project defined in CS\u00a0410.  Written work is reviewed and returned for corrective rewriting.  Students will design and develop a project prototype, and demonstrate the prototype to a formal panel along with delivering the formal product specifications and a draft formal grant proposal. (qualifies as a CAP experience) (This is a writing intensive course.).\n",
+        "hours": "3 Credits",
+        "title": "Professional Workforce Development II"
+    },
+    {
+        "code": "CS517",
+        "description": "\nLecture 3 hours; 3 credits.   Laboratory work required.  Algorithms and software for fundamental problems in scientific computing.  Topics: properties of floating point arithmetic, linear systems of equations, matrix factorizations, stability of algorithms, conditioning of problems, least-squares problems, eigenvalue computations, numerical integration and differentiation, nonlinerar equations, iterative solution of linear systems.\n",
+        "hours": "3 Credits",
+        "title": "Computational Methods and Software"
+    },
+    {
+        "code": "CS518",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required. Overview of Internet and World Wide Web; web servers and security, HTTP protocol; web application and design; server side scripts and database integration, and programming for the Web.\n",
+        "hours": "3 Credits",
+        "title": "Web Programming"
+    },
+    {
+        "code": "CS531",
+        "description": "\nLaboratory work required. Extensive coverage of the hypertext transfer protocol (HTTP), specifications and commentary (IETF RFCs), and implications for servers and clients. Students will develop a web server providing common HTTP functionality and implementing all HTTP (including unsafe and conditional) methods, content negotiation, transfer and content encoding, basic & digest authentication, and server-side execution of programs (i.e., dynamic resources). Frequent in-class demonstrations of progress and protocol conformance will be required. Prerequisites: Familiarity with Internet and network (including socket) programming.\n",
+        "hours": "3 Credits",
+        "title": "Web Server Design"
+    },
+    {
+        "code": "CS541",
+        "description": "\nLaboratory work required. Project-oriented coverage of the principles of application design and development for Android platform smart devices. Topics include user interface; input methods; data handling; network techniques; localization and sensing. Students are required to produce a professional-quality mobile application. Prerequisites: Knowledge of Java.\n",
+        "hours": "3 Credits",
+        "title": "App Development for Smart Devices"
+    },
+    {
+        "code": "CS550",
+        "description": "\nLaboratory work required. Three level database architecture. The relational database model and relational algebra. SQL and its use in database procedures and with conventional programming languages. Entity relationship modeling.  Functional dependencies and normalization. Transactions, concurrency and recovery. Prerequisites: Familiarity with elementary set theory, propositional logic, and any two programming languages are expected; a course in finite mathematics or discrete structures is recommended.\n",
+        "hours": "3 Credits",
+        "title": "Database Concepts"
+    },
+    {
+        "code": "CS551",
+        "description": "\nLecture 3 hours; 3 credits. Laboratory work required. Evaluation of software development methodologies.  Topics include:  software life cycle models, software specification and design methodologies, informal specification techniques, formal specifications, design tools, software analysis, quality assurance, life cycle management, software costing models and complexity.\n",
+        "hours": "3 Credits",
+        "title": "Software Engineering Survey"
+    },
+    {
+        "code": "CS554",
+        "description": "\nLecture 3 hours; 3 credits.   Laboratory work required. The administration of computer networks and their interaction with wide area networks:  network  topologies for local and wide area networks, common protocols and services, management of distributed file services, routing and configuration, security, monitoring and trouble-shooting.\n",
+        "hours": "3 Credits",
+        "title": "Network Management"
+    },
+    {
+        "code": "CS555",
+        "description": "\nInternet and the 5-layered protocol architecture for the Internet, applications built on top of data networks, specifically the Internet, the web, the transport layer, TCP and UDP protocols, the network layer, the data link layer, also some of the technologies for the physical layer. Prerequisites: Familiarity with C++ or Java programming for Unix systems.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Networks and Communications"
+    },
+    {
+        "code": "CS556",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  Programming in SQL and PL/SQL and hands-on development of DBA administration skills in the ORACLE database environment.  Creating database objects, querying and manipulating, and PL/SQL programming constructs.  Setup and administer databases.  Create, organize, and manage database files, users, privileges and other resources.\n",
+        "hours": "3 Credits",
+        "title": "Database Administration I"
+    },
+    {
+        "code": "CS557",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite: A grade of C or better in CS\u00a0556.  Laboratory work required. Advanced DBA administration skills in the Oracle database environment.  Topics in planning and implementing backup and recovery of the database.  Performance optimization and tuning of database and applications including memory and disk structures.  Configuration and maintenance of clients and servers in a network environment.\n",
+        "hours": "3 Credits",
+        "title": "Database Administration II"
+    },
+    {
+        "code": "CS558",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite: experience with UNIX.  Laboratory work required.  Aspects of administering a SOLARIS/UNIX operating system in a networked environment are covered.  Topics covered include installation, file system management, backup procedures, process control, user administration, device management, Network File Systems (NFS), Network Information Systems (NIS), UNIX security, Domain Name Services (DNS), and integration with other operating systems.\n",
+        "hours": "3 Credits",
+        "title": "Unix System Administration"
+    },
+    {
+        "code": "CS560",
+        "description": "\nLecture 3 hours; 3 credits. Laboratory work required.  An introduction to graphical systems and methods.  Topics include basic primitives, windowing, transformations, hardware, interaction devices, 3-D graphics, curved surfaces, solids, and realism techniques such as visible surface, lighting, shadows, and surface detail.  Requires project involving OpenGL programming.\n",
+        "hours": "3 Credits",
+        "title": "Computer Graphics"
+    },
+    {
+        "code": "CS562",
+        "description": "\nThe course introduces the basic components and concepts needed for understanding cybersecurity.  These include basics and security vulnerabilities of networks, operating systems, databases, and distributed systems.  In addition, some fundamentals of security enforcement will be introduced and discussed.\n",
+        "hours": "3 Credits",
+        "title": "Cybersecurity Fundamentals"
+    },
+    {
+        "code": "CS563",
+        "description": "\nMathematical foundations including information theory, number theory, factoring, and prime number generation; Cryptographic protocols including basic building blocks and protocols; Cryptographic techniques including key generation and key management, and applications; Cryptographic algorithms--DES, AES, Stream Ciphers, Hash functions, digital signatures, etc.  Prerequisite:  CS\u00a0270.\n",
+        "hours": "3 Credits",
+        "title": "Cryptography for Cybersecurity"
+    },
+    {
+        "code": "CS564",
+        "description": "\nAuthentication in cyber systems including password-based, address-based, biometrics-based, and SSO systems; Authorization and accounting in cyber systems; Securing wired and wireless networks; Secured applications including secure e-mail services, secure web services, and secure e-commerce applications; Security and privacy in cloud environments.\n",
+        "hours": "3 Credits",
+        "title": "Networked Systems Security"
+    },
+    {
+        "code": "CS565",
+        "description": "\nIntroduction to information assurance.  Metrics, planning and deployment; identity and trust technologies; verification and evaluation, incident response; human factors; regulation, policy languages, and enforcement; legal, ethical, and social implications; privacy and security trade-offs; system survivability; intrusion detection; fault and security management.  Prerequisites: CS\u00a0562 or familiarity with computer security area.\n",
+        "hours": "3 Credits",
+        "title": "Information Assurance"
+    },
+    {
+        "code": "CS575",
+        "description": "\nLecture 3 hours; 3 credits.  Efficient implementation methods.  Time management.  Planning and design of simulation experiments.  Statistical issues in simulation.  Generation of random numbers and stochastic variates.  Programming with graphically- and text-based simulation languages.  Verification and validation of simulation models.  Distributed simulation.  Special topics such as HLA will be discussed.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Computer Simulation"
+    },
+    {
+        "code": "CS576",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  This course is to help students fully understand and utilize the internal workings and capabilities provided by modern computing, networking and programming environments.  Topics include: Shell Script Programming, X Windows (Xlib and Motif), UNIX internals (I/O, Processes, Threads, IPC and Signals), Network Programming (UDP/TCP Sockets and Multicasting) and Java Systems Programming (SWING, Multithreading and Networking).\n",
+        "hours": "3 Credits",
+        "title": "Systems Programming"
+    },
+    {
+        "code": "CS578",
+        "description": "\nThe discipline of Computational Geometry is devoted to the study of algorithms which are formulated in terms of spatially embedded arrangements of objects, such as points, lines, surfaces, and solids. This course covers fundamental algorithms including convex hulls, polygon triangulations, point location, Voronoi diagrams, Delaunaytriangulations, binary space partitions, quadtrees, and other topics.\n",
+        "hours": "3 Credits",
+        "title": "Computational Geometry, Methods and Applications"
+    },
+    {
+        "code": "CS580",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  Introduction to concepts, principles, challenges, and research in major areas of AI.  Areas of discussion include: natural language and vision processing, machine learning, machine logic and reasoning, robotics, expert and mundane systems.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Artificial Intelligence"
+    },
+    {
+        "code": "CS586",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  The motivation for and successes of parallel computing.  A taxonomy of commercially available parallel computers.  Strategies for parallel decompositions.  Parallel performance metrics.  Parallel algorithms and their relation to corresponding serial algorithms. Numerous examples from scientific computing, mainly in linear algebra and differential equations.  Implementations using public-domain network libraries on workstation clusters and computers.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Parallel Computing"
+    },
+    {
+        "code": "CS588",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  Theoretical and practical aspects of compiler design and implementation.  Topics will include lexical analysis, parsing, translation, code generation, optimization, and error handling.\n",
+        "hours": "3 Credits",
+        "title": "Principles of Compiler Construction"
+    },
+    {
+        "code": "CS595",
+        "description": "\nSpecial topics.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS597",
+        "description": "\n1-3 credits. Prerequisite:  permission of the instructor.  Independent study under the direction of an instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Independent Study in Computer Science"
+    },
+    {
+        "code": "CS600",
+        "description": "\nLecture 3 hours; 3 credits.  Design of efficient algorithms and the mathematical analysis of their performance.  Topics to be covered include:  mathematical preliminaries, sorting and order statistics, advanced data structures, linear programming, exploring graphs, parallel algorithms, randomized algorithms, transformation of the domain, and NP-completeness.  (offered fall).\n",
+        "hours": "3 Credits",
+        "title": "Algorithms and Data Structures"
+    },
+    {
+        "code": "CS635",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0665.  This is a first course in parallel architecture, with an emphasis on the description and evaluation of commercially available machines.  Topics to be covered include:  parallelization and performance metrics, scalability and the \"laws\" of Amdahl and Gustavson, computational similarity, models of computation, parallelization paradigms, networkcharacteristics and topology, communication calculus and templates, pipelining and parallelism, processor types, memory hierarchy, cache coherence protocols, latency-hiding mechanisms, routing algorithms, and languages and libraries to support parallel architecture.\n",
+        "hours": "3 Credits",
+        "title": "Parallel Computer Architecture"
+    },
+    {
+        "code": "CS656",
+        "description": "\nLecture 3 hours; 3 credits.  Prerequisite: CS\u00a0550. Laboratory work required.  Analysis, design and implementation of databases and database applications using modern software engineering methods. Database CASE tools.  Analysis using process, function, and dataflow analysis in conjunction with entity relationship modeling.  Database diagrams and database design.  Application suite design and high level design of applications.  Refining implementations.\n",
+        "hours": "3 Credits",
+        "title": "Database Methodology"
+    },
+    {
+        "code": "CS660",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0560.  Laboratory work required.  The mathematical tools needed for the geometrical aspects of 3D computer graphics.  Fundamentals: homogeneous coordinates, transformations and perspective.  Theory of parametric and implicit curve and surface models: polar forms, Bezier arcs and de Casteljau subdivision, continuity constraints, B-splines, tensor product, and triangular patch surfaces.  Representations of solids and conversions among them.  Beometric algorithms for graphics problems, with applications to ray tracing, hidden surface elimination, etc.\n",
+        "hours": "3 Credits",
+        "title": "3D Computer Graphics"
+    },
+    {
+        "code": "CS665",
+        "description": "\nLecture 3 hours; 3 credits.  A detailed and quantitative study of the architecture of modern uni-processor computers.  The major components are:  the technology drivers, performance measures, instruction sets (including 80X86, VAX, and a generic RISC which is very similar to the MIPS series), processor implementation, advanced pipelining and superscalar features, cache and memory design,  and I/O.  The emphasis is on obtaining quantitative measures of performance, describing interactions of the various components, studying trade-offs between the components in commercial processors, and integration into a complete computer system including interaction of the software and hardware.  (offered spring).\n",
+        "hours": "3 Credits",
+        "title": "Computer Architecture"
+    },
+    {
+        "code": "CS667",
+        "description": "\n",
+        "hours": "1-3 Credits",
+        "title": "Cooperative Education"
+    },
+    {
+        "code": "CS669",
+        "description": "\n",
+        "hours": "1-3 Credits",
+        "title": "Practicum"
+    },
+    {
+        "code": "CS690",
+        "description": "\nLecture 1 hour; 1 credit.  A one-hour weekly lecture given by faculty from Old Dominion and other institutions.\n",
+        "hours": "1 Credit",
+        "title": "Colloquium"
+    },
+    {
+        "code": "CS695",
+        "description": "\n",
+        "hours": "1-3 Credits",
+        "title": "Topics"
+    },
+    {
+        "code": "CS697",
+        "description": "\n1-3 credits. Prerequisite:  permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Independent Study in Computer Science"
+    },
+    {
+        "code": "CS698",
+        "description": "\n3 credits.  Departmental permission required.\n",
+        "hours": "3 Credits",
+        "title": "Masters Project"
+    },
+    {
+        "code": "CS699",
+        "description": "\n3 credits.  Departmental permission required.\n",
+        "hours": "3 Credits",
+        "title": "Thesis Research"
+    },
+    {
+        "code": "CS710",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0600. Laboratory work required.  The course will involve solving two or three comprehensive projects anchored in computer science and engineering.  Possible topics for projects include: computational issues in network design and analysis; scheduling problems and applications; digital geometry and pattern recognition; image processing and computer vision applications; robotics.  The basic thrust is to demonstrate the usefulness and power of algorithm design and analysis in solving real-life problems.\n",
+        "hours": "3 Credits",
+        "title": "Applied Algorithms"
+    },
+    {
+        "code": "CS711",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  The most common path to improved confidence in a program is via testing.  This course explores divergent and sometimes conflicting approaches to conducting testing and to measuring the resulting confidence.  Topics include the theoretical basis for testing, common testing methods, statistical measures of program reliability, and the relationship between correctness and reliability.\n",
+        "hours": "3 Credits",
+        "title": "Software Validation"
+    },
+    {
+        "code": "CS712",
+        "description": "\nStochastic processes are ways of quantifying the dynamic relationship of sequences of random events.  This course will expose the participants to standard concepts and methods of stochastic modeling, as well as the rich diversity of applications.  Topics include, but not limited to, Markov chains in discrete and continuous time, Poisson processes, renewal theory and branching processes.\n",
+        "hours": "3 Credits",
+        "title": "Stochastic Modeling"
+    },
+    {
+        "code": "CS713",
+        "description": "\nThis course covers current problems and state of computations in bimolecular modeling, molecular mechanics including force field origin, composition, and evaluation techniques, and simulation techniques including conformational sampling, geometry optimization, molecular dynamics and Brownian dynamics.\n",
+        "hours": "3 Credits",
+        "title": "Modeling and Simulation in Computational Biology"
+    },
+    {
+        "code": "CS714",
+        "description": "\nThis course serves to illustrate important principles in Monte Carlo simulation methods and to demonstrate their power in applications.  The course covers Metropolis-Hastings algorithm, Gibbs sampler, Markov Chain Monte Carlo, acceptance-rejection method, Monte Carlo integration, quasi-Monte Carlo, random walk, and random number generation.\n",
+        "hours": "3 Credits",
+        "title": "Monte Carlo Simulation"
+    },
+    {
+        "code": "CS715",
+        "description": "\nThis course combines the theory and practices in medical imaging computing with emphasis on Image Guided Therapy (IGT).  Topics include rigid registration, approximation/interpolation, segmentation, no-rigid registration, image-to-mesh conversion, real time parallel computing, software development for medical applications and solution of large sparse linear systems.\n",
+        "hours": "3 Credits",
+        "title": "Medical Image Computing and Simulation"
+    },
+    {
+        "code": "CS716",
+        "description": "\nThis course introduces the foundations and the application of computer network simulations. Topics include the modeling of real-world networks with specific devices and protocols, the identification of key performance parameters, the test of performance and the verification and optimization using comparisons of measured and simulated data.\n",
+        "hours": "3 Credits",
+        "title": "Communication Networks Simulation and Evaluation"
+    },
+    {
+        "code": "CS717",
+        "description": "\nLecture, 3 hours; 3 credits.  Prerequisite: permission of instructor.  This is a bioinformatics course for non-CS majors.  It introduces the fundamental topics in bioinformatics:  introduction to molecular biology, pair-wise sequence alignment, database search methods such as FASTA and BLAST, multiple sequence alignment, genome scale alignment, protein secondary structure prediction and protein tertiary structure prediction.\n",
+        "hours": "3 Credits",
+        "title": "Bioinformatics I  NonCS"
+    },
+    {
+        "code": "CS722",
+        "description": "\nThis course presents both the foundational and the practical aspects of modeling, analyzing, and mining of computerized data sets, including classification, regression, clustering, semi-supervised learning, structured sparsity learning, etc.  The course assignments are designed to contain both theoretical and programming components in order to train students to gain hands-on-experience.\n",
+        "hours": "3 Credits",
+        "title": "Machine Learning"
+    },
+    {
+        "code": "CS723",
+        "description": "\nThis course introduces the fundamental knowledge in bioinformatics and the current advances in selected directions.  The topics include:  fundamental concepts and experimental techniques in molecular biology, computational methods in genomic sequence comparison and analysis, and computational methods in molecular structural modeling.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Bioinformatics"
+    },
+    {
+        "code": "CS724",
+        "description": "\nThis course introduces parallel programming principles and has emphasis on hands-on programming and deploying high-performance computing applications for different science and engineering disciplines. Topics includes programming on NVIDIA GPU, efficient GPU accelerated implementation of: (a) computation intensive kernels (b) few sample large scale financial and molecular dynamics simulations, and (c) large scale data analytics and mining.\n",
+        "hours": "3 Credits",
+        "title": "High Performance Computing with GPU for Large Scale Simulation"
+    },
+    {
+        "code": "CS725",
+        "description": "\nThis course covers the theory and application of information visualization.  Research on graph design, visual perception, cognition, and interaction will be covered.  Research and practical techniques for the display of graphs, networks, hierarchies, text, and complex multivariate data will be addressed.  Course projects will require the development of interactive web-based visualizations.\n",
+        "hours": "3 Credits",
+        "title": "Information Visualization"
+    },
+    {
+        "code": "CS726",
+        "description": "\nThis course links the fundamental concepts and algorithms of graphs with the actual biological problems.  Various biological problems will be selected to discuss the formulation of the graph, the graph algorithms, and the performance analysis.\n",
+        "hours": "3 Credits",
+        "title": "Application of Graphs in Bioinformatics"
+    },
+    {
+        "code": "CS734",
+        "description": "\nLaboratory work required. Theory and engineering of information retrieval in the context of developing web-based search engines. Topics include issues related to crawling, ranking, query processing, retrieval models, evaluation, clustering, machine learning, and other aspects related to building web search engines. Students will perform a mix of hands-on development and coding, as well as theoretical exploration of the research literature.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Information Retrieval"
+    },
+    {
+        "code": "CS744",
+        "description": "\nLecture 3 hours; 3 credits.  The course will introduce some of the commonly used techniques in the performance evaluation of computing systems.  Students will be exposed to a variety of analytical and simulation tools used in this field.  The applicability of the techniques will be illustrated through case studies.\n",
+        "hours": "3 Credits",
+        "title": "Performance Evaluation of Computer Systems and Networks"
+    },
+    {
+        "code": "CS751",
+        "description": "\nLecture 3 hours; 3 credits.   Digital Libraries (DLs) are an increasingly popular research area that encompass more than traditional information retrieval or database methods and techniques.  The course will cover a brief history of DL development, with emphasis on World Wide Web implementations.  Case studies will be performed on various DLs.  The class will focus heavily on project work.  At the end of the course, students will be prepared to develop, evaluate, or apply digital library technologies in their work environment.  Topics include: Repositories; Distributed Searching; Metadata Harvesting; Preservation, Reference Linking and Citation Analysis.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Digital Libraries"
+    },
+    {
+        "code": "CS752",
+        "description": "\nLecture 3 hours; 3 credits.  This course looks at fundamental issues in the area of wireless networks and mobile computing.  The course material is organized around the following broad themes: Basics of mobile and wireless communications; Cellular communications:  Bandwidth allocation and reservation, Location management, Call admission strategies and QoS issues: Mobile IP and Mobile TCP; Mobile Ad-Hoc NETworks (MANET): Routing, Multimedia and QoS support; Sensor networks.\n",
+        "hours": "3 Credits",
+        "title": "Wireless Communications and Mobile Computing"
+    },
+    {
+        "code": "CS771",
+        "description": "\nLecture 3 hours; 3 credits.  This course covers principles, design decisions, design techniques, policies, and mechanisms in the design and implementation of general-purpose multiprogramming and distributed operating systems.  Topics to be covered include:  concurrency, interprocess communication, threads, access control, protection and authentication, multiprocessor operating systems.\n",
+        "hours": "3 Credits",
+        "title": "Advanced Operating Systems"
+    },
+    {
+        "code": "CS772",
+        "description": "\nLecture 3 hours; 3 credits.  This course deals with the basic protocols, techniques and programming issues to secure internet applications and traffic.  Topics include: Cryptographic algorithms tools and concepts; Secure Socket Layer (SSL), Transport Layer Security (TLS) and IPSec protocols; Securing Internet Applications: HTTP, SMTP, UDP and multicast; Hands on socket programming using C and Java.\n",
+        "hours": "3 Credits",
+        "title": "Network Security: Concepts, Protocols and Programming"
+    },
+    {
+        "code": "CS773",
+        "description": "\nIntroduction to data mining; Algorithms including naive Bayes, Decision Trees and Rules, Association Rules, Linear classification, and Clustering; Cross validation, Lift charts, ROC Curves; SVM, Bayesian networks, K-means clustering; Data transformation; PCA; Ensemble Learning; Application of data mining to security and privacy including authentication, authorization, and intrusion detection; Privacy-preserving data mining. Prerequisite: CS\u00a0471 and CS\u00a0455 or CS\u00a0555.\n",
+        "hours": "3 Credits",
+        "title": "Data Mining and Security"
+    },
+    {
+        "code": "CS775",
+        "description": "\nLecture 3 hours; 3 credits. This course deals with the design issues in distributed computing systems and will discuss the motivation for building distributed systems, various algorithms and protocols proposed in literature for system operability, and some of the experimental distributed systems that have been built in the last few years.  Special attention will be paid to the fault-tolerant and performance aspects of these systems.  The project component of this course will enable students to get hands-on experience of implementing some of the distributed algorithms.\n",
+        "hours": "3 Credits",
+        "title": "Distributed Systems"
+    },
+    {
+        "code": "CS778",
+        "description": "\nLecture 3 hours; 3 credits.  This course will introduce some of the technical foundations for capturing, transmitting, presentation and storage of continuous multimedia.  Students will explore the applications of multimedia and techniques in some areas such as group collaboration and network based education.  Topics covered include: Architectures and issues for distributed Multimedia Systems Support for real-time multimedia applications, quality-of-service, synchronization, and presentation of multiple multimedia streams.\n",
+        "hours": "3 Credits",
+        "title": "Networked Multimedia Systems"
+    },
+    {
+        "code": "CS779",
+        "description": "\nLecture 3 hours; 3 credits.  Understanding the design, implementation and performance of network protocols using  TCP/IP protocol suite as a case study.  The students will have hands-on experience on low-level tools and will access and study the source code of these protocols and writing networking software applications.  Topics include:  socket interface, IPv4 and IPv6, routing, UDP, multicasting and IGMP, TCP specification, implementation and performance.\n",
+        "hours": "3 Credits",
+        "title": "Design of Network Protocols"
+    },
+    {
+        "code": "CS791",
+        "description": "\n1-3 credits.  Prerequisite: permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Graduate Seminar"
+    },
+    {
+        "code": "CS795",
+        "description": "\nTopics in computer science.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS796",
+        "description": "\n1-3 credits. Prerequisite: permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS810",
+        "description": "\nLecture 3 hours; 3 credits. Prerequisite:  CS\u00a0600. Laboratory work required.  The course will involve solving two or three comprehensive projects anchored in computer science and engineering.  Possible topics for projects include: computational issues in network design and analysis; scheduling problems and applications; digital geometry and pattern recognition; image processing and computer vision applications; robotics.  The basic thrust is to demonstrate the usefulness and power of algorithm design and analysis in solving real-life problems.\n",
+        "hours": "3 Credits",
+        "title": "Applied Algorithms"
+    },
+    {
+        "code": "CS811",
+        "description": "\nLecture 3 hours; 3 credits.  Laboratory work required.  The most common path to improved confidence in a program is via testing.  This course explores divergent and sometimes conflicting approaches to conducting testing and to measuring the resulting confidence.  Topics include the theoretical basis for testing, common testing methods, statistical measures of program reliability, and the relationship between correctness and reliability.\n",
+        "hours": "3 Credits",
+        "title": "Software Validation"
+    },
+    {
+        "code": "CS812",
+        "description": "\nStochastic processes are ways of quantifying the dynamic relationship of sequences of random events.  This course will expose the participants to standard concepts and methods of stochastic modeling, as well as the rich diversity of applications.  Topics include, but not limited to, Markov chains in discrete and continuous time, Poisson processes, renewal theory and branching processes.\n",
+        "hours": "3 Credits",
+        "title": "Stochastic Modeling"
+    },
+    {
+        "code": "CS813",
+        "description": "\nThis course covers current problems and state of computations in bimolecular modeling, molecular mechanics including force field origin, composition, and evaluation techniques, and simulation techniques including conformational sampling, geometry optimization, molecular dynamics and Brownian dynamics.\n",
+        "hours": "3 Credits",
+        "title": "Modeling and Simulation in Computational Biology"
+    },
+    {
+        "code": "CS814",
+        "description": "\nThis course serves to illustrate important principles in Monte Carlo simulation methods and to demonstrate their power in applications.  The course covers Metropolis-Hastings algorithm, Gibbs sampler, Markov Chain Monte Carlo, acceptance-rejection method, Monte Carlo integration, quasi-Monte Carlo, random walk, and random number generation.\n",
+        "hours": "3 Credits",
+        "title": "Monte Carlo Simulation"
+    },
+    {
+        "code": "CS815",
+        "description": "\nThis course combines the theory and practices in medical imaging computing with emphasis on Image Guided Therapy (IGT).  Topics include rigid registration, approximation/interpolation, segmentation, no-rigid registration, image-to-mesh conversion, real time parallel computing, software development for medical applications and solution of large sparse linear systems.\n",
+        "hours": "3 Credits",
+        "title": "Medical Image Computing and Simulation"
+    },
+    {
+        "code": "CS816",
+        "description": "\nThis course introduces the foundations and the application of computer network simulations. Topics include the modeling of real-world networks with specific devices and protocols, the identification of key performance parameters, the test of performance and the verification and optimization using comparisons of measured and simulated data.\n",
+        "hours": "3 Credits",
+        "title": "Communication Networks Simulation and Evaluation"
+    },
+    {
+        "code": "CS822",
+        "description": "\nThis course presents both the foundational and the practical aspects of modeling, analyzing, and mining of computerized data sets, including classification, regression, clustering, semi-supervised learning, structured sparsity learning, etc.  The course assignments are designed to contain both theoretical and programming components in order to train students to gain hands-on-experience.\n",
+        "hours": "3 Credits",
+        "title": "Machine Learning"
+    },
+    {
+        "code": "CS823",
+        "description": "\nThis course introduces the fundamental knowledge in bioinformatics and the current advances in selected directions.  The topics include:  fundamental concepts and experimental techniques in molecular biology, computational methods in genomic sequence comparison and analysis, and computational methods in molecular structural modeling.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Bioinformatics"
+    },
+    {
+        "code": "CS824",
+        "description": "\nThis course introduces parallel programming principles and has emphasis on hands-on programming and deploying high-performance computing applications for different science and engineering disciplines. Topics includes programming on NVIDIA GPU, efficient GPU accelerated implementation of: (a) computation intensive kernels (b) few sample large scale financial and molecular dynamics simulations, and (c) large scale data analytics and mining.\n",
+        "hours": "3 Credits",
+        "title": "High Performance Computing with GPU for Large Scale Simulation"
+    },
+    {
+        "code": "CS825",
+        "description": "\nThis course covers the theory and application of information visualization.  Research on graph design, visual perception, cognition, and interaction will be covered.  Research and practical techniques for the display of graphs, networks, hierarchies, text, and complex multivariate data will be addressed.  Course projects will require the development of interactive web-based visualizations.\n",
+        "hours": "3 Credits",
+        "title": "Information Visualization"
+    },
+    {
+        "code": "CS826",
+        "description": "\nThis course links the fundamental concepts and algorithms of graphs with the actual biological problems.  Various biological problems will be selected to discuss the formulation of the graph, the graph algorithms, and the performance analysis.\n",
+        "hours": "3 Credits",
+        "title": "Application of Graphs in Bioinformatics"
+    },
+    {
+        "code": "CS834",
+        "description": "\nLaboratory work required. Theory and engineering of information retrieval in the context of developing web-based search engines. Topics include issues related to crawling, ranking, query processing, retrieval models, evaluation, clustering, machine learning, and other aspects related to building web search engines. Students will perform a mix of hands-on development and coding, as well as theoretical exploration of the research literature.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Information Retrieval"
+    },
+    {
+        "code": "CS844",
+        "description": "\nLecture 3 hours; 3 credits.  The course will introduce some of the commonly used techniques in the performance evaluation of computing systems.  Students will be exposed to a variety of analytical and simulation tools used in this field.  The applicability of the techniques will be illustrated through case studies.\n",
+        "hours": "3 Credits",
+        "title": "Performance Evaluation of Computer Systems and Networks"
+    },
+    {
+        "code": "CS851",
+        "description": "\nLecture 3 hours; 3 credits.   Digital Libraries (DLs) are an increasingly popular research area that encompass more than traditional information retrieval or database methods and techniques.  The course will cover a brief history of DL development, with emphasis on World Wide Web implementations.  Case studies will be performed on various DLs.  The class will focus heavily on project work.  At the end of the course, students will be prepared to develop, evaluate, or apply digital library technologies in their work environment.  Topics include: Repositories; Distributed Searching; Metadata Harvesting; Preservation, Reference Linking and Citation Analysis.\n",
+        "hours": "3 Credits",
+        "title": "Introduction to Digital Libraries"
+    },
+    {
+        "code": "CS852",
+        "description": "\nLecture 3 hours; 3 credits.  This course looks at fundamental issues in the area of wireless networks and mobile computing.  The course material is organized around the following broad themes: Basics of mobile and wireless communications; Cellular communications:  Bandwidth allocation and reservation, Location management, Call admission strategies and QoS issues: Mobile IP and Mobile TCP; Mobile Ad-Hoc NETworks (MANET): Routing, Multimedia and QoS support; Sensor networks.\n",
+        "hours": "3 Credits",
+        "title": "Wireless Communications and Mobile Computing"
+    },
+    {
+        "code": "CS871",
+        "description": "\nLecture 3 hours; 3 credits.  This course covers principles, design decisions, design techniques, policies, and mechanisms in the design and implementation of general-purpose multiprogramming and distributed operating systems.  Topics to be covered include:  concurrency, interprocess communication, threads, access control, protection and authentication, multiprocessor operating systems.\n",
+        "hours": "3 Credits",
+        "title": "Advanced Operating Systems"
+    },
+    {
+        "code": "CS872",
+        "description": "\nLecture 3 hours; 3 credits.  This course deals with the basic protocols, techniques and programming issues to secure internet applications and traffic.  Topics include: Cryptographic algorithms tools and concepts; Secure Socket Layer (SSL), Transport Layer Security (TLS) and IPSec protocols; Securing Internet Applications: HTTP, SMTP, UDP and multicast; Hands on socket programming using C and Java.\n",
+        "hours": "3 Credits",
+        "title": "Network Security: Concepts, Protocols and Programming"
+    },
+    {
+        "code": "CS873",
+        "description": "\nIntroduction to data mining; Algorithms including naive Bayes, Decision Trees and Rules, Association Rules, Linear classification, and Clustering; Cross validation, Lift charts, ROC Curves; SVM, Bayesian networks, K-means clustering; Data transformation; PCA; Ensemble Learning; Application of data mining to security and privacy including authentication, authorization, and intrusion detection; Privacy-preserving data mining. Prerequisite: CS\u00a0471 and CS\u00a0455 or CS\u00a0555.\n",
+        "hours": "3 Credits",
+        "title": "Data Mining and Security"
+    },
+    {
+        "code": "CS875",
+        "description": "\nLecture 3 hours; 3 credits. This course deals with the design issues in distributed computing systems and will discuss the motivation for building distributed systems, various algorithms and protocols proposed in literature for system operability, and some of the experimental distributed systems that have been built in the last few years.  Special attention will be paid to the fault-tolerant and performance aspects of these systems.  The project component of this course will enable students to get hands-on experience of implementing some of the distributed algorithms.\n",
+        "hours": "3 Credits",
+        "title": "Distributed Systems"
+    },
+    {
+        "code": "CS878",
+        "description": "\nLecture 3 hours; 3 credits.  This course will introduce some of the technical foundations for capturing, transmitting, presentation and storage of continuous multimedia.  Students will explore the applications of multimedia and techniques in some areas such as group collaboration and network based education.  Topics covered include: Architectures and issues for distributed Multimedia Systems Support for real-time multimedia applications, quality-of-service, synchronization, and presentation of multiple multimedia streams.\n",
+        "hours": "3 Credits",
+        "title": "Networked Multimedia Systems"
+    },
+    {
+        "code": "CS879",
+        "description": "\nLecture 3 hours; 3 credits.  Understanding the design, implementation and performance of network protocols using  TCP/IP protocol suite as a case study.  The students will have hands-on experience on low-level tools and will access and study the source code of these protocols and writing networking software applications.  Topics include:  socket interface, IPv4 and IPv6, routing, UDP, multicasting and IGMP, TCP specification, implementation and performance.\n",
+        "hours": "3 Credits",
+        "title": "Design of Network Protocols"
+    },
+    {
+        "code": "CS891",
+        "description": "\n1-3 credits.  Prerequisite: permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Graduate Seminar"
+    },
+    {
+        "code": "CS895",
+        "description": "\nTopics in computer science.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS896",
+        "description": "\n1-3 credits. Prerequisite: permission of the instructor.\n",
+        "hours": "1-3 Credits",
+        "title": "Topics in Computer Science"
+    },
+    {
+        "code": "CS899",
+        "description": "\n1-9 credits.  Departmental permission required.\n",
+        "hours": "1-9 Credits",
+        "title": "Doctoral Dissertation"
+    },
+    {
+        "code": "CS999",
+        "description": "\n1 credit.  A one-hour pass/fail registration required of all graduate students to maintain active status during the final semester prior to graduation.  After successfully passing the candidacy examination, all doctoral students are required to be registered for at least one graduate credit each term until the degree is complete.\n",
+        "hours": "1 Credit",
+        "title": "Computer Science 999"
+    }
 ]
