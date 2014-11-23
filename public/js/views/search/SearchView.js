@@ -41,15 +41,19 @@ define([
       var term = this.$("#term").val();
       var dropdown = this.$("#dropdown").val();
       var body = this.$el.html(SearchTemplate);
-      console.log(self.Courses.where({"avaliableSeats":"0"}));
+      console.log(window.CorsicaApp.collections.courseCollection);
       // console.log("searching!");
-      _.each(self.Courses.where({"crn":term}), function(data) {
-         var item = new SearchItemView({model:data.attributes});
+      _.each(window.CorsicaApp.collections.courseCollection.where({"crn":term}), function(data) {
+         var item = new SearchItemView(data);
          body.find("#course_list").append(item.render().el);
       });
     },
     render: function () {
-      return this.$el.html(SearchTemplate);
+      this.$el.html(SearchTemplate);
+      $(document).ready(function(){
+           //Stanley was here
+          $('.username').text(foo.firstName + " " + foo.lastName);
+      });
     }
   });
 

@@ -15,7 +15,6 @@ define([
   var DashboardItemView = Backbone.View.extend({
     //el: $("#course_list"),
     className: "course row",
-    model: new Course(),
 
     events: {
       // This delegates event handlers.
