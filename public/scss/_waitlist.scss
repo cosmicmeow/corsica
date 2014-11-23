@@ -7,6 +7,15 @@
 		position:relative;
 	}
 
+	.white{
+		background-color:#fff;
+
+	}
+
+	.brown{
+		background-color:#E7E7E7;
+	}
+
 	.content_team{
 		text-align: left;
 		position: absolute;
@@ -31,29 +40,31 @@
 		color:#BD2132;
 	}
 
-	.list{
+	h1{
+		font-size:26px;
+	}
 
-		.header{
-			background-color: #fff;
-			background-image: none;
-			height: 60px;
-			line-height: 60px;
-			text-align: left;
-			font-size: 30px;
-		}
+	.list{
 
 		.course.head{
 			background-color:#F5F0E7;
 			font-size:20px;
-			border:0;
+			border: 1px solid #d4d4d4;
 		}
 		
 		.course{
+			background-color:#fff;
+			padding: 10px 0;
 			margin:0;
 			text-align:left;
 			font-size:16px;
-			height:50px;
-			line-height:50px;
+			border: 1px solid #d4d4d4;
+			border-top:0;
+
+			.control{
+				cursor:pointer;
+				color:#930E00;
+			}
 		}
 	}
 

@@ -1,5 +1,6 @@
 var _ = require("lodash");
 var data = require('../data/fall_2014');
+var classData = require('../data/classes');
 module.exports = function(app, passport) {
 var course = function (info){
 	return {
@@ -52,19 +53,24 @@ var course = function (info){
 		res.redirect('/');
 	});
 
-app.get('/data', function(req, res) {
-				var courses = [];
-				var klass;
-				_.each(data.main, function(info){
-					klass = course(info);
-					if (klass.status === "shut"){
-						klass.description = klass.description;
-						klass.courseNum = "CS" + klass.courseNum;
+	app.get('/data', function(req, res) {
+		var courses = [];
+		var klass;
+		_.each(data.main, function(info){
+			klass = course(info);
+			if (klass.status === "shut"){
+				klass.description = klass.description;
+				klass.courseNum = "CS" + klass.courseNum;
+				_.find(classData, function  (listing) {
+					if(listing.code === klass.courseNum){
+						klass.listing = listing;
 						courses.push(klass);
 					}
-				});
-				res.status(200).send(courses);
-});
+				}) 
+			}
+		});
+		res.status(200).send(courses);
+	});
 
 
 // =============================================================================

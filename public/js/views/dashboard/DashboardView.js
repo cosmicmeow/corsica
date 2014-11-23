@@ -61,7 +61,8 @@ define([
               crn: model.get('crn'),
               i_user: model.get('i_user'),
               capacity: model.get('capacity'),
-              id: model.cid
+              id: model.cid,
+              listing: model.get('listing')
             };
 
             // Create a new row

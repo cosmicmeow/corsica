@@ -1,13 +1,85 @@
 <div id="waitlist_view">
 
-  <!-- Header ================================================== -->
-  <div class="header header-team">
-    <div class="container">
-      <div class="content_team">
-        <div class="message">Fall 2014: <span class="coursename"><%= data.courseNum%> <%= data.description %></span></div>
-      </div>
-    </div>
-  </div>
+	<!-- Header ================================================== -->
+	<div class="header header-team">
+		<div class="container">
+			<div class="content_team">
+			<div class="message">Fall 2014: <span class="coursename"><%= data.courseNum%> <%= data.listing.title %></span></div>
+			</div>
+		</div>
+	</div>
 
+	<div class="wrapper white" style="padding-top:50px">
+		<div class="container">
+			<h1>Information:</h1>
+			<p><%= data.listing.hours%></p>
+			<p><%= data.listing.description%></p>
+		</div>
+	</div>
+
+	<div class="list wrapper" style="padding-top:0px;text-align:center;border-bottom:1px solid #d4d4d4">
+		<div class="container">
+		  	<!-- Three columns of text below the header -->
+		  	<div class="row">
+		        <div class="col-sm-12">
+		          <div class="course head row">
+		            <div class="course_name_header col-sm-4">Course</div>
+		            <div class="course_crn col-sm-1">CRN</div>
+		            <div class="course_instructor col-sm-2">Instructor</div>
+		            <div class="course_stats col-sm-4">Status</div>
+		          </div>
+		        </div>
+			</div>
+
+			<div class="row">
+		        <div class="col-sm-12">
+					<div class="course row">
+						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+							<span class="course_num"><%= data.courseNum %>: </span>
+							<span class="course_name"><%= data.listing.title %></span>
+						</div>
+						<div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
+						<div class="col-sm-2"><span class="course_instructor"><%= data.i_user %></span></div>
+						<div class="col-sm-4"><span class="course_stat"><%= data.capacity %></span></div>
+						<div class="col-sm-1 control">X</div>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="list wrapper brown" style="padding-top:50px;">
+		<div class="container">
+			<h1>Current Waitlist:</h1>
+		  	<!-- Three columns of text below the header -->
+		  	<div class="row">
+		        <div class="col-sm-12">
+		          <div class="course head row">
+		            <div class="course_name_header col-sm-4">Student</div>
+		            <div class="course_crn col-sm-1">ID</div>
+		            <div class="course_instructor col-sm-2">Email</div>
+		            <div class="course_stats col-sm-4">Phone #</div>
+		          </div>
+		        </div>
+			</div>
+
+			<div class="row">
+		        <div class="col-sm-12">
+					<div class="course row">
+						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+							<span class="course_num"><%= data.courseNum %></span>
+							<span class="course_name"><%= data.description %></span>
+						</div>
+						<div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
+						<div class="col-sm-2"><span class="course_instructor"><%= data.i_user %></span></div>
+						<div class="col-sm-4"><span class="course_stat"><%= data.capacity %></span></div>
+						<div class="col-sm-1 control">X</div>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
 
 </div>
