@@ -10,6 +10,7 @@ define([
 
     render: function(crn){
 
+      $(window).scrollTop(0);
       var self = this;
 
       console.log(crn);

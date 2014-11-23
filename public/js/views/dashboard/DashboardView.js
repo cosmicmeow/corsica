@@ -89,17 +89,17 @@ define([
           });
         */
 
-        $(window).scrollTop(1);
+        $(window).scrollTop(0);
 
 
         $(document).ready(function(){
+          /*
           $.each($(".course_name"), function(){
             var text = $(this).text();
             if (text.length > 30){
               $(this).text(text.substring(0, 30) + "..."); 
             }
-          });
-             //Stanley was here
+          });*/
             $('.username').text(foo.firstName + " " + foo.lastName);
         });
 
