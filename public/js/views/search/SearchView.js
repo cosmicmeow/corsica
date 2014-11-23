@@ -4,48 +4,59 @@ define([
   'underscore',
   'backbone',
   'text!templates/search/searchTemplate.html',
-  'views/dashboard/DashboardItemView',
+  'jst!templates/search/searchItemTemplate.html',
   'collections/courses/CourseCollection',
-  'models/course/Course'
+  'models/course/Course',
 ], function($, _, Backbone, SearchTemplate, SearchItemView, CourseCollection, Course){
 
   //Handlebars
   _.templateSettings = {
-  interpolate: /\{\{(.+?)\}\}/g
+    interpolate: /\{\{(.+?)\}\}/g
   };
-  var DashboardView = Backbone.View.extend({
+
+  var SearchView = Backbone.View.extend({
     el: $("#page"),
-    initialize: function() {
-      var self = this;
-
-      var Courses = new CourseCollection();
-      Courses.fetch({
-        success: function(err,data) {
-
-        _.each(data, function(data) {
-          var aCourse = new Course();
-          aCourse.set(data);
-          Courses.add(aCourse);
-          // var item = new SearchItemView({model:data});
-          // body.find("#course_list").append(item.render().el);
-        });
-        this.Courses = Courses;
-      }});
-    },
-    modelView: SearchItemView,
+    //modelView: SearchItemView,
     collection: new CourseCollection(),
     events: {
-      "click #search": "search"
+      "click #search": "search",
+      "click .waitlist": "waitlistDetail"
     },
     search: function () {
+      var self = this;
+
       var term = this.$("#term").val();
       var dropdown = this.$("#dropdown").val();
       var body = this.$el.html(SearchTemplate);
-      console.log(window.CorsicaApp.collections.courseCollection);
-      // console.log("searching!");
-      _.each(window.CorsicaApp.collections.courseCollection.where({"crn":term}), function(data) {
-         var item = new SearchItemView(data);
-         body.find("#course_list").append(item.render().el);
+
+      _.each(window.CorsicaApp.collections.courseCollection.where({"crn":term}), function(model) {
+
+        var courseRow = self.$el.find("#course_list");
+        var row;
+
+        var course_data = {
+          courseNum: model.get('courseNum'),
+          description: model.get('description'),
+          crn: model.get('crn'),
+          i_user: model.get('i_user'),
+          capacity: model.get('capacity'),
+          id: model.cid,
+          listing: model.get('listing')
+        };
+
+        // Create a new row
+        row = SearchItemView({
+          data: course_data,
+          _: _
+        });
+
+        // Add this new row to the screen
+        courseRow.append(row);
+        $(document).ready(function(){
+            $('.username').text(foo.firstName + " " + foo.lastName);
+        });
+
+
       });
     },
     render: function () {
@@ -58,6 +69,7 @@ define([
   });
 
   //DashboardView.render();
-  return DashboardView;
+  return SearchView;
 
 });
+
