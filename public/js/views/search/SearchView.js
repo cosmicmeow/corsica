@@ -29,40 +29,45 @@ define([
       var dropdown = this.$("#dropdown").val();
       var body = this.$el.html(SearchTemplate);
 
-      _.each(window.CorsicaApp.collections.courseCollection.where({"crn":term}), function(model) {
+      window.CorsicaApp.collections.courseCollection.each(function(model) {
+        var pattern = new RegExp( $.trim( term ).replace( / /gi, '|' ), "i");
+        _(model.attributes).any(function(attr, term) {
+            if(!pattern.test(attr))
+                return false;
 
-        var courseRow = self.$el.find("#course_list");
-        var row;
+            var courseRow = self.$el.find("#course_list");
+            var row;
 
-        var course_data = {
-          courseNum: model.get('courseNum'),
-          description: model.get('description'),
-          crn: model.get('crn'),
-          i_user: model.get('i_user'),
-          capacity: model.get('capacity'),
-          id: model.cid,
-          listing: model.get('listing')
-        };
+            var course_data = {
+              courseNum: model.get('courseNum'),
+              description: model.get('description'),
+              crn: model.get('crn'),
+              i_user: model.get('i_user'),
+              capacity: model.get('capacity'),
+              id: model.cid,
+              listing: model.get('listing')
+            };
 
-        // Create a new row
-        row = SearchItemView({
-          data: course_data,
-          _: _
+            // Create a new row
+            row = SearchItemView({
+              data: course_data,
+              _: _
+            });
+
+            // Add this new row to the screen
+            courseRow.append(row);
+            $(document).ready(function(){
+                $('.username').text(foo.firstName + " " + foo.lastName);
+            });
+
+            return true;
         });
-
-        // Add this new row to the screen
-        courseRow.append(row);
-        $(document).ready(function(){
-            $('.username').text(foo.firstName + " " + foo.lastName);
-        });
-
-
       });
+
     },
     render: function () {
       this.$el.html(SearchTemplate);
       $(document).ready(function(){
-           //Stanley was here
           $('.username').text(foo.firstName + " " + foo.lastName);
       });
     }
