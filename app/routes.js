@@ -1,30 +1,7 @@
 var _ = require("lodash");
-var data = require('../data/fall_2014');
-var classData = require('../data/classes');
+
+
 module.exports = function(app, passport) {
-var course = function (info){
-	return {
-		status: info[0],
-		capacity: info[1],
-		avaliableSeats: info[2],
-		prop: info[3],
-		courseNum: info[4].toUpperCase(),
-		crn: info[5],
-		note: info[6],
-		description: info[7],
-		days: info[8],
-		location: info[9],
-		instructor: info[10],
-		i_user: info[11],
-		unknown1: info[12],
-		unknown2: info[13],
-		unknown3: info[14],
-		unknown4: info[15],
-		unknown5: info[16],
-		unknown6: info[17],
-		unknown7: info[18]
-	};
-};
 // normal routes ===============================================================
 
 	// show the home page (will also have our login links)
@@ -51,25 +28,6 @@ var course = function (info){
 	app.get('/logout', function(req, res) {
 		req.logout();
 		res.redirect('/');
-	});
-
-	app.get('/data', function(req, res) {
-		var courses = [];
-		var klass;
-		_.each(data.main, function(info){
-			klass = course(info);
-			if (klass.status === "shut"){
-				klass.description = klass.description;
-				klass.courseNum = "CS" + klass.courseNum;
-				_.find(classData, function  (listing) {
-					if(listing.code === klass.courseNum){
-						klass.listing = listing;
-						courses.push(klass);
-					}
-				}) 
-			}
-		});
-		res.status(200).send(courses);
 	});
 
 
