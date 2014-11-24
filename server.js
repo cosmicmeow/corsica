@@ -13,6 +13,7 @@ var passport = require('passport');
 var flash    = require('connect-flash');
 var session      = require('express-session');
 var configDB = require('./config/database.js');
+
 require('./config/passport')(passport); // pass passport for configuration
 dotenv.load();
 //var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
@@ -40,6 +41,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./app/api.js')(app, passport);
+
 app.use("/", express.static(path.join(__dirname, '/public')));
 app.use('/client', function(req, res, next) {
     if (req.user === undefined && req.path.indexOf('/client') === 0)
@@ -49,8 +52,9 @@ app.use('/client', function(req, res, next) {
     }
     next();
 });
+
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+    var err = new Error('Not Found | No such route');
     err.status = 404;
     next(err);
 });
