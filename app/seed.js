@@ -32,11 +32,10 @@ var course = function (info){
 };
 
 _.each(data.main, function(info){
-  klass = course(info);
-    //check if it exists already
+    var klass = new course(info);
     klass.courseNum = "CS" + klass.courseNum;
     _.find(classData, function  (listing) {
-      if(listing.code === klass.courseNum){
+      if (listing.code === klass.courseNum) {
         klass.listing = listing;
         //create a listing
         waitList = new Waitlist({
@@ -45,9 +44,21 @@ _.each(data.main, function(info){
         });
         waitList.save(function (err) {
           if (!err) {
-            return console.log("created");
+            //return console.log("created");
+            console.log("no err");
           } else {
-            return console.log(err);
+               if (err.code === 11000 || err.code === 11001) {
+                 //console.log("exists");
+                 //do check updates
+                Waitlist.findOne({"crn": klass.crn}, function (err, data) {
+                  //update if change in status
+                  if (data.info.status !== klass.status){
+                     console.log(klass.crn, data.info.status, klass.status);
+                     console.log(" a wild change has appeared");
+                  }
+                });
+              }
+            return err;
           }
         });
       }
