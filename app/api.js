@@ -69,7 +69,7 @@ module.exports = function(app, passport) {
 
   // List waitlists
   app.get('/api/waitlists', function (req, res) {
-    return Waitlist.find(function (err, waitlists) {
+    return Waitlist.find({"status":"shut"}, function (err, waitlists) {
       if (!err) {
 
         return res.send(waitlists);
