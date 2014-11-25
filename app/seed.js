@@ -53,8 +53,8 @@ _.each(data.main, function(info){
                 Waitlist.findOne({"crn": klass.crn}, function (err, data) {
                   //update if change in status
                   if (data.info.status !== klass.status){
-                    Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
-                     console.log(klass.crn, data.info.status, klass.status);
+                    Waitlist.update({"crn": klass.crn},{"info.status":klass.status, "info.capacity:": klass.capacity, "info.availableSeats": klass.availableSeats}).exec();
+                     console.log(klass.crn, data.crn, data.info.status, klass.status);
                      console.log(" a wild change has appeared");
                   }
                 });
