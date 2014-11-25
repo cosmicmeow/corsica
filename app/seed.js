@@ -11,7 +11,7 @@ var course = function (info){
   return {
     status: info[0],
     capacity: info[1],
-    avaliableSeats: info[2],
+    availableSeats: info[2],
     prop: info[3],
     courseNum: info[4].toUpperCase(),
     crn: info[5],
@@ -53,6 +53,7 @@ _.each(data.main, function(info){
                 Waitlist.findOne({"crn": klass.crn}, function (err, data) {
                   //update if change in status
                   if (data.info.status !== klass.status){
+                    Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity}).exec();
                      console.log(klass.crn, data.info.status, klass.status);
                      console.log(" a wild change has appeared");
                   }
