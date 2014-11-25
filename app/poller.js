@@ -39,10 +39,7 @@ _.each(data.main, function(info){
       if (listing.code === klass.courseNum) {
         klass.listing = listing;
         //create a listing
-        waitList = new Waitlist({
-          info : klass,
-          crn  : klass.crn
-        });
+        waitList = new Waitlist(klass);
         waitList.save(function (err) {
           if (!err) {
             //return console.log("created");
@@ -53,12 +50,12 @@ _.each(data.main, function(info){
                  //do check updates
                 Waitlist.findOne({"crn": klass.crn}, function (err, data) {
                   //update if change in status
-                  if (data.info.status !== klass.status){
-                    Waitlist.update({"crn": klass.crn},{"info.status":klass.status, "info.capacity:": klass.capacity, "info.availableSeats": klass.availableSeats}).exec();
+                  if (data.status !== klass.status){
+                    Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
                      console.log(klass.crn, data.crn, data.info.status, klass.status);
                      console.log(" a wild change has appeared");
                      //pass the array of subscribers
-                     notify(data.subscribers);
+                     //notify(data.subscribers);
                   }
                 });
               }
