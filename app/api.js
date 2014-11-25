@@ -25,6 +25,9 @@ module.exports = function(app, passport) {
   // Single update
   app.put('/api/waitlists/:id', function (req, res) {
     //{"crn":req.params.crn}
+    if (req.body.subscribers !== null){
+      req.body.subscribers = JSON.parse(req.body.subscribers);
+    }
     return Waitlist.findByIdAndUpdate(req.params.id, req.body, function (err, product) {
       //run over the properties
 
@@ -38,27 +41,6 @@ module.exports = function(app, passport) {
       });
   });
 
-  // Single update
-  app.put('/api/waitlists/subscribe/:crn', function (req, res) {
-    console.log(req.body);
-    return Waitlist.find({"crn":req.params.crn}, function (err, data) {
-      if (!err) {
-        console.log("updated");
-        return Waitlist.update({"crn":req.params.crn}, {$set:{"subscribers": JSON.parse(req.body.subscribers)}},  function (err) {
-          if (!err) {
-            console.log("updated");
-          } else {
-            console.log(err);
-          }
-          return res.send("updated");
-        });
-      } else {
-        console.log(err);
-        return res.send(err);
-      }
-      //waitlist.subscribers = req.body.subscribers;
-    });
-  });
 
   // GET to READ
 
