@@ -33,7 +33,7 @@ var course = function (info){
 
 _.each(data.main, function(info){
   klass = course(info);
-  if (klass.status === "shut"){
+    //check if it exists already
     klass.courseNum = "CS" + klass.courseNum;
     _.find(classData, function  (listing) {
       if(listing.code === klass.courseNum){
@@ -52,5 +52,4 @@ _.each(data.main, function(info){
         });
       }
     });
-  }
 });
