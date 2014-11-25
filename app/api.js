@@ -140,4 +140,27 @@ module.exports = function(app, passport) {
      });
    });
  });
+
+ //Subsciptions
+ app.post('/api/waitlists/unsubscribe', function (req,res) {
+  console.log(req.body);
+  return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
+    //save the info
+    console.log(course);
+    if (course.subscribers.indexOf(req.body.email)<0){
+      res.send("you're already unsubscribed ");
+    }
+    course.subscribers.splice(req.body.email,1);
+    return course.save(function (err) {
+      if (!err){
+        console.log("removed");
+        return res.send('success removed');
+      }
+      else {
+        console.log(err);
+        res.end('error removing');
+      }
+    });
+  });
+});
 };
