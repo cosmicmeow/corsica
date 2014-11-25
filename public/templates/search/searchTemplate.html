@@ -9,24 +9,37 @@
     </div>
   </div>
 
-  <div class="list wrapper" style="background-color:#fff;padding-top:50px;text-align:center;border-bottom:1px solid #d4d4d4">
+
+
+  <div class="list wrapper brown" style="padding:50px 0;text-align:left;border-bottom:1px solid #d4d4d4">
     <div class="container">
       <!-- Three columns of text below the header -->
       <div class="row">
         <div class="col-sm-12">
-          <div class="header">Computer Science: Fall 2014 Wait-Lists</div>
-             <div class="col-lg-offset-4 col-lg-6 col-lg-offset-4">
-                <div class="input-group">
-                  <input type="text" class="form-control" id="term" value="13411" placeholder="13411">
-                  <span class="input-group-btn">
-                  <div class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="search">Go!</button>
-                  </span>
-                </div><!-- /input-group -->
+
+          <h3>How to Search:</h3>
+          <p>You can search for a waitlist by entering CRN, Course's Numberm, Instructor's Last Name, or a keyword (e.g. Introduction).</p>
+
+          <div class="searchbar col-lg-offset-4 col-lg-6 col-lg-offset-4">
+            <div class="input-group">
+              <input type="text" class="form-control" id="term" value="" placeholder="Enter CRN, Course's Number, Instructor's Last Name, or a keyword (e.g. Introduction) ">
+              <div class="input-group-btn"><button class="btn btn-red" type="button" id="search">Go!</button></div><!-- /input-group -->
             </div><!-- /btn-group -->
-        </div><!-- /.col-lg-6 -->
-          <div id="course_list">
-          </div>
+          </div><!-- /.col-lg-6 -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list wrapper white" style="padding:50px 0;text-align:center;border-bottom:1px solid #d4d4d4">
+    <div class="container">
+      <!-- Three columns of text below the header -->
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div id="course_list"></div>
+
         </div>
       </div>
     </div>

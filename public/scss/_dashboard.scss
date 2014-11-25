@@ -15,6 +15,15 @@
 		}
 	}
 
+	.white{
+		background-color:#fff;
+
+	}
+
+	.brown{
+		background-color:#E7E7E7;
+	}
+
 	.waitlist:hover{
 		cursor:pointer;
 		color:#BD2132;
@@ -44,6 +53,22 @@
 			font-size:16px;
 			line-height:20px;
 		}
+	}
+
+	.searchbar{
+		padding: 0;
+		margin: 20px 0;
+	}
+
+	#term{
+		height: 50px;
+	}
+
+	.btn-red{
+		height: 50px;
+		min-width: 100px;
+		background-color: #930E00;
+		color: #fff;
 	}
 
 }	

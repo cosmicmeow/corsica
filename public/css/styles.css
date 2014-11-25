@@ -144,6 +144,10 @@
     padding: 0 10px 0; }
     #dashboard_view .message span {
       color: #a53e1a; }
+  #dashboard_view .white {
+    background-color: #fff; }
+  #dashboard_view .brown {
+    background-color: #E7E7E7; }
   #dashboard_view .waitlist:hover {
     cursor: pointer;
     color: #BD2132; }
@@ -164,6 +168,36 @@
     text-align: left;
     font-size: 16px;
     line-height: 20px; }
+  #dashboard_view .searchbar {
+    padding: 0;
+    margin: 20px 0; }
+  #dashboard_view #term {
+    height: 50px; }
+  #dashboard_view .btn-red {
+    height: 50px;
+    min-width: 100px;
+    background-color: #930E00;
+    color: #fff; }
+
+#footer_view ul {
+  padding: 0;
+  margin: 0; }
+#footer_view li {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+  display: block;
+  border-bottom: 1px solid #4F4241;
+  transition: all 0.2s ease-out;
+  border-left: 10px solid #292120; }
+  #footer_view li a {
+    line-height: 40px;
+    color: #EFEBE2; }
+  #footer_view li a:hover, #footer_view li a:visited, #footer_view li a:active {
+    text-decoration: none; }
+#footer_view li:hover {
+  cursor: pointer;
+  border-left: 10px solid #4F4241; }
 
 body {
   font-family: 'Maven Pro', sans-serif;
@@ -249,9 +283,9 @@ h5 {
 
 footer {
   background-color: #292120;
-  height: 150px;
-  padding-top: 50px;
-  color: #fff; }
+  min-height: 150px;
+  padding: 50px 0;
+  color: #EFEBE2; }
 
 .withbg {
   background-image: url(../img/red_bg2.png);
