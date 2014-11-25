@@ -23,14 +23,17 @@ GET /api/waitlists
 #return the specific document if exists
 GET /api/waitlists/:id
 
-#update the document
+#update the document including
+    - whether courses can be subscribed waitlist.locked
+    - the ordering of subscribers
 PUT /api/waitlists/:id
 
-#add a user subscription to notifications
+#add a user's email  subscription to notifications
 POST /api/waitlists/subscribe
 
-#remove a user subscription notification
+#unsubscribe a user from subscription notification by posting their email
 POST /api/waitlists/unsubscribe
+
 ```
 
 Model
