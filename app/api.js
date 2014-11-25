@@ -22,32 +22,6 @@ module.exports = function(app, passport) {
     return res.send(course);
   });
 
-  // PUT to UPDATE
-
-  // Bulk update
-  app.put('/api/waitlists', function (req, res) {
-      var i, len = 0;
-      console.log("is Array req.body.waitlists");
-      console.log(Array.isArray(req.body.waitlists));
-      console.log("PUT: (waitlists)");
-      console.log(req.body.waitlists);
-      if (Array.isArray(req.body.waitlists)) {
-          len = req.body.waitlists.length;
-      }
-      for (i = 0; i < len; i++) {
-          Waitlist.update({ "_id": id }, req.body.waitlists[i][id], function (err, numAffected) {
-              if (err) {
-                  console.log("Error on update");
-                  console.log(err);
-              } else {
-                  console.log("updated num: " + numAffected);
-              }
-          });
-      }
-      return res.send(req.body.waitlists);
-  });
-  // Single update
-
   // Single update
   app.put('/api/waitlists/:id', function (req, res) {
     //{"crn":req.params.crn}
