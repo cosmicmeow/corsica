@@ -30,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
+require('./app/seed.js');
 require('./config/passport')(passport); // pass passport for configuration
 
 /** PASSPORT USER LOGIN**/
