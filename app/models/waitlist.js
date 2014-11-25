@@ -23,6 +23,7 @@ var waitlistSchema = mongoose.Schema({
   unknown4: {type: String},
   unknown5: {type: String},
   unknown6: {type: String},
+  listing:  {type: mongoose.Schema.Types.Mixed},
   subscribers: {type: Array, default: Array}, //, unique: true?
   lastModified: { type: Date, default: Date.now },
   notified: { type: Date, default: Date.now }
