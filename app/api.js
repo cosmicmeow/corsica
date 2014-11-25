@@ -1,4 +1,6 @@
 var Waitlist = require('./models/waitlist');
+var User = require('./models/user');
+var _ = require('lodash');
 
 module.exports = function(app, passport) {
   // PROFILE SECTION =========================
@@ -105,10 +107,13 @@ module.exports = function(app, passport) {
        res.send("already subscribed redirect");
      }
      course.subscribers.push(req.body.email);
-     return course.save(function (err) {
+     return course.save(function (err, data) {
        if (!err){
+         User.update({"local.email": req.body.email},{$addToSet: {"local.subscribed": course.crn }}, function (err, user) {
+           console.log(user," user records were found and updated");
+         });
          console.log("subscribed");
-         return res.send('success');
+         return res.send(data);
        }
        else {
          console.log(err);
@@ -127,11 +132,16 @@ module.exports = function(app, passport) {
     if (course.subscribers.indexOf(req.body.email)<0){
       res.send("you're already unsubscribed ");
     }
-    course.subscribers.splice(req.body.email,1);
-    return course.save(function (err) {
+
+    course.subscribers =  _.remove(course.subscribers, function (elm) {
+      if (elm !== req.body.email){
+        return elm;
+      }
+    });
+    return course.save(function (err, data) {
       if (!err){
         console.log("removed");
-        return res.send('success removed');
+        return res.send(data);
       }
       else {
         console.log(err);
