@@ -46,9 +46,26 @@ module.exports = function(app, passport) {
       }
       return res.send(req.body.waitlists);
   });
+  // Single update
 
   // Single update
-  app.put('/api/waitlists/:crn', function (req, res) {
+  app.put('/api/waitlists/:id', function (req, res) {
+    //{"crn":req.params.crn}
+    return Waitlist.findByIdAndUpdate(req.params.id, req.body, function (err, product) {
+      //run over the properties
+
+      ///product.description = req.body.description;
+        if (!err) {
+          console.log("updated");
+        } else {
+          console.log(err);
+        }
+        return res.send(product);
+      });
+  });
+
+  // Single update
+  app.put('/api/waitlists/subscribe/:crn', function (req, res) {
     console.log(req.body);
     return Waitlist.find({"crn":req.params.crn}, function (err, data) {
       if (!err) {
