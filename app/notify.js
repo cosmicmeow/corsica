@@ -21,8 +21,8 @@ var mailOptions = {
     from: 'Corsica (oratt001@gmail.com)', // sender address
     to: emails, // list of receivers
     subject: 'A spot has opened up in ' + waitlist.listing.code, // Subject line
-    text: 'A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.description + 'click here to join', // plaintext body
-    html: '<b>A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.description + 'click here to join</b>' // html body
+    text: 'A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title + 'click here to join', // plaintext body
+    html: '<b>A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title + 'click here to join</b>' // html body
 };
 
 // send mail with defined transport object
