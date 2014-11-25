@@ -6,7 +6,13 @@ define([
 ], function($, _, Backbone, waitlistTemplate){
 
   var WaitlistView = Backbone.View.extend({
+
     el: $("#page"),
+
+    events: {
+      "click .glyphicon-chevron-up": "clickUp",
+      "click .glyphicon-chevron-down": "clickDown"
+    },
 
     render: function(crn){
 
@@ -32,25 +38,63 @@ define([
                 id: model.cid,
                 listing: model.get('listing'),
                 note: model.get('note'),
-                time: model.get('days') + " " + model.get('times')
+                time: model.get('days') + " " + model.get('times'),
+                location: model.get('location')
               };
 
               //console.log(course_data);
-              // Create a new row
-              row = waitlistTemplate({
-                data: course_data
-              });
+              // Callback stuff
+              function makeTemplate (cb){
+                var row = waitlistTemplate({
+                  data: course_data
+                });
 
-              // Add this new row to the screen
-              self.$el.html(row);
+                cb(row);
+
+              }
+
+              function addToDom(row){
+                // Add this new row to the screen
+                self.$el.html(row);
+              }
               
+              makeTemplate(addToDom);
               //this.$el.html(waitlistTemplate);
             }
           });
         }
       });
 
-    } // .render
+    }, // .render
+
+    clickUp: function(e){
+      //console.log("clicked UP on: ", $(e.target).parent().parent());
+
+      var row = $(e.target).parent().parent();
+      var rows = ".course.row.col-sm-12";
+      var index = $(".course.row.col-sm-12").index(row);
+      var total = $(".course.row.col-sm-12").length;
+
+      if (index > 0){
+        $(rows + ":eq(" + index + ")").insertBefore($(rows + ":eq(" + (index - 1) + ")"));
+      }
+
+    },
+
+    clickDown: function(e){
+      //console.log("clicked DOWN on: ", $(e.target).parent().parent());
+
+      var row = $(e.target).parent().parent();
+      var rows = ".course.row.col-sm-12";
+      var index = $(".course.row.col-sm-12").index(row);
+      var total = $(".course.row.col-sm-12").length;
+
+      if (index < total){
+        $(rows + ":eq(" + index + ")").insertAfter($(rows + ":eq(" + (index + 1) + ")"));
+      }
+
+    }
+
 
   });
 

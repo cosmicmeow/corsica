@@ -7,6 +7,10 @@
 		position:relative;
 	}
 
+	.container.students{
+		text-align:right;
+	}
+
 	.white{
 		background-color:#fff;
 
@@ -31,17 +35,33 @@
 		line-height: 40px;
 
 		span{
-			color:#a53e1a;
+			color:#930E00;
 		}
-	}
-
-	.waitlist:hover{
-		cursor:pointer;
-		color:#BD2132;
 	}
 
 	h1{
 		font-size:26px;
+		text-align: left;
+	}
+
+	.btn{
+		border-radius:0;
+		min-width: 120px;
+		line-height: 40px;
+		padding: 0;
+		margin-top: 20px;
+		font-size:18px;
+	}
+
+	.btn-red{
+		transition:all 0.2s ease-out;
+		color:#fff;
+		background-color:#930E00;	
+		border-bottom:6px solid #930E00;
+	}
+
+	.btn-red:hover{
+		border-bottom:6px solid #730b00;
 	}
 
 	.list{
@@ -62,8 +82,18 @@
 			border-top:0;
 
 			.control{
-				cursor:pointer;
-				color:#930E00;
+				text-align: right;
+
+				span{
+					transition:all 0.2s ease-out;
+					color:#930E00;
+					margin:0 4px;
+				}
+
+				span:hover{
+					cursor:pointer;
+					color:#292120;
+				}
 			}
 		}
 	}

@@ -3,6 +3,8 @@
   #waitlist_view .container {
     height: 100%;
     position: relative; }
+  #waitlist_view .container.students {
+    text-align: right; }
   #waitlist_view .white {
     background-color: #fff; }
   #waitlist_view .brown {
@@ -18,12 +20,24 @@
     padding: 10px;
     line-height: 40px; }
     #waitlist_view .message span {
-      color: #a53e1a; }
-  #waitlist_view .waitlist:hover {
-    cursor: pointer;
-    color: #BD2132; }
+      color: #930E00; }
   #waitlist_view h1 {
-    font-size: 26px; }
+    font-size: 26px;
+    text-align: left; }
+  #waitlist_view .btn {
+    border-radius: 0;
+    min-width: 120px;
+    line-height: 40px;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 18px; }
+  #waitlist_view .btn-red {
+    transition: all 0.2s ease-out;
+    color: #fff;
+    background-color: #930E00;
+    border-bottom: 6px solid #930E00; }
+  #waitlist_view .btn-red:hover {
+    border-bottom: 6px solid #730b00; }
   #waitlist_view .list .course.head {
     background-color: #F5F0E7;
     font-size: 20px;
@@ -37,8 +51,14 @@
     border: 1px solid #d4d4d4;
     border-top: 0; }
     #waitlist_view .list .course .control {
-      cursor: pointer;
-      color: #930E00; }
+      text-align: right; }
+      #waitlist_view .list .course .control span {
+        transition: all 0.2s ease-out;
+        color: #930E00;
+        margin: 0 4px; }
+      #waitlist_view .list .course .control span:hover {
+        cursor: pointer;
+        color: #292120; }
 
 #navbar .navbar-red {
   background-color: #930E00; }
