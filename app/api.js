@@ -3,7 +3,7 @@ var Waitlist = require('./models/waitlist');
 module.exports = function(app, passport) {
   // PROFILE SECTION =========================
   // POST to CREATE
-  app.post('/api/courses', function (req, res) {
+  app.post('/api/waitlists', function (req, res) {
     var course;
     console.log("POST: ");
     console.log(req.body);
@@ -25,17 +25,17 @@ module.exports = function(app, passport) {
   // PUT to UPDATE
 
   // Bulk update
-  app.put('/api/courses', function (req, res) {
+  app.put('/api/waitlists', function (req, res) {
       var i, len = 0;
-      console.log("is Array req.body.courses");
-      console.log(Array.isArray(req.body.courses));
-      console.log("PUT: (courses)");
-      console.log(req.body.courses);
-      if (Array.isArray(req.body.courses)) {
-          len = req.body.courses.length;
+      console.log("is Array req.body.waitlists");
+      console.log(Array.isArray(req.body.waitlists));
+      console.log("PUT: (waitlists)");
+      console.log(req.body.waitlists);
+      if (Array.isArray(req.body.waitlists)) {
+          len = req.body.waitlists.length;
       }
       for (i = 0; i < len; i++) {
-          Waitlist.update({ "_id": id }, req.body.courses[i][id], function (err, numAffected) {
+          Waitlist.update({ "_id": id }, req.body.waitlists[i][id], function (err, numAffected) {
               if (err) {
                   console.log("Error on update");
                   console.log(err);
@@ -44,11 +44,11 @@ module.exports = function(app, passport) {
               }
           });
       }
-      return res.send(req.body.courses);
+      return res.send(req.body.waitlists);
   });
 
   // Single update
-  app.put('/api/courses/:id', function (req, res) {
+  app.put('/api/waitlists/:id', function (req, res) {
     return Waitlist.findById(req.params.id, function (err, course) {
       course.title = req.body.title;
       course.description = req.body.description;
@@ -67,12 +67,12 @@ module.exports = function(app, passport) {
 
   // GET to READ
 
-  // List courses
-  app.get('/api/courses', function (req, res) {
-    return Waitlist.find(function (err, courses) {
+  // List waitlists
+  app.get('/api/waitlists', function (req, res) {
+    return Waitlist.find(function (err, waitlists) {
       if (!err) {
 
-        return res.send(courses);
+        return res.send(waitlists);
       } else {
         return console.log(err);
       }
@@ -80,7 +80,7 @@ module.exports = function(app, passport) {
   });
 
   // Single course
-  app.get('/api/courses/:id', function (req, res) {
+  app.get('/api/waitlists/:id', function (req, res) {
     return Waitlist.findById(req.params.id, function (err, course) {
       if (!err) {
         return res.send(course);
@@ -92,8 +92,8 @@ module.exports = function(app, passport) {
 
   // DELETE to DESTROY
 
-  // Bulk destroy all courses
-  app.delete('/api/courses', function (req, res) {
+  // Bulk destroy all waitlists
+  app.delete('/api/waitlists', function (req, res) {
     Waitlist.remove(function (err) {
       if (!err) {
         console.log("removed");
@@ -105,7 +105,7 @@ module.exports = function(app, passport) {
   });
 
   // remove a single course
-  app.delete('/api/courses/:id', function (req, res) {
+  app.delete('/api/waitlists/:id', function (req, res) {
     return Waitlist.findById(req.params.id, function (err, course) {
       return course.remove(function (err) {
         if (!err) {
@@ -119,7 +119,7 @@ module.exports = function(app, passport) {
   });
 
   //Subsciptions
-  app.post('/api/courses/subscribe', function (req,res) {
+  app.post('/api/waitlists/subscribe', function (req,res) {
    console.log(req.body);
    return Waitlist.findById(req.body.id, function (err, course) {
      //save the info

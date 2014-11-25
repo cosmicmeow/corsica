@@ -3,7 +3,7 @@ define(['backbone', 'models/course/Course'], function(Backbone, CourseModel) {
     var CourseCollection = Backbone.Collection.extend({
         model: CourseModel,
         //url: config.base_url + 'assets/data/events.json',
-        url: '/data',
+        url: '/api/waitlists',
 
         initialize: function(models) {},
 

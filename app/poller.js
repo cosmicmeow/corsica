@@ -18,17 +18,17 @@ var course = function (info){
     crn: info[5],
     note: info[6],
     description: info[7],
-    days: info[8],
-    location: info[9],
-    instructor: info[10],
-    i_user: info[11],
-    unknown1: info[12],
-    unknown2: info[13],
-    unknown3: info[14],
-    unknown4: info[15],
-    unknown5: info[16],
-    unknown6: info[17],
-    unknown7: info[18]
+    times: info[8],
+    days: info[9],
+    location: info[10],
+    instructor: info[11],
+    i_user: info[12],
+    unknown1: info[13],
+    unknown2: info[14],
+    unknown3: info[15],
+    unknown4: info[16],
+    unknown5: info[17],
+    unknown6: info[18]
   };
 };
 

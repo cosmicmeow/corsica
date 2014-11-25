@@ -12,8 +12,10 @@
 	<div class="wrapper white" style="padding-top:50px">
 		<div class="container">
 			<h1>Information:</h1>
-			<p><%= data.listing.hours%></p>
+			<p><%= data.note%></p>
 			<p><%= data.listing.description%></p>
+			<p>Time: <%= data.time%><p>
+			<p>Location: <%= data.location%><p>
 		</div>
 	</div>
 
@@ -41,7 +43,7 @@
 						<div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
 						<div class="col-sm-2"><span class="course_instructor"><%= data.i_user %></span></div>
 						<div class="col-sm-4"><span class="course_stat"><%= data.capacity %></span></div>
-						<div class="col-sm-1 control">X</div>
+						<div class="col-sm-1 control"><span class="glyphicon glyphicon-remove"></span></div>
 						</div>
 					</div>
 			</div>
@@ -57,8 +59,7 @@
 		        <div class="col-sm-12">
 		          <div class="course head row">
 		            <div class="course_name_header col-sm-4">Student</div>
-		            <div class="course_crn col-sm-1">ID</div>
-		            <div class="course_instructor col-sm-2">Email</div>
+		            <div class="course_instructor col-sm-3">Email</div>
 		            <div class="course_stats col-sm-4">Phone #</div>
 		          </div>
 		        </div>
@@ -68,15 +69,65 @@
 		        <div class="col-sm-12">
 					<div class="course row">
 						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
-							<span class="course_num"><%= data.courseNum %></span>
-							<span class="course_name"><%= data.description %></span>
+							<span class="studen_name">Spongebob Squarepants</span>
 						</div>
-						<div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
-						<div class="col-sm-2"><span class="course_instructor"><%= data.i_user %></span></div>
-						<div class="col-sm-4"><span class="course_stat"><%= data.capacity %></span></div>
-						<div class="col-sm-1 control">X</div>
-						</div>
+						<div class="col-sm-3"><span class="student_email">square@pants.com</span></div>
+						<div class="col-sm-3"><span class="student_phone">757.773.9438</span></div>
+						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up"></span> <span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-remove"></span></div>
 					</div>
+				</div>
+			</div>
+
+			<div class="row">
+		        <div class="col-sm-12">
+					<div class="course row">
+						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+							<span class="studen_name">Squidward Tentacles</span>
+						</div>
+						<div class="col-sm-3"><span class="student_email">squid@music.com</span></div>
+						<div class="col-sm-3"><span class="student_phone">757.773.9438</span></div>
+						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up"></span> <span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-remove"></span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+		        <div class="col-sm-12">
+					<div class="course row">
+						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+							<span class="studen_name">Patrick Star</span>
+						</div>
+						<div class="col-sm-3"><span class="student_email">pat@rick.com</span></div>
+						<div class="col-sm-3"><span class="student_phone">757.773.9438</span></div>
+						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up"></span> <span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-remove"></span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+		        <div class="col-sm-12">
+					<div class="course row">
+						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+							<span class="studen_name">Eugene Crab</span>
+						</div>
+						<div class="col-sm-3"><span class="student_email">moneyty@money.com</span></div>
+						<div class="col-sm-3"><span class="student_phone">757.773.9438</span></div>
+						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up"></span> <span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-remove"></span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+		        <div class="col-sm-12">
+					<div class="course row">
+						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+							<span class="studen_name">Plankton ??</span>
+						</div>
+						<div class="col-sm-3"><span class="student_email">evil@mastermind.com</span></div>
+						<div class="col-sm-3"><span class="student_phone">757.773.9438</span></div>
+						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up"></span> <span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-remove"></span></div>
+					</div>
+				</div>
 			</div>
 
 		</div>

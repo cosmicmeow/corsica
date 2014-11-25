@@ -27,10 +27,12 @@ define([
                 courseNum: model.get('courseNum'),
                 description: model.get('description'),
                 crn: model.get('crn'),
-                i_user: model.get('i_user'),
+                i_user: model.get('instructor'),
                 capacity: model.get('capacity'),
                 id: model.cid,
-                listing: model.get('listing')
+                listing: model.get('listing'),
+                note: model.get('note'),
+                time: model.get('days') + " " + model.get('times')
               };
 
               //console.log(course_data);
