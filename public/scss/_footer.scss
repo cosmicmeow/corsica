@@ -1,0 +1,30 @@
+#footer_view{
+	ul{
+		padding:0;
+		margin:0;
+	}
+
+	li{
+		list-style: none;
+		margin: 0;
+		padding: 0 10px;
+		display: block;
+		border-bottom: 1px solid #4F4241;
+		transition: all 0.2s ease-out;
+		border-left:10px solid #292120;
+
+		a{
+			line-height: 40px;
+			color: #EFEBE2;
+		}
+
+		a:hover, a:visited, a:active{
+			text-decoration: none;
+		}
+	}
+
+	li:hover{
+		cursor:pointer;
+		border-left:10px solid #4F4241;
+	}
+}

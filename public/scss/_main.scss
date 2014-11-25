@@ -3,6 +3,7 @@
 @import "panel";
 @import "login";
 @import "dashboard";
+@import "footer";
 
 body{
 	font-family:'Maven Pro', sans-serif;
@@ -104,9 +105,9 @@ h5{
 
 footer{
 	background-color:#292120;
-	height:150px;
-	padding-top:50px;
-	color:#fff;
+	min-height:150px;
+	padding:50px 0;
+	color:#EFEBE2;
 }
 
 .withbg{
