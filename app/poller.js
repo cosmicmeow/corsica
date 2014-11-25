@@ -43,19 +43,20 @@ _.each(data.main, function(info){
         waitList.save(function (err) {
           if (!err) {
             //return console.log("created");
-            console.log("no err");
+            console.log("created new record for ", klass.crn);
           } else {
                if (err.code === 11000 || err.code === 11001) {
                  //console.log("exists");
                  //do check updates
-                Waitlist.findOne({"crn": klass.crn}, function (err, data) {
+                Waitlist.findOne({"crn": klass.crn}, function (err, course) {
                   //update if change in status
-                  if (data.status !== klass.status){
+                  if (course.status !== klass.status){
                     Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
-                     console.log(klass.crn, data.crn, data.status, klass.status);
+                     console.log(klass.crn, course.crn, course.status, klass.status);
                      console.log(" a wild change has appeared");
                      //pass the array of subscribers
-                     //notify(data.subscribers);
+                     console.log(course.subscribers);
+                     notify(course.subscribers);
                   }
                 });
               }

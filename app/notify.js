@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 
-module.exports.notify = function notify (emails){
+module.exports = function notify (emails){
 // create reusable transporter object using SMTP transport
 emails = emails.reduce(function(a,b){
     return a +", "+ b;
