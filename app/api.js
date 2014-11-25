@@ -121,13 +121,13 @@ module.exports = function(app, passport) {
   //Subsciptions
   app.post('/api/waitlists/subscribe', function (req,res) {
    console.log(req.body);
-   return Waitlist.findById(req.body.id, function (err, course) {
+   return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
      //save the info
      console.log(course);
-     if (course.subscribers.indexOf(req.body.user)>=0){
+     if (course.subscribers.indexOf(req.body.email)>=0){
        res.send("already subscribed redirect");
      }
-     course.subscribers.push(req.body.user);
+     course.subscribers.push(req.body.email);
      return course.save(function (err) {
        if (!err){
          console.log("subscribed");
