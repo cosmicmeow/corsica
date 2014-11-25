@@ -48,20 +48,24 @@ module.exports = function(app, passport) {
   });
 
   // Single update
-  app.put('/api/waitlists/:id', function (req, res) {
-    return Waitlist.findById(req.params.id, function (err, course) {
-      course.title = req.body.title;
-      course.description = req.body.description;
-      course.price = req.body.price;
-      produce.provider = req.body.user;
-      return course.save(function (err) {
-        if (!err) {
-          console.log("updated");
-        } else {
-          console.log(err);
-        }
-        return res.send(course);
-      });
+  app.put('/api/waitlists/:crn', function (req, res) {
+    console.log(req.body);
+    return Waitlist.find({"crn":req.params.crn}, function (err, data) {
+      if (!err) {
+        console.log("updated");
+        return Waitlist.update({"crn":req.params.crn}, {$set:{"subscribers": JSON.parse(req.body.subscribers)}},  function (err) {
+          if (!err) {
+            console.log("updated");
+          } else {
+            console.log(err);
+          }
+          return res.send("updated");
+        });
+      } else {
+        console.log(err);
+        return res.send(err);
+      }
+      //waitlist.subscribers = req.body.subscribers;
     });
   });
 
