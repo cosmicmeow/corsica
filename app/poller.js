@@ -56,7 +56,7 @@ _.each(data.main, function(info){
                      console.log(" a wild change has appeared");
                      //pass the array of subscribers
                      console.log(course.subscribers);
-                     notify(course.subscribers);
+                     notify(course);
                   }
                 });
               }
