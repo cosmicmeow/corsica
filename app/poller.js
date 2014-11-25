@@ -52,7 +52,7 @@ _.each(data.main, function(info){
                   //update if change in status
                   if (data.status !== klass.status){
                     Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
-                     console.log(klass.crn, data.crn, data.info.status, klass.status);
+                     console.log(klass.crn, data.crn, data.status, klass.status);
                      console.log(" a wild change has appeared");
                      //pass the array of subscribers
                      //notify(data.subscribers);
