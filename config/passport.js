@@ -101,6 +101,7 @@ module.exports = function(passport) {
                         newUser.local.lastName = req.body.lastName;
                         newUser.local.phoneNumber = req.body.phoneNumber;
                         newUser.local.textPreference = req.body.textPreference;
+                        newUser.local.access = req.body.access;
 
                         newUser.save(function(err) {
                             if (err)

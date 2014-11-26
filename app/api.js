@@ -1,6 +1,7 @@
 var Waitlist = require('./models/waitlist');
 var User = require('./models/user');
 var _ = require('lodash');
+var bcrypt   = require('bcrypt-nodejs');
 
 module.exports = function(app, passport) {
   // PROFILE SECTION =========================
@@ -22,6 +23,31 @@ module.exports = function(app, passport) {
       }
     });
     return res.send(course);
+  });
+
+    // PROFILE SECTION =========================
+  // POST to CREATE
+  app.post('/api/makeauser', function (req, res) {
+    var user;
+    console.log(req.body);
+    //laundry wash clean
+    user = new User({"local":{
+      password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8), null),
+      email: req.body.email,
+      firstName : req.body.firstName,
+      lastName : req.body.lastName,
+      phoneNumber : req.body.phoneNumber,
+      textPreference : req.body.textPreference,
+      access: req.body.access
+    }});
+    user.save(function (err) {
+      if (!err) {
+        return console.log("created");
+      } else {
+        return console.log(err);
+      }
+    });
+    return res.redirect("/client");
   });
 
   // Single update

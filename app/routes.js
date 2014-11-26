@@ -59,6 +59,19 @@ module.exports = function(app, passport) {
 			});
 		});
 
+		// CREATE NEW ACCOUNT =================================
+		// show the signup form
+		app.get('/newaccount', isLoggedIn, function(req, res) {
+			res.render('newaccount.ejs', { message: req.flash('signupMessage') });
+		});
+
+		// process the new account form
+		app.post('/newaccount', passport.authenticate('local-signup', {
+			successRedirect : '/client', // redirect to the secure profile section
+			failureRedirect : '/newaccount', // redirect back to the signup page if there is an error
+			failureFlash : true // allow flash messages
+		}));
+
 		// SIGNUP =================================
 		// show the signup form
 		app.get('/signup', function(req, res) {

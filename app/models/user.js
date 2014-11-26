@@ -3,7 +3,12 @@ var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
 // define the schema for our user model
-var userSchema = mongoose.Schema({
+// Acess levels:
+// student : can add/remove themselves from a waitlist
+// advisor : can modify students on the list
+// scheduler : can hide/unhide waitlist
+// admin
+var userSchema = mongoose.Schema({ 
 
     local            : {
         email           : String,
@@ -11,8 +16,9 @@ var userSchema = mongoose.Schema({
         firstName       : String,
         lastName        : String,
         phoneNumber     : String,
-        subscribed      : {type: Array, default:Array},
-        textPreference  : Boolean
+        subscribed      : {type: Array, default: Array},
+        textPreference  : Boolean, 
+        access          : {type: String, default: "student"}
     },
     facebook         : {
         id           : String,
