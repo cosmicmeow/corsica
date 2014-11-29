@@ -81,6 +81,9 @@
   color: #333;
   background-color: rgba(255, 255, 255, 0.5); }
 
+#create_user {
+  display: none; }
+
 #accordion .panel-heading {
   background-color: #930E00; }
   #accordion .panel-heading span.rotated {
@@ -151,6 +154,29 @@
   #dashboard_view .waitlist:hover {
     cursor: pointer;
     color: #BD2132; }
+  #dashboard_view .has_waitlist {
+    opacity: 0;
+    transition: opacity 0.2s ease-out; }
+  #dashboard_view .has_waitlist.show {
+    opacity: 1; }
+  #dashboard_view .no_waitlist.show {
+    opacity: 1; }
+  #dashboard_view .has_waitlist.hide {
+    display: none; }
+  #dashboard_view .no_waitlist.hide {
+    display: none; }
+  #dashboard_view .no_waitlist {
+    opacity: 0;
+    transition: opacity 0.2s ease-out; }
+    #dashboard_view .no_waitlist .col-sm-12 {
+      border: 1px dashed #dedede; }
+    #dashboard_view .no_waitlist a {
+      line-height: 47px;
+      padding: 0;
+      margin: 10px;
+      min-width: 150px;
+      max-width: 100%;
+      font-size: 20px; }
   #dashboard_view .list .header {
     background-color: #fff;
     background-image: none;

@@ -37,15 +37,80 @@ define([
 
     },
 
+    renderStudent: function(){
+
+      var self = this;
+
+      console.log("Render - Student Dashboard");
+
+      var body = this.$el.html(DashboardTemplate);
+
+      window.CorsicaApp.collections.courseCollection.fetch({
+        success: function(collection) {
+
+          if (__user.subscribed.length > 0){
+
+            collection.each(function(model) {
+              for (var i = 0; i < __user.subscribed.length; i++){
+
+                if (model.get("crn") === __user.subscribed[i]){
+
+                  var courseRow = self.$el.find("#course_list");
+                  var row;
+
+                  var course_data = {
+                    courseNum: model.get('courseNum'),
+                    description: model.get('description'),
+                    crn: model.get('crn'),
+                    i_user: model.get('instructor'),
+                    capacity: model.get('capacity'),
+                    id: model.cid,
+                    listing: model.get('listing')
+                  };
+
+                  // Create a new row
+                  row = DashboardItemTemplate({
+                    data: course_data,
+                    _: _
+                  });
+
+                  // Add this new row to the screen
+                  courseRow.append(row);
+
+                }
+              }
+             
+            });
+
+            $(".has_waitlist").addClass("show");
+            $(".no_waitlist").addClass("hide");
+
+          } else {
+            console.log("No waitlist subscribed");
+              $(".has_waitlist").addClass("hide");
+              $(".no_waitlist").addClass("show");
+
+          }
+
+          $(window).scrollTop(0);
+          $(document).ready(function(){
+              $('.username').text(__user.firstName + " " + __user.lastName);
+              $('.firstname').text(__user.firstName);
+          });
+
+        }
+
+      });
+    
+    },
+
     render: function(){
 
       var self = this;
 
-      console.log("Render - Dashboard")
+      console.log("Render - Faculty Dashboard")
 
       var body = this.$el.html(DashboardTemplate);
-
-      //window.CorsicaApp.collections.courseCollection = new CourseCollection();
 
       window.CorsicaApp.collections.courseCollection.fetch({
         success: function(collection) {
@@ -74,33 +139,15 @@ define([
             // Add this new row to the screen
             courseRow.append(row);
 
-            //console.log(model);
-            //body.find("#course_list").append(item.render().el);
           });
-
-          //console.log(collection);
-/*
-          _.each(collection, function(collection) {
-
-            console.log(collection)
-            
-            var item = new DashboardItemView({model:data});
-            body.find("#course_list").append(item.render().el);
-          });
-        */
 
         $(window).scrollTop(0);
 
 
         $(document).ready(function(){
-          /*
-          $.each($(".course_name"), function(){
-            var text = $(this).text();
-            if (text.length > 30){
-              $(this).text(text.substring(0, 30) + "..."); 
-            }
-          });*/
-            $('.username').text(foo.firstName + " " + foo.lastName);
+            $('.username').text(__user.firstName + " " + __user.lastName);
+            $(".has_waitlist").addClass("show");
+            $(".no_waitlist").addClass("hide");
         });
 
       }});

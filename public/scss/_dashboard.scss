@@ -29,6 +29,45 @@
 		color:#BD2132;
 	}
 
+	.has_waitlist{
+		opacity:0;
+		transition: opacity 0.2s ease-out;
+	}
+
+	.has_waitlist.show{
+		opacity:1;
+	}
+
+	.no_waitlist.show{
+		opacity:1;
+	}
+
+	.has_waitlist.hide{
+		display:none;
+	}
+
+	.no_waitlist.hide{
+		display:none;
+	}
+
+	.no_waitlist{
+		opacity:0;
+		transition: opacity 0.2s ease-out;
+		.col-sm-12{
+
+			border:1px dashed #dedede;
+		}
+
+		a {
+			line-height: 47px;
+			padding: 0;
+			margin: 10px;
+			min-width: 150px;
+			max-width: 100%;
+			font-size: 20px;
+		}
+	}
+
 	.list{
 
 		.header{

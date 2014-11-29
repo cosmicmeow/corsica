@@ -57,7 +57,7 @@ define([
             // Add this new row to the screen
             courseRow.append(row);
             $(document).ready(function(){
-                $('.username').text(foo.firstName + " " + foo.lastName);
+                $('.username').text(__user.firstName + " " + __user.lastName);
             });
 
             return true;
@@ -68,7 +68,7 @@ define([
     render: function () {
       this.$el.html(SearchTemplate);
       $(document).ready(function(){
-          $('.username').text(foo.firstName + " " + foo.lastName);
+          $('.username').text(__user.firstName + " " + __user.lastName);
       });
     }
   });

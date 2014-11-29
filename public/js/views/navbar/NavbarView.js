@@ -16,6 +16,10 @@ define([
     render: function(){
 
       this.$el.html(navbarTemplate);
+
+      if (__user.access === "admin"){
+        $("#create_user").show();
+      }
  
     },
 

@@ -3,7 +3,7 @@
     "opt_s": "201410",
     "main": [
         ["open", "cap:70; enroll:69;avail:1", "1", "q", "120g", "13411", " LECTURE. STUDENTS MUST ALSO REGISTER FOR A RECITATION SECTION. ", "Introduction to Information Literacy and Research", "1500-1615", "TR", "MGB 0101", "GUPTA, R", "rgupta", "0", "X", "", "dupodd", "A", "N"],
-        ["shut", "cap:30; enroll:30;avail:0", "0", "q", "120g", "18767", " NO RECITATION IS REQUIRED FOR THIS SECTION ", "Introduction to Information Literacy and Research", "1620-1735", "MW", "ECSB 3104", "GUPTA, A", "ajay", "0", "X", "", "dupeven", "A", "N"],
+        ["open", "cap:30; enroll:30;avail:0", "0", "q", "120g", "18767", " NO RECITATION IS REQUIRED FOR THIS SECTION ", "Introduction to Information Literacy and Research", "1620-1735", "MW", "ECSB 3104", "GUPTA, A", "ajay", "0", "X", "", "dupeven", "A", "N"],
         ["tiny", "cap:70; enroll:67;avail:3", "3", "q", "120g", "15306", " LECTURE. STUDENTS MUST ALSO REGISTER FOR A RECITATION SECTION. ", "Introduction to Information Literacy and Research", "1620-1735", "TR", "KAUF  0224", "GUPTA, R", "rgupta", "0", "X", "", "dupodd", "A", "N"],
         ["shut", "cap:25; enroll:25;avail:0", "0", "p", "120g", "15310", "", "INTRO INFORMATION LIT RECITATI", "0930-1020", "T", "DRAGAS 1105", "HENNEMAN, K", "", "0", "X", "", "dupeven", "C", "N"],
         ["tiny", "cap:25; enroll:23;avail:2", "2", "p", "120g", "15311", "", "INTRO INFORMATION LIT RECITATI", "1000-1050", "M", "DRAGAS 1105", "KOGATAM, M", "", "0", "X", "", "dupodd", "C", "N"],
