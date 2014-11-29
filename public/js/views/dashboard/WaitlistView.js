@@ -2,8 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'jst!templates/dashboard/waitlistTemplate.html'
-], function($, _, Backbone, waitlistTemplate){
+  'jst!templates/dashboard/waitlistTemplate.html',
+  'jst!templates/dashboard/waitlistStudentTemplate.html'
+], function($, _, Backbone, waitlistTemplate, waitlistStudentTemplate){
 
   var WaitlistView = Backbone.View.extend({
 
@@ -36,6 +37,7 @@ define([
 
           collection.each(function(model) {
             if (model.get("crn") === crn){
+              console.log(model); 
               var course_data = {
                 courseNum: model.get('courseNum'),
                 description: model.get('description'),
@@ -47,9 +49,23 @@ define([
                 note: model.get('note'),
                 time: model.get('days') + " " + model.get('times'),
                 location: model.get('location'),
-                subscribed_num: model.get('subscribers').length
+                subscribed_num: model.get('subscribers').length,
+                subscribers: model.get('subscribers')
               };
+/*
+              for (var i = 0; i < model.get('subscribers').length; i++){
+                var student_data = {
+                  subscriber_firstname: model.get('subscribers')[i].firstName,
+                  subscriber_lastname: model.get('subscribers')[i].lastName
+                  subscriber_email: model.get('subscribers')[i].email,
+                  subscriber_firstname: model.get('subscribers')[i].phoneNumber,
+                };
 
+                var row = waitlistStudentTemplate({
+                  data: student_data
+                });
+              }
+*/
               //console.log(course_data);
               // Callback stuff
               function makeTemplate (cb){
