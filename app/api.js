@@ -129,13 +129,18 @@ module.exports = function(app, passport) {
    return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
      //save the info
      console.log(course);
-     if (course.subscribers.indexOf(req.body.email)>=0){
+     //want to check if subscribed 
+     var check = _.pluck(course.subscribers, "email");
+     console.log(check);
+     if (check.indexOf(req.body.user.email)>=0){
+       console.log("already subscribed");
        res.send("already subscribed redirect");
      }
-     course.subscribers.push(req.body.email);
+
+     course.subscribers.push(req.body.user);
      return course.save(function (err, data) {
        if (!err){
-         User.update({"local.email": req.body.email},{$addToSet: {"local.subscribed": course.crn }}, function (err, user) {
+         User.update({"local.email": req.body.user.email},{$addToSet: {"local.subscribed": course.crn }}, function (err, user) {
            console.log(user," user records were found and updated");
          });
          console.log("subscribed");
@@ -155,19 +160,20 @@ module.exports = function(app, passport) {
   return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
     //save the info
     console.log(course);
-    if (course.subscribers.indexOf(req.body.email)<0){
+    var check = _.pluck(course.subscribers, "email");
+    if (check.indexOf(req.body.email)<0){
       res.send("you're already unsubscribed ");
     }
 
     course.subscribers =  _.remove(course.subscribers, function (elm) {
-      if (elm !== req.body.email){
+      if (elm.email !== req.body.user.email){
         return elm;
       }
     });
     return course.save(function (err, data) {
       if (!err){
         console.log("removed");
-        User.update({"local.email": req.body.email},{$pull: {"local.subscribed": course.crn }}, function (err, user) {
+        User.update({"local.email": req.body.user.email},{$pull: {"local.subscribed": course.crn }}, function (err, user) {
           console.log(user," user records were found and updated");
         });
         return res.send(data);

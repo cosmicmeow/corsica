@@ -88,6 +88,8 @@ define([
 
           } else{
 
+            $(".students").show();
+            $(".control").show();
           }
 
         }
@@ -127,7 +129,7 @@ define([
       $.ajax({
         type: 'POST',
         url: '/api/waitlists/subscribe',
-        data: { email: __user.email, crn: this.crn }
+        data: { user: __user, crn: this.crn }
       }).done(function() {
         location.reload();
       });
@@ -137,7 +139,7 @@ define([
       $.ajax({
         type: 'POST',
         url: '/api/waitlists/unsubscribe',
-        data: { email: __user.email, crn: this.crn }
+        data: { user: __user, crn: this.crn }
       }).done(function() {
         location.reload();
       });
