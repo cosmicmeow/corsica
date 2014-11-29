@@ -65,7 +65,8 @@ define([
                     i_user: model.get('instructor'),
                     capacity: model.get('capacity'),
                     id: model.cid,
-                    listing: model.get('listing')
+                    listing: model.get('listing'),
+                    subscribed_num : model.get('subscribers').length
                   };
 
                   // Create a new row
@@ -127,7 +128,8 @@ define([
               i_user: model.get('instructor'),
               capacity: model.get('capacity'),
               id: model.cid,
-              listing: model.get('listing')
+              listing: model.get('listing'),
+              subscribed_num : model.get('subscribers').length
             };
 
             // Create a new row

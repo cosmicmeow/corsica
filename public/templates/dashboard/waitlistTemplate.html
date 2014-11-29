@@ -24,10 +24,10 @@
 		  	<div class="row">
 		        <div class="col-sm-12">
 		          <div class="course head row">
-		            <div class="course_name_header col-sm-4">Course</div>
+		            <div class="course_name_header col-sm-5">Course</div>
 		            <div class="course_crn col-sm-1">CRN</div>
-		            <div class="course_instructor col-sm-2">Instructor</div>
-		            <div class="course_stats col-sm-4">Status</div>
+		            <div class="course_instructor col-sm-3">Instructor</div>
+		            <div class="course_stats col-sm-2">Status</div>
 		          </div>
 		        </div>
 			</div>
@@ -35,17 +35,20 @@
 			<div class="row">
 		        <div class="col-sm-12">
 					<div class="course row">
-						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+						<div class="col-sm-5 waitlist" data-id="<%=data.id%>">
 							<span class="course_num"><%= data.courseNum %>: </span>
 							<span class="course_name"><%= data.listing.title %></span>
 						</div>
 						<div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
-						<div class="col-sm-2"><span class="course_instructor"><%= data.i_user %></span></div>
-						<div class="col-sm-4"><span class="course_stat"><%= data.capacity %></span></div>
+						<div class="col-sm-3"><span class="course_instructor"><%= data.i_user %></span></div>
+						<div class="col-sm-2"><span class="course_stat"><%= data.subscribed_num %>/10</span></div>
 						<div class="col-sm-1 control"><span class="glyphicon glyphicon-remove"></span></div>
-						</div>
 					</div>
+				</div>
 			</div>
+
+			<div class="btn btn-red" id="subscribe_btn">Queue</div>
+			<div class="btn btn-grey" id="unsubscribe_btn">Unsubscribe</div>
 
 		</div>
 	</div>

@@ -2,7 +2,8 @@
   margin-top: 50px; }
   #waitlist_view .container {
     height: 100%;
-    position: relative; }
+    position: relative;
+    min-height: 200px; }
   #waitlist_view .container.students {
     text-align: right; }
   #waitlist_view .white {
@@ -36,6 +37,14 @@
     color: #fff;
     background-color: #930E00;
     border-bottom: 6px solid #930E00; }
+  #waitlist_view .btn-grey {
+    transition: all 0.2s ease-out;
+    background-color: #E7E7E7;
+    min-width: 150px;
+    color: #595959;
+    border-bottom: 6px solid #E7E7E7; }
+  #waitlist_view .btn-grey:hover {
+    border-bottom: 6px solid #dedede; }
   #waitlist_view .btn-red:hover {
     border-bottom: 6px solid #730b00; }
   #waitlist_view .list .course.head {
@@ -59,6 +68,12 @@
       #waitlist_view .list .course .control span:hover {
         cursor: pointer;
         color: #292120; }
+  #waitlist_view .students, #waitlist_view .control, #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
+    display: none; }
+  #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
+    position: absolute;
+    right: 0;
+    margin-right: 15px; }
 
 #navbar .navbar-red {
   background-color: #930E00; }

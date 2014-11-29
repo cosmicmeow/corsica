@@ -5,6 +5,7 @@
 	.container{
 		height:100%;
 		position:relative;
+		min-height: 200px;
 	}
 
 	.container.students{
@@ -60,6 +61,18 @@
 		border-bottom:6px solid #930E00;
 	}
 
+	.btn-grey{
+		transition:all 0.2s ease-out;
+		background-color: #E7E7E7;
+		min-width: 150px;
+		color: #595959;
+		border-bottom:6px solid #E7E7E7;
+	}
+
+	.btn-grey:hover{
+		border-bottom:6px solid #dedede;
+	}
+
 	.btn-red:hover{
 		border-bottom:6px solid #730b00;
 	}
@@ -96,6 +109,16 @@
 				}
 			}
 		}
+	}
+
+	.students, .control, #subscribe_btn, #unsubscribe_btn{
+		display:none;
+	}
+
+	#subscribe_btn, #unsubscribe_btn{
+		position: absolute;
+		right: 0;
+		margin-right: 15px;
 	}
 
 }	

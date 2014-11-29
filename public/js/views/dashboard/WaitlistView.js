@@ -11,13 +11,20 @@ define([
 
     events: {
       "click .glyphicon-chevron-up": "clickUp",
-      "click .glyphicon-chevron-down": "clickDown"
+      "click .glyphicon-chevron-down": "clickDown",
+      "click #subscribe_btn" : "clickQueue",
+      "click #unsubscribe_btn" : "clickUnQueue"
+    },
+
+    initialize: function(){
+      this.crn = "";
     },
 
     render: function(crn){
 
       $(window).scrollTop(0);
       var self = this;
+      this.crn = crn;
 
       console.log(crn);
       var row;
@@ -39,7 +46,8 @@ define([
                 listing: model.get('listing'),
                 note: model.get('note'),
                 time: model.get('days') + " " + model.get('times'),
-                location: model.get('location')
+                location: model.get('location'),
+                subscribed_num: model.get('subscribers').length
               };
 
               //console.log(course_data);
@@ -62,6 +70,26 @@ define([
               //this.$el.html(waitlistTemplate);
             }
           });
+
+          if (__user.access === "student"){
+
+            $(".students").hide();
+            var found = false;
+            for (var i = 0; i < __user.subscribed.length; i++){
+              if (__user.subscribed[i] === self.crn){
+                found = true;
+                $("#unsubscribe_btn").show();
+              }
+            }
+
+            if (found === false){
+              $("#subscribe_btn").show();
+            }
+
+          } else{
+
+          }
+
         }
       });
 
@@ -93,8 +121,27 @@ define([
         $(rows + ":eq(" + index + ")").insertAfter($(rows + ":eq(" + (index + 1) + ")"));
       }
 
-    }
+    },
 
+    clickQueue: function(){
+      $.ajax({
+        type: 'POST',
+        url: '/api/waitlists/subscribe',
+        data: { email: __user.email, crn: this.crn }
+      }).done(function() {
+        location.reload();
+      });
+    }, 
+
+    clickUnQueue: function(){
+      $.ajax({
+        type: 'POST',
+        url: '/api/waitlists/unsubscribe',
+        data: { email: __user.email, crn: this.crn }
+      }).done(function() {
+        location.reload();
+      });
+    }
 
   });
 

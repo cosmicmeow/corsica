@@ -167,6 +167,9 @@ module.exports = function(app, passport) {
     return course.save(function (err, data) {
       if (!err){
         console.log("removed");
+        User.update({"local.email": req.body.email},{$pull: {"local.subscribed": course.crn }}, function (err, user) {
+          console.log(user," user records were found and updated");
+        });
         return res.send(data);
       }
       else {
