@@ -51,27 +51,31 @@ define([
   };
 
   App.prototype.init = function() {
+    var self = this;
+    $(function(){
+      self.router = new Router();
 
-    this.router = new Router();
+      // Collections (Data sources)
+      self.collections.courseCollection = new CourseCollection();
 
-    // Collections (Data sources)
-    this.collections.courseCollection = new CourseCollection();
+      //this.currentUser = new UserModel();
 
-    //this.currentUser = new UserModel();
+      // VIEWS
+      self.views.aboutView = new AboutView();
+      self.views.homeView = new HomeView();
+      self.views.loginView = new LoginView();
+      self.views.dashboardView = new DashboardView();
+      self.views.waitlistView = new WaitlistView();
+      self.views.searchView = new SearchView();
+      self.views.navbarView = new NavbarView();
+      self.views.footerView = new FooterView();
 
-    // VIEWS
-    this.views.aboutView = new AboutView();
-    this.views.homeView = new HomeView();
-    this.views.loginView = new LoginView();
-    this.views.dashboardView = new DashboardView();
-    this.views.waitlistView = new WaitlistView();
-    this.views.searchView = new SearchView();
-    this.views.navbarView = new NavbarView();
-    this.views.footerView = new FooterView();
+      Backbone.history.start({pushState: false, root: "/"});
 
-    Backbone.history.start({pushState: false, root: "/"});
+      self.setupGlobalHandlers();
+    })
 
-    this.setupGlobalHandlers();
+    
 
   };
 
