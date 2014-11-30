@@ -70,6 +70,52 @@ module.exports = function(app, passport) {
   });
 
 
+  // Single update
+app.post('/api/waitlists/reorder', function (req, res) {
+  //{"crn":req.params.crn}
+  console.log(req.body.subscribers);
+  console.log(req.body);
+  if (req.body.subscribers !== null){
+    req.body.subscribers = JSON.parse(req.body.subscribers);
+  }
+  console.log(req.body.subscribers);
+  return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
+    //run over the properties
+    //
+    console.log(course);
+    console.log(err);
+    var subscribers = course.subscribers;
+
+      var order = req.body.subscribers;
+      var reorderedSubscribers = [];
+
+      _.each(order, function (elm){
+        _.find(subscribers, function(sub){
+           if (sub.email === elm){
+             //console.log(sub);
+             reorderedSubscribers.push(sub);
+             return;
+           }
+        });
+      });
+
+    course.subscribers = reorderedSubscribers;
+    ///product.description = req.body.description;
+    return course.save(function (err, data) {
+      if (!err){
+
+      console.log("updated object");
+      return res.send(data);
+      }
+      else {
+      console.log(err);
+      res.end('error');
+      }
+    });
+  });
+});
+
+
   // GET to READ
 
   // List waitlists
