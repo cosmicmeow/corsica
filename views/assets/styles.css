@@ -19,3 +19,10 @@
 body{ 
 	padding-top:80px; 
 }
+
+.btn-red{
+    height: 50px;
+    min-width: 100px;
+    background-color: #930E00;
+    color: #fff;
+  }
