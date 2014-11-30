@@ -2,9 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'jst!templates/dashboard/waitlistTemplate.html',
-  'jst!templates/dashboard/waitlistStudentTemplate.html'
-], function($, _, Backbone, waitlistTemplate, waitlistStudentTemplate){
+  'jst!templates/dashboard/waitlistTemplate.html'
+], function($, _, Backbone, waitlistTemplate){
 
   var WaitlistView = Backbone.View.extend({
 
@@ -13,8 +12,10 @@ define([
     events: {
       "click .glyphicon-chevron-up": "clickUp",
       "click .glyphicon-chevron-down": "clickDown",
+      "click #subscribers_save": "clickSave",
       "click #subscribe_btn" : "clickQueue",
-      "click #unsubscribe_btn" : "clickUnQueue"
+      "click #unsubscribe_btn" : "clickUnQueue",
+      "click .glyphicon-remove" : "clickRemove"
     },
 
     initialize: function(){
@@ -52,20 +53,7 @@ define([
                 subscribed_num: model.get('subscribers').length,
                 subscribers: model.get('subscribers')
               };
-/*
-              for (var i = 0; i < model.get('subscribers').length; i++){
-                var student_data = {
-                  subscriber_firstname: model.get('subscribers')[i].firstName,
-                  subscriber_lastname: model.get('subscribers')[i].lastName
-                  subscriber_email: model.get('subscribers')[i].email,
-                  subscriber_firstname: model.get('subscribers')[i].phoneNumber,
-                };
 
-                var row = waitlistStudentTemplate({
-                  data: student_data
-                });
-              }
-*/
               //console.log(course_data);
               // Callback stuff
               function makeTemplate (cb){
@@ -141,6 +129,19 @@ define([
 
     },
 
+    clickSave: function(){
+      console.log("Saving the list for: ", this.crn);
+      var studentsArray = [];
+
+      $(".student_waitlist").each(function(){
+        var studentEmail = $(this).attr("student-id");
+        studentsArray.push(studentEmail);
+      });
+
+      console.log(studentsArray);
+
+    },
+
     clickQueue: function(){
       $.ajax({
         type: 'POST',
@@ -159,6 +160,19 @@ define([
       }).done(function() {
         location.reload();
       });
+    },
+
+    clickRemove: function(e){
+      console.log("Remove student", $(e.target).parent().parent().attr("student-id"));
+      var student_email = $(e.target).parent().parent().attr("student-id");
+      $.ajax({
+        type: 'POST',
+        url: '/api/waitlists/adminUnsubscribe',
+        data: { email: student_email, crn: this.crn }
+      }).done(function() {
+        location.reload();
+      });
+
     }
 
   });

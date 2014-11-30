@@ -70,12 +70,12 @@
 			<div class="students_list">
 
 				<% data.subscribers.forEach(function(student) { %>
-					<div class="course row col-sm-12">
-						<div class="col-sm-4 waitlist" data-id="<%=data.id%>">
+					<div class="course row col-sm-12 student_waitlist" student-id="<%=student.email%>">
+						<div class="col-sm-4 waitlist">
 							<span class="studen_name"><%= student.firstName%> <%= student.lastName%></span>
 						</div>
 						<div class="col-sm-3"><span class="student_email"><%= student.email%></span></div>
-						<div class="col-sm-3"><span class="student_phone"><%= student.phoneNum%></span></div>
+						<div class="col-sm-3"><span class="student_phone"><%= student.phoneNumber%></span></div>
 						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up"></span> <span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-remove"></span></div>
 					</div>
 				<% }); %>
@@ -83,7 +83,7 @@
 
 			</div>
 
-			<div class="btn btn-red">Save</div>
+			<div class="btn btn-red" id="subscribers_save">Save</div>
 		</div> <!-- container -->
 	</div>
 
