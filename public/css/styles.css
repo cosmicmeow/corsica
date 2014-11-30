@@ -283,6 +283,8 @@
     color: #fff; }
   #dashboard_view .search_notfound {
     display: none; }
+  #dashboard_view .student-visible {
+    display: none; }
 
 #footer_view ul {
   padding: 0;

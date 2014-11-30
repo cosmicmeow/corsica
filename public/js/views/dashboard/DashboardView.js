@@ -57,6 +57,13 @@ define([
 
                   var courseRow = self.$el.find("#course_list");
                   var row;
+                  var position = 0;
+
+                  for (var j = 0; j < model.get('subscribers').length; j++){
+                    if (__user.email === model.get('subscribers')[j].email){
+                      position = j + 1;
+                    }
+                  }
 
                   var course_data = {
                     courseNum: model.get('courseNum'),
@@ -66,7 +73,8 @@ define([
                     capacity: model.get('capacity'),
                     id: model.cid,
                     listing: model.get('listing'),
-                    subscribed_num : model.get('subscribers').length
+                    subscribed_num : model.get('subscribers').length,
+                    current_num : position
                   };
 
                   // Create a new row
@@ -85,6 +93,7 @@ define([
 
             $(".has_waitlist").addClass("show");
             $(".no_waitlist").addClass("hide");
+            $(".student-visible").show();
 
           } else {
             console.log("No waitlist subscribed");

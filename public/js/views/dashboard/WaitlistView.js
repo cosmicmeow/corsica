@@ -31,6 +31,7 @@ define([
       console.log(crn);
       var row;
       var studentsOnList = 0;
+      var position = 0;
 
       //console.log(cid);
 
@@ -40,6 +41,13 @@ define([
           collection.each(function(model) {
             if (model.get("crn") === crn){
               console.log(model); 
+
+              for (var j = 0; j < model.get('subscribers').length; j++){
+                if (__user.email === model.get('subscribers')[j].email){
+                  position = j + 1;
+                }
+              }
+
               var course_data = {
                 courseNum: model.get('courseNum'),
                 description: model.get('description'),
@@ -52,7 +60,8 @@ define([
                 time: model.get('days') + " " + model.get('times'),
                 location: model.get('location'),
                 subscribed_num: model.get('subscribers').length,
-                subscribers: model.get('subscribers')
+                subscribers: model.get('subscribers'),
+                current_num: position
               };
 
               studentsOnList = model.get("subscribers").length;
@@ -86,6 +95,7 @@ define([
               if (__user.subscribed[i] === self.crn){
                 found = true;
                 $("#unsubscribe_btn").show();
+                $(".student-visible").show();
               }
             }
 
@@ -94,6 +104,9 @@ define([
             }
 
           } else{
+
+            $(".student-visible").hide();
+
             if (studentsOnList === 0){
               $(".empty").show();
             } else{

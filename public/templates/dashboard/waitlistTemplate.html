@@ -28,6 +28,7 @@
 		            <div class="course_crn col-sm-1">CRN</div>
 		            <div class="course_instructor col-sm-3">Instructor</div>
 		            <div class="course_stats col-sm-2">Status</div>
+		            <div class="course_stats col-sm-1 student-visible">#</div>
 		          </div>
 		        </div>
 			</div>
@@ -42,6 +43,7 @@
 						<div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
 						<div class="col-sm-3"><span class="course_instructor"><%= data.i_user %></span></div>
 						<div class="col-sm-2"><span class="course_stat"><%= data.subscribed_num %>/10</span></div>
+						<div class="course_stats col-sm-1 student-visible"><%= data.current_num %></div>
 						<div class="col-sm-1 control"><span class="glyphicon glyphicon-remove scheduler-visible"></span></div>
 					</div>
 				</div>
