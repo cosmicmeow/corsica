@@ -146,6 +146,14 @@ define([
 
       console.log(studentsArray);
 
+      $.ajax({
+        type: 'POST',
+        url: '/api/waitlists/reorder',
+        data: { subscribers: studentsArray, crn: this.crn }
+      }).done(function() {
+        location.reload();
+      });
+
     },
 
     clickQueue: function(){

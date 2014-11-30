@@ -75,9 +75,9 @@ app.post('/api/waitlists/reorder', function (req, res) {
   //{"crn":req.params.crn}
   console.log(req.body.subscribers);
   console.log(req.body);
-  if (req.body.subscribers !== null){
-    req.body.subscribers = JSON.parse(req.body.subscribers);
-  }
+  // if (req.body.subscribers !== null){
+  //   req.body.subscribers = JSON.parse(req.body.subscribers);
+  // }
   console.log(req.body.subscribers);
   return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
     //run over the properties
