@@ -20,7 +20,8 @@ define([
     collection: new CourseCollection(),
     events: {
       "click #search": "search",
-      "click .waitlist": "waitlistDetail"
+      "click .waitlist": "waitlistDetail",
+      "keyup #term" : "keyPressEventHandler"
     },
     search: function () {
       var self = this;
@@ -70,7 +71,12 @@ define([
       $(document).ready(function(){
           $('.username').text(__user.firstName + " " + __user.lastName);
       });
-    }
+    },
+    keyPressEventHandler : function(event){
+      if(event.keyCode == 13){
+          this.$("#search").click();
+      }
+  }
   });
 
   //DashboardView.render();
