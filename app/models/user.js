@@ -8,7 +8,7 @@ var bcrypt   = require('bcrypt-nodejs');
 // advisor : can modify students on the list
 // scheduler : can hide/unhide waitlist
 // admin
-var userSchema = mongoose.Schema({ 
+var userSchema = mongoose.Schema({
 
     local            : {
         email           : String,
@@ -17,7 +17,7 @@ var userSchema = mongoose.Schema({
         lastName        : String,
         phoneNumber     : String,
         subscribed      : {type: Array, default: Array},
-        textPreference  : Boolean, 
+        textPreference  : Boolean,
         access          : {type: String, default: "student"}
     },
     facebook         : {

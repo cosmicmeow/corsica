@@ -129,7 +129,7 @@ module.exports = function(app, passport) {
    return Waitlist.findOne({"crn":req.body.crn}, function (err, course) {
 	 //save the info
 	 console.log(course);
-	 //want to check if subscribed 
+	 //want to check if subscribed
 	 var check = _.pluck(course.subscribers, "email");
 	 console.log(check);
 	 if (check.indexOf(req.body.user.email)>=0){
