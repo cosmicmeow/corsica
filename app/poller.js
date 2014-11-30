@@ -3,6 +3,7 @@ var classData = require('../data/classes');
 var Waitlist = require('./models/waitlist');
 var _ = require('lodash');
 var notify = require('./notify.js');
+var moment = require('moment');
 
 var courses = [];
 var klass;
@@ -31,7 +32,7 @@ var course = function (info){
     unknown6: info[18]
   };
 };
-
+console.log("poller is running, looking for changes");
 _.each(data.main, function(info){
     var klass = new course(info);
     klass.courseNum = "CS" + klass.courseNum;
@@ -48,15 +49,40 @@ _.each(data.main, function(info){
                if (err.code === 11000 || err.code === 11001) {
                  //console.log("exists");
                  //do check updates
-                Waitlist.findOne({"crn": klass.crn}, function (err, course) {
+                Waitlist.findOne({"crn": klass.crn}, function (err, waitlist) {
                   //update if change in status
-                  if (course.status !== klass.status){
-                    Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
-                     console.log(klass.crn, course.crn, course.status, klass.status);
-                     console.log(" a wild change has appeared");
+                  // if (waitlist.crn==="13417"){
+                  //    console.log(klass.availableSeats);
+                  //    console.log(waitlist.availableSeats);
+                  //   console.log(waitlist.availableSeats !== klass.availableSeats);
+                  // }
+                  if (waitlist.availableSeats !== klass.availableSeats){
+                    console.log("change detected");
+                    //over a day since last notified?
+                    var now = moment();
+                    var past = moment(waitlist.notified);
+                    /** DEBUGGING EVERY HOUR **/
+                    var elapsed = now.diff(past, "hours");
+                    console.log(elapsed);
+                    console.log(waitlist.notified);
+                    console.log(moment.utc());
+
+                    if (waitlist.status !== klass.status && elapsed > 0){
+                    Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats, "notified": moment()}).exec();
+                     console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
+                     console.log(" a wild change has appeared notification");
                      //pass the array of subscribers
-                     console.log(course.subscribers);
-                     notify(course);
+                     console.log(waitlist.subscribers);
+                     notify(waitlist);
+                    }
+                    else {
+                      //updates only the change in status
+                      Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
+                       console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
+                       console.log(" a wild change has appeared no notification");
+                       //pass the array of subscribers
+                       console.log(waitlist.subscribers);
+                    }
                   }
                 });
               }
