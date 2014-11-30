@@ -279,6 +279,8 @@
     min-width: 100px;
     background-color: #930E00;
     color: #fff; }
+  #dashboard_view .search_notfound {
+    display: none; }
 
 #footer_view ul {
   padding: 0;

@@ -24,17 +24,27 @@ define([
       "keyup #term" : "keyPressEventHandler"
     },
     search: function () {
+
+      console.log("Hit search for: ", this.$("#term").val());
+
+      this.$("#course_list").empty();
+      this.$(".search_notfound").hide();
+
       var self = this;
 
       var term = this.$("#term").val();
-      var dropdown = this.$("#dropdown").val();
-      var body = this.$el.html(SearchTemplate);
+
+      var found = false;
 
       window.CorsicaApp.collections.courseCollection.each(function(model) {
         var pattern = new RegExp( $.trim( term ).replace( / /gi, '|' ), "i");
+
         _(model.attributes).any(function(attr, term) {
-            if(!pattern.test(attr))
+            if(!pattern.test(attr)){
                 return false;
+            }
+
+            found = true;
 
             var courseRow = self.$el.find("#course_list");
             var row;
@@ -58,21 +68,27 @@ define([
 
             // Add this new row to the screen
             courseRow.append(row);
-            $(document).ready(function(){
-                $('.username').text(__user.firstName + " " + __user.lastName);
-            });
 
-            return true;
+            //return true;
         });
       });
 
+      console.log("found entry?", found);
+
+      if (found === false){
+        self.$(".search_notfound").show();
+      }
+
     },
+
     render: function () {
+
       this.$el.html(SearchTemplate);
-      $(document).ready(function(){
-          $('.username').text(__user.firstName + " " + __user.lastName);
-      });
+
+      $('.username').text(__user.firstName + " " + __user.lastName);
+      $('.firstname').text(__user.firstName);
     },
+
     keyPressEventHandler : function(event){
       if(event.keyCode == 13){
           this.$("#search").click();
