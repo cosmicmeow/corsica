@@ -130,6 +130,19 @@ app.post('/api/waitlists/reorder', function (req, res) {
 	});
   });
 
+  // List waitlists
+  app.get('/api/waitlists/all', function (req, res) {
+  return Waitlist.find(function (err, waitlists) {
+    if (!err) {
+
+    return res.send(waitlists);
+    } else {
+    return console.log(err);
+    }
+  });
+  });
+
+
   // Single course
   app.get('/api/waitlists/:id', function (req, res) {
 	return Waitlist.findById(req.params.id, function (err, course) {
