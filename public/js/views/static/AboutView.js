@@ -9,7 +9,7 @@ define([
     el: $("#page"),
 
     render: function(){
-
+      $(window).scrollTop(0);
       this.$el.html(aboutTemplate);
  
     }

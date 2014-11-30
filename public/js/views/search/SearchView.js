@@ -84,7 +84,7 @@ define([
     },
 
     render: function () {
-
+      $(window).scrollTop(0);
       this.$el.html(SearchTemplate);
 
       $('.username').text(__user.firstName + " " + __user.lastName);

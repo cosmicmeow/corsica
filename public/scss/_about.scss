@@ -1,0 +1,49 @@
+#about_view{
+	.header{
+
+		h1{
+			margin: 264px auto 0;
+			text-align: center;
+			background-color: #292120;
+			max-width: 260px;
+			line-height: 70px;
+		}
+
+		.content_team{
+			position: relative;
+		}
+
+		.container{
+			height: 100%;
+		}
+
+	}
+
+	hr{
+		border-top:1px dashed;
+		border-color:#292120;
+	}
+
+	p{
+		margin-bottom:80px;
+	}
+
+	.btn{
+		border-radius:0;
+		min-width: 180px;
+		line-height: 40px;
+		margin-top: 20px;
+		font-size:18px;
+	}
+
+	.btn-red{
+		transition:all 0.2s ease-out;
+		color:#fff;
+		background-color:#930E00;	
+		border-bottom:6px solid #930E00;
+	}
+
+	.btn-red{
+		color:#fff;
+	}
+}

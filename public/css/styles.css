@@ -214,6 +214,35 @@
       background-color: rgba(255, 255, 255, 0.65);
       padding: 15px 30px; }
 
+#about_view .header h1 {
+  margin: 264px auto 0;
+  text-align: center;
+  background-color: #292120;
+  max-width: 260px;
+  line-height: 70px; }
+#about_view .header .content_team {
+  position: relative; }
+#about_view .header .container {
+  height: 100%; }
+#about_view hr {
+  border-top: 1px dashed;
+  border-color: #292120; }
+#about_view p {
+  margin-bottom: 80px; }
+#about_view .btn {
+  border-radius: 0;
+  min-width: 180px;
+  line-height: 40px;
+  margin-top: 20px;
+  font-size: 18px; }
+#about_view .btn-red {
+  transition: all 0.2s ease-out;
+  color: #fff;
+  background-color: #930E00;
+  border-bottom: 6px solid #930E00; }
+#about_view .btn-red {
+  color: #fff; }
+
 #dashboard_view {
   margin-top: 50px; }
   #dashboard_view .message {
@@ -414,9 +443,6 @@ footer {
 .mitigation {
   color: #930E00;
   font-style: italic; }
-
-hr {
-  border-color: #ccc; }
 
 .one-edge-shadow {
   -webkit-box-shadow: 1px 7px 50px -4px rgba(0, 0, 0, 0.75);
