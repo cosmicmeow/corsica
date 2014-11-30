@@ -1,9 +1,7 @@
 var nodemailer = require('nodemailer');
 var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 var _ = require('lodash');
-var list = require ('./fakedata.json');
-
-
+//var list = require ('./fakedata.json');
 
 module.exports =
 function notify (waitlist){
@@ -81,4 +79,4 @@ _.each(waitlist.subscribers, function (person, key) {
   }
 };
 
-module.exports(list);
+//module.exports(list);
