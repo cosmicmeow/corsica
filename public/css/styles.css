@@ -299,7 +299,10 @@
   border-left: 10px solid #292120; }
   #footer_view li a {
     line-height: 40px;
-    color: #EFEBE2; }
+    color: #EFEBE2;
+    width: 100%;
+    height: 100%;
+    display: block; }
   #footer_view li a:hover, #footer_view li a:visited, #footer_view li a:active {
     text-decoration: none; }
 #footer_view li:hover {
