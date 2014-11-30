@@ -17,7 +17,7 @@ var userSchema = mongoose.Schema({
         lastName        : String,
         phoneNumber     : String,
         subscribed      : {type: Array, default: Array},
-        textPreference  : Boolean,
+        textPreference  : {type: Boolean, default: false},
         access          : {type: String, default: "student"}
     },
     facebook         : {
