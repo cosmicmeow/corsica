@@ -30,6 +30,7 @@ define([
 
       console.log(crn);
       var row;
+      var studentsOnList = 0;
 
       //console.log(cid);
 
@@ -53,6 +54,8 @@ define([
                 subscribed_num: model.get('subscribers').length,
                 subscribers: model.get('subscribers')
               };
+
+              studentsOnList = model.get("subscribers").length;
 
               //console.log(course_data);
               // Callback stuff
@@ -91,8 +94,11 @@ define([
             }
 
           } else{
-
-            $(".students").show();
+            if (studentsOnList === 0){
+              $(".empty").show();
+            } else{
+              $(".students").show();
+            }
             $(".control").show();
           }
 

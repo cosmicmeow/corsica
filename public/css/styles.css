@@ -74,6 +74,17 @@
     position: absolute;
     right: 0;
     margin-right: 15px; }
+  #waitlist_view .empty {
+    display: none;
+    text-align: center; }
+    #waitlist_view .empty .col-sm-12 {
+      background-color: #fff;
+      border: 1px dashed #dedede; }
+      #waitlist_view .empty .col-sm-12 h2 {
+        font-size: 24px;
+        margin: 30px 0 15px; }
+      #waitlist_view .empty .col-sm-12 p {
+        margin: 0 0 30px; }
 
 #navbar .navbar-red {
   background-color: #930E00; }

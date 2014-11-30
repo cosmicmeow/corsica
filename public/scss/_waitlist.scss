@@ -121,4 +121,23 @@
 		margin-right: 15px;
 	}
 
+	.empty{
+		display:none;
+		text-align: center;
+
+		.col-sm-12{
+			background-color:#fff;
+			border:1px dashed #dedede;
+
+			h2{
+				font-size:24px;
+				margin:30px 0 15px;
+			}
+
+			p{
+				margin: 0 0 30px;
+			}
+		}
+	}
+
 }	
