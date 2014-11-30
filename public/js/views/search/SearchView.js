@@ -27,6 +27,8 @@ define([
 
       console.log("Hit search for: ", this.$("#term").val());
 
+      $(window).scrollTop(350);
+
       this.$("#course_list").empty();
       this.$(".search_notfound").hide();
 

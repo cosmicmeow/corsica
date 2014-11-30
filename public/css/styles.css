@@ -68,7 +68,7 @@
       #waitlist_view .list .course .control span:hover {
         cursor: pointer;
         color: #292120; }
-  #waitlist_view .students, #waitlist_view .control, #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
+  #waitlist_view .students, #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
     display: none; }
   #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
     position: absolute;
@@ -85,6 +85,8 @@
         margin: 30px 0 15px; }
       #waitlist_view .empty .col-sm-12 p {
         margin: 0 0 30px; }
+  #waitlist_view .advisor-visible, #waitlist_view .scheduler-visible {
+    display: none; }
 
 #navbar .navbar-red {
   background-color: #930E00; }

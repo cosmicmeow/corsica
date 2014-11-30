@@ -111,7 +111,7 @@
 		}
 	}
 
-	.students, .control, #subscribe_btn, #unsubscribe_btn{
+	.students, #subscribe_btn, #unsubscribe_btn{
 		display:none;
 	}
 
@@ -138,6 +138,10 @@
 				margin: 0 0 30px;
 			}
 		}
+	}
+
+	.advisor-visible, .scheduler-visible{
+		display:none;
 	}
 
 }	

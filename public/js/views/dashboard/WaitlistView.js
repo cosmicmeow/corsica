@@ -99,7 +99,17 @@ define([
             } else{
               $(".students").show();
             }
-            $(".control").show();
+
+            if (__user.access === "advisor"){         // if user = advisor
+              $(".advisor-visible").show();
+
+            } else if (__user.access === "scheduler"){ // if user = scheduler
+              $(".scheduler-visible").show();
+
+            } else{                                    // if user = admin
+              $(".advisor-visible").show();
+              $(".scheduler-visible").show();
+            }
           }
 
         }
