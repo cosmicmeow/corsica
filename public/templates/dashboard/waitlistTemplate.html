@@ -9,8 +9,9 @@
 		</div>
 	</div>
 
-	<div class="wrapper white" style="padding-top:50px">
+	<div class="wrapper white course_info" style="padding-top:50px">
 		<div class="container">
+			<div class="locked"><span class="glyphicon glyphicon-exclamation-sign"></span> This class is currently hidden from students</div>
 			<h1>Information:</h1>
 			<p><b>Time</b>: <%= data.time%> <br><b>Location</b>: <%= data.location%></p>
 			<p><%= data.note%></p>
@@ -44,7 +45,7 @@
 						<div class="col-sm-3"><span class="course_instructor"><%= data.i_user %></span></div>
 						<div class="col-sm-2"><span class="course_stat"><%= data.subscribed_num %>/10</span></div>
 						<div class="course_stats col-sm-1 student-visible"><%= data.current_num %></div>
-						<div class="col-sm-1 control"><span class="glyphicon glyphicon-remove scheduler-visible"></span></div>
+						<div class="col-sm-1 control"><span class="glyphicon glyphicon-remove scheduler-visible" data-id="<%= data.id%>"></span><span class="glyphicon glyphicon-plus scheduler-visible" data-id="<%= data.id%>"></span></div>
 					</div>
 				</div>
 			</div>

@@ -53,9 +53,6 @@ module.exports = function(app, passport) {
   // Single update
   app.put('/api/waitlists/:id', function (req, res) {
 	//{"crn":req.params.crn}
-	if (req.body.subscribers !== null){
-	  req.body.subscribers = JSON.parse(req.body.subscribers);
-	}
 	return Waitlist.findByIdAndUpdate(req.params.id, req.body, function (err, product) {
 	  //run over the properties
 

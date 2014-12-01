@@ -67,7 +67,7 @@ _.each(waitlist.subscribers, function (person, key) {
   twilio.sendMessage({
     to: number, // Any number Twilio can deliver to
     from: '+17579135000', // A number you bought from Twilio and can use for outbound communication
-    body: "Hi, This is CORSICA, a spot in " + course + "has opened up",
+    body: "Hi, This is CORSICA, a spot in " + course + " has opened up",
     }, function( err, responseData) {
     console.log(err);
     if (!err) {

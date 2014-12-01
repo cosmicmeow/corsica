@@ -68,6 +68,17 @@
       #waitlist_view .list .course .control span:hover {
         cursor: pointer;
         color: #292120; }
+  #waitlist_view .course_info h1 {
+    font-size: 26px;
+    text-align: left;
+    margin-bottom: 0; }
+  #waitlist_view .course_info .locked {
+    display: none;
+    background-color: #efefef;
+    border: 1px dashed #dedede;
+    padding: 15px; }
+  #waitlist_view .course_info p {
+    margin-top: 15px; }
   #waitlist_view .students, #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
     display: none; }
   #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
@@ -314,6 +325,9 @@
     display: none; }
   #dashboard_view .student-visible {
     display: none; }
+  #dashboard_view .locked {
+    background-color: #efefef;
+    border: 1px dashed #dedede; }
 
 #footer_view ul {
   padding: 0;

@@ -1,10 +1,23 @@
-<div class="course row">
+
+<% if (data.locked === true) { %>
+  	<div class="course row locked">
+<% } else { %>
+	<div class="course row">
+<% } %>
+
   <div class="col-sm-5 waitlist" data-id="<%=data.id%>">
     <span class="course_num"><%= data.courseNum %>: </span>
     <span class="course_name"><%= data.listing.title %></span>
   </div>
   <div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
   <div class="col-sm-3"><span class="course_instructor"><%= data.i_user %></span></div>
-  <div class="col-sm-2"><span class="course_stat"><%= data.subscribed_num %>/10</span></div>
+  <div class="col-sm-2">
+  	<span class="course_stat"><%= data.subscribed_num %>/10</span>
+
+  	<% if (data.locked === true) { %>
+  		<span class="lock_message"> [Hidden]</span>
+  	<% } %>
+
+  </div>
   <div class="col-sm-1"><span class="course_stat"><%= data.current_num %></span></div>
 </div>

@@ -15,7 +15,9 @@ define([
       "click #subscribers_save": "clickSave",
       "click #subscribe_btn" : "clickQueue",
       "click #unsubscribe_btn" : "clickUnQueue",
-      "click .glyphicon-remove" : "clickRemove"
+      "click .glyphicon-remove.advisor-visible" : "clickRemove",
+      "click .glyphicon-remove.scheduler-visible" : "clickLock",
+      "click .glyphicon-plus.scheduler-visible" : "clickUnLock"
     },
 
     initialize: function(){
@@ -32,6 +34,7 @@ define([
       var row;
       var studentsOnList = 0;
       var position = 0;
+      var locked = false;
 
       //console.log(cid);
 
@@ -54,7 +57,7 @@ define([
                 crn: model.get('crn'),
                 i_user: model.get('instructor'),
                 capacity: model.get('capacity'),
-                id: model.cid,
+                id: model.get('_id'),
                 listing: model.get('listing'),
                 note: model.get('note'),
                 time: model.get('days') + " " + model.get('times'),
@@ -63,6 +66,8 @@ define([
                 subscribers: model.get('subscribers'),
                 current_num: position
               };
+
+              locked = model.get("locked");
 
               studentsOnList = model.get("subscribers").length;
 
@@ -105,6 +110,10 @@ define([
 
           } else{
 
+            if (locked === true){
+              $(".locked").show(); // shows the message that the course is hidden
+            }
+
             $(".student-visible").hide();
 
             if (studentsOnList === 0){
@@ -117,11 +126,20 @@ define([
               $(".advisor-visible").show();
 
             } else if (__user.access === "scheduler"){ // if user = scheduler
-              $(".scheduler-visible").show();
+              if (locked === true){
+                $(".glyphicon-plus.scheduler-visible").show();
+              } else{
+                $(".glyphicon-remove.scheduler-visible").show();
+              }
 
             } else{                                    // if user = admin
               $(".advisor-visible").show();
-              $(".scheduler-visible").show();
+
+              if (locked === true){
+                $(".glyphicon-plus.scheduler-visible").show();
+              } else{
+                $(".glyphicon-remove.scheduler-visible").show();
+              }
             }
           }
 
@@ -210,6 +228,34 @@ define([
         location.reload();
       });
 
+    },
+
+    clickLock: function(e){
+      console.log("Hide waitlist from student", $(e.target).attr("data-id"));
+      var course_id = $(e.target).attr("data-id");
+      
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/' + course_id,
+        data: { 'locked' : true }
+      }).done(function() {
+        location.reload();
+      });
+      
+    },
+
+    clickUnLock: function(e){
+      console.log("Show waitlist from student", $(e.target).attr("data-id"));
+      var course_id = $(e.target).attr("data-id");
+      
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/' + course_id,
+        data: { 'locked' : false }
+      }).done(function() {
+        location.reload();
+      });
+      
     }
 
   });

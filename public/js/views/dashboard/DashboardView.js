@@ -118,7 +118,7 @@ define([
 
       var self = this;
 
-      console.log("Render - Faculty Dashboard")
+      console.log("Render - Faculty Dashboard");
 
       var body = this.$el.html(DashboardTemplate);
 
@@ -130,6 +130,8 @@ define([
             var courseRow = self.$el.find("#course_list");
             var row;
 
+            var locked = model.get('locked');
+
             var course_data = {
               courseNum: model.get('courseNum'),
               description: model.get('description'),
@@ -138,7 +140,8 @@ define([
               capacity: model.get('capacity'),
               id: model.cid,
               listing: model.get('listing'),
-              subscribed_num : model.get('subscribers').length
+              subscribed_num : model.get('subscribers').length,
+              locked: model.get('locked')
             };
 
             // Create a new row
