@@ -36,7 +36,7 @@ define([
 
       var term = this.$("#term").val();
 
-      var found = false;
+      var found = 0;
 
       window.CorsicaApp.collections.courseCollection.each(function(model) {
         var pattern = new RegExp( $.trim( term ).replace( / /gi, '|' ), "i");
@@ -46,10 +46,9 @@ define([
                 return false;
             }
 
-            found = true;
-
             var courseRow = self.$el.find("#course_list");
             var row;
+            var locked = model.get('locked');
 
             var course_data = {
               courseNum: model.get('courseNum'),
@@ -62,14 +61,32 @@ define([
               subscribers_num : model.get('subscribers').length
             };
 
-            // Create a new row
-            row = SearchItemView({
-              data: course_data,
-              _: _
-            });
+            if (locked){
+              if (__user.access !== 'student'){
+                // Create a new row
+                row = SearchItemView({
+                  data: course_data,
+                  _: _
+                });
 
-            // Add this new row to the screen
-            courseRow.append(row);
+                // Add this new row to the screen
+                courseRow.append(row);
+
+                found++;
+              }
+            } else{
+                // Create a new row
+                row = SearchItemView({
+                  data: course_data,
+                  _: _
+                });
+
+                // Add this new row to the screen
+                courseRow.append(row);
+                found++;
+            }
+
+           
 
             //return true;
         });
@@ -77,7 +94,7 @@ define([
 
       console.log("found entry?", found);
 
-      if (found === false){
+      if (found === 0){
         self.$(".search_notfound").show();
       }
 
