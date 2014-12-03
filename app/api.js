@@ -127,18 +127,6 @@ app.post('/api/waitlists/reorder', function (req, res) {
 	});
   });
 
-  // List waitlists
-  app.get('/api/waitlists/all', function (req, res) {
-  return Waitlist.find(function (err, waitlists) {
-    if (!err) {
-
-    return res.send(waitlists);
-    } else {
-    return console.log(err);
-    }
-  });
-  });
-
 
   // Single course
   app.get('/api/waitlists/:id', function (req, res) {
@@ -210,6 +198,9 @@ app.post('/api/waitlists/reorder', function (req, res) {
    });
  });
 
+
+/** Special Endpoints **/
+
  //Subsciptions
  app.post('/api/waitlists/unsubscribe', function (req,res) {
   console.log(req.body);
@@ -274,4 +265,49 @@ app.post('/api/waitlists/reorder', function (req, res) {
 		});
 	});
   });
+  // Lock
+  app.get('/api/waitlists/all', function (req, res) {
+    return Waitlist.find(function (err, waitlists) {
+      if (!err) {
+
+        return res.send(waitlists);
+      } else {
+        return console.log(err);
+      }
+    });
+  });
+
+  // List waitlists
+  app.post('/api/waitlists/lock', function (req, res) {
+    return Waitlist.find({},function (err, waitlists) {
+      if (!err) {
+        _.each(waitlists, function (elm) {
+          elm.locked = true;
+          elm.save();
+        });
+
+        return res.send(waitlists);
+      } else {
+        return console.log(err);
+      }
+    });
+  });
+
+  // Unlock
+  app.post('/api/waitlists/unlock', function (req, res) {
+    return Waitlist.find({},function (err, waitlists) {
+      console.log("here");
+      if (!err) {
+        _.each(waitlists, function (elm) {
+          elm.locked = false;
+          elm.save();
+        });
+
+        return res.send(waitlists);
+      } else {
+        return console.log(err);
+      }
+    });
+  });
+
 };
