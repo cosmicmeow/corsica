@@ -9,7 +9,59 @@
     </div>
   </div>
 
-  <div class="list wrapper" style="background-color:#fff;padding-top:50px;text-align:center;border-bottom:1px solid #d4d4d4">
+  <div class="list wrapper brown test_panel" style="padding-top:25px;border-bottom:1px solid #d4d4d4;border-top:1px solid #d4d4d4">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+
+          <h1>Test Harness</h1>
+          <hr>
+          <p><span class="glyphicon glyphicon-exclamation-sign"></span> This is only visible for the notification function testing. The final product will not display this panel.</p>
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Test</th>
+                <th>Expected Result</th>
+                <th>Toggle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>File dated November 9th (before registration)</td>
+                <td>Locks all classes and displays a message</td>
+                <td><div class="btn btn-red" id="toggle_test1">Toggle Case 1</div></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>File dated January 21st (after registration)</td>
+                <td>Locks all classes and displays a message</td>
+                <td><div class="btn btn-red" id="toggle_test2">Toggle Case 2</div></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>File dated in between 1 and 2, with some classes full and some classes not full [default]</td>
+                <td>Unlocks all classes</td>
+                <td><div class="btn btn-red" id="toggle_test3">Toggle Case 3</div></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>File dated in between 1 and 2, with some of the classes that were full -> no longer full (notification) and some classes that were not full, full (open wait-list)</td>
+                <td>Send appropriate notification to students</td>
+                <td><div class="btn btn-red" id="toggle_test4">Toggle Case 4</div></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list wrapper white" style="padding-top:50px;text-align:center;border-bottom:1px solid #d4d4d4">
     <div class="container">
       <!-- Three columns of text below the header -->
       <div class="row">
@@ -35,7 +87,7 @@
             <div class="col-sm-12">
               <h2>Hi there, <span class="firstname"></span></h2>
               <p>It doesn't look like you queued yourself into any wait-list yet.<br>
-                Start by searching for a class!<br><a href="/search" class="btn btn-red">Search</a></p>
+                Start by searching for a class!<br><a href="/search" class="btn btn-red"><span class="glyphicon glyphicon-search"></span> Search</a></p>
             </div>
           </div>
 

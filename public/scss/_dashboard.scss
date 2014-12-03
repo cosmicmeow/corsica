@@ -2,6 +2,49 @@
 
 	margin-top:50px;
 
+	.test_panel{
+		h1{
+			margin-bottom:0;
+		}
+		hr{
+			margin: 10px 0;
+			border-top:1px dashed;
+			border-color:#292120;
+		}
+
+		ul{
+			margin-bottom: 20px;
+		}
+
+		span{
+			color:#930E00;
+		}
+
+		.btn{
+			height: auto;
+			border-radius:0;
+		}
+
+		table{
+			background-color: #fff;
+			th{
+				background-color: #333;
+				color: #fff;
+				padding: 15px;
+				text-align: center;
+				border: 0;
+			}
+			tr > td:first-child{
+				text-align: center;
+			}
+			td{
+				padding: 10px;
+			}
+		}
+	}
+
+	
+
 	.message{
 
 		height:60px;

@@ -26,7 +26,11 @@ define([
       // format:
       // "event selector": "function"
 
-      "click .waitlist": "waitlistDetail"
+      "click .waitlist": "waitlistDetail",
+      "click #toggle_test1" : "testOne",
+      "click #toggle_test2" : "testTwo",
+      "click #toggle_test3" : "testThree",
+      "click #toggle_test4" : "testFour"
     },
     
     initialize: function() {
@@ -180,6 +184,61 @@ define([
 
       //window.CorsicaApp.views.waitlistView.render(this.model);
       //window.location.href = "/client#waitlist";
+    },
+
+    // Lock all classes - display 'registration period hasn't started'
+    testOne: function(){
+
+      //var id = $(e.currentTarget).data("id");
+      //var collection = window.CorsicaApp.collections.courseCollection.pluck("_id");
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/locked',
+        data: { 'locked' : true }
+      }).done(function() {
+        location.reload();
+      });
+
+    },
+
+    // Lock all classes - display 'registration period ended', send notification to students
+    testTwo: function(){
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/locked',
+        data: { 'locked' : true }
+      }).done(function() {
+        location.reload();
+      });
+
+    },
+
+    // Unlock all classes
+    testThree: function(){
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/locked',
+        data: { 'locked' : false }
+      }).done(function() {
+        location.reload();
+      });
+
+    },
+
+    // Change a class stats, send notification to students on the list
+    testFour: function(){
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/locked',
+        data: { 'locked' : false }
+      }).done(function() {
+        location.reload();
+      });
+
     }
 
   });
