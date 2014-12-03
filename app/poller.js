@@ -2,7 +2,7 @@ var data = require('../data/fall_2014');
 var classData = require('../data/classes');
 var Waitlist = require('./models/waitlist');
 var _ = require('lodash');
-var notify = require('./notify.js');
+var util = require('./notify.js');
 var moment = require('moment');
 
 var courses = [];
@@ -73,7 +73,7 @@ _.each(data.main, function(info){
                      console.log(" a wild change has appeared notification");
                      //pass the array of subscribers
                      console.log(waitlist.subscribers);
-                     notify(waitlist);
+                     util.notify(waitlist);
                     }
                     else {
                       //updates only the change in status

@@ -3,18 +3,9 @@ var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILI
 var _ = require('lodash');
 //var list = require ('./fakedata.json');
 
-module.exports =
-function notify (waitlist){
-// create reusable transporter object using SMTP transport
+var util = exports;
 
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'xtupledev@gmail.com',
-        pass: 'xTuple!23510'
-    }
-});
-
+util.notify = function (waitlist){
 
 // setup e-mail data with unicode symbols
 _.each(waitlist.subscribers, function (person, key) {
@@ -33,50 +24,60 @@ _.each(waitlist.subscribers, function (person, key) {
     }
   }
 
-  //perform actions
-  mail(person.email, text, html );
-});
+    //perform actions
+    util.mail(person.email, text, html );
+  });
+};
 
-  function mail(to,subject,text,html) {
-    // body...
-    var mailOptions = {
-        from: 'Corsica (oratt001@gmail.com)', // sender address
-        to: to, // list of receivers
-        subject: subject,
-        text: text,
-        html: html// html body
-    };
+util.mail = function mail(to,subject,text,html) {
+  // create reusable transporter object using SMTP transport
 
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, function(error, info){
-        if(error){
-            console.log(error);
-            return error;
-        }else{
-            console.log('Message sent: ' + info.response);
-            return info.reponse;
-        }
-    });
-  }
-  /* Text the User
-  *  @param wailist
-  *  @param people on the list
-  */
-  function message(number, course) {
-    // body...
-  twilio.sendMessage({
-    to: number, // Any number Twilio can deliver to
-    from: '+17579135000', // A number you bought from Twilio and can use for outbound communication
-    body: "Hi, This is CORSICA, a spot in " + course + " has opened up",
-    }, function( err, responseData) {
-    console.log(err);
-    if (!err) {
-      console.log(responseData);
-      return responseData;
-      //res.end();
+  var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'xtupledev@gmail.com',
+      pass: 'xTuple!23510'
+    }
+  });
+
+  // body...
+  var mailOptions = {
+      from: 'Corsica (oratt001@gmail.com)', // sender address
+      to: to, // list of receivers
+      subject: subject,
+      text: text,
+      html: html// html body
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+          console.log(error);
+          return error;
+      }else{
+          console.log('Message sent: ' + info.response);
+          return info.reponse;
       }
-    });
-  }
+  });
+};
+/* Text the User
+*  @param wailist
+*  @param people on the list
+*/
+util.message = function message(number, course) {
+  // body...
+twilio.sendMessage({
+  to: number, // Any number Twilio can deliver to
+  from: '+17579135000', // A number you bought from Twilio and can use for outbound communication
+  body: "Hi, This is CORSICA, a spot in " + course + " has opened up",
+  }, function( err, responseData) {
+  console.log(err);
+  if (!err) {
+    console.log(responseData);
+    return responseData;
+    //res.end();
+    }
+  });
 };
 
 //module.exports(list);
