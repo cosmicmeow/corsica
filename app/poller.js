@@ -61,7 +61,9 @@ _.each(data.main, function(info){
                     //over a day since last notified?
                     var now = moment();
                     var past = moment(waitlist.notified);
+                    
                     /** DEBUGGING EVERY HOUR **/
+                    /** NOTE CHANGE HIS FOR PRODUCTION TO SET INTERVAL FOR UPDATE **/
                     var elapsed = now.diff(past, "hours");
                     console.log(elapsed);
                     console.log(waitlist.notified);
