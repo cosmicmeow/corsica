@@ -2,6 +2,7 @@ var Waitlist = require('./models/waitlist');
 var User = require('./models/user');
 var _ = require('lodash');
 var bcrypt   = require('bcrypt-nodejs');
+var notify   = require('./util');
 
 module.exports = function(app, passport) {
   // PROFILE SECTION =========================
@@ -308,6 +309,26 @@ app.post('/api/waitlists/reorder', function (req, res) {
         return res.send(waitlists);
       } else {
         return console.log(err);
+      }
+    });
+  });
+
+
+  // Single course
+  //return a view
+  app.get('/confirm/:id', function (req, res) {
+      console.log(req.query.params);
+    return Waitlist.findById(req.params.id, function (err, course) {
+      if (!err) {
+
+        return res.render('confirm.ejs', {
+          status : req.params.id,
+          data : course
+        });
+      } else {
+        console.log(err);
+        return res.send(err);
+
       }
     });
   });

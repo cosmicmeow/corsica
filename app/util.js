@@ -1,9 +1,29 @@
 var nodemailer = require('nodemailer');
 var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 var _ = require('lodash');
-//var list = require ('./fakedata.json');
+// Nodejs encryption with CTR
+var crypto = require('crypto'),
+algorithm = 'aes-256-ctr',
+password = 'CORSICA'; //This should be secret
+
 
 var util = exports;
+
+util.encrypt = function encrypt(text){
+  var cipher = crypto.createCipher(algorithm,password);
+  var crypted = cipher.update(text,'utf8','hex');
+  crypted += cipher.final('hex');
+  return crypted;
+};
+
+
+
+util.decrypt = function decrypt(text){
+  var decipher = crypto.createDecipher(algorithm,password);
+  var dec = decipher.update(text,'hex','utf8');
+  dec += decipher.final('utf8');
+  return dec;
+};
 
 util.notify = function (waitlist){
 
