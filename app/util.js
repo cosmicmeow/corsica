@@ -43,7 +43,7 @@ _.each(waitlist.subscribers, function (person, key) {
     html = html + " To claim, head to '"+ link;
     if (person.textPreference === true || person.textPreference === "true" ){
       console.log("sent a text");
-      message(person.phoneNumber, waitlist.listing.code);
+      util.message(person.phoneNumber, waitlist.listing.code);
     }
   }
 
@@ -74,8 +74,8 @@ util.mail = function mail(to,subject,text,html) {
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'xtupledev@gmail.com',
-      pass: 'xTuple!23510'
+      user: 'corsica.odu@gmail.com',
+      pass: 'brunelle'
     }
   });
 
