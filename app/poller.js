@@ -66,7 +66,7 @@ _.each(data.main, function(info){
                       console.log("Before:", waitlist.availableSeats, waitlist.status);
                       console.log("After:", klass.availableSeats, klass.status);
 
-                      console.log("-------------------------------------");
+                      console.log("------------------------------------");
                       //over a day since last notified?
                       var now = moment();
                       var past = moment(waitlist.notified);
