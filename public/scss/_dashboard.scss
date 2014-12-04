@@ -161,9 +161,20 @@
 		display:none;
 	}
 
-	.locked{
+	.locked, .before_date, .after_date{
 		background-color: #efefef;
 		border: 1px dashed #dedede;
 	}
+
+	.before_date, .after_date{
+		display:none;
+		min-height: 50px;
+		padding-top: 13px;
+
+		&.show{
+			display:block;
+		}
+	}
+
 
 }	

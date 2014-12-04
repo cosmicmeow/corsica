@@ -57,7 +57,7 @@ define([
             collection.each(function(model) {
               for (var i = 0; i < __user.subscribed.length; i++){
 
-                if (model.get("crn") === __user.subscribed[i]){
+                if (model.get("crn") === __user.subscribed[i] && model.get("locked") !== true){
 
                   var courseRow = self.$el.find("#course_list");
                   var row;
@@ -99,6 +99,8 @@ define([
             $(".no_waitlist").addClass("hide");
             $(".student-visible").show();
 
+            $(".test_panel").hide();
+
           } else {
             console.log("No waitlist subscribed");
               $(".has_waitlist").addClass("hide");
@@ -110,7 +112,20 @@ define([
           $(document).ready(function(){
               $('.username').text(__user.firstName + " " + __user.lastName);
               $('.firstname').text(__user.firstName);
-          });
+
+              var cookies = (document.cookie).split(" ");
+
+              _.each(cookies, function(cookie) {
+
+                if (cookie === "beforeDate=true;"){
+                  $(".before_date").addClass("show");
+                }
+
+                if (cookie === "afterDate=true;"){
+                  $(".after_date").addClass("show");
+                }
+              });
+            });
 
         }
 
@@ -166,6 +181,21 @@ define([
             $('.username').text(__user.firstName + " " + __user.lastName);
             $(".has_waitlist").addClass("show");
             $(".no_waitlist").addClass("hide");
+
+            var cookies = (document.cookie).split(" ");
+
+            _.each(cookies, function(cookie) {
+
+              if (cookie === "beforeDate=true;"){
+                $(".before_date").addClass("show");
+              }
+
+              if (cookie === "afterDate=true;"){
+                $(".after_date").addClass("show");
+              }
+            });
+
+            
         });
 
       }});
@@ -189,14 +219,17 @@ define([
     // Lock all classes - display 'registration period hasn't started'
     testOne: function(){
 
-      //var id = $(e.currentTarget).data("id");
-      //var collection = window.CorsicaApp.collections.courseCollection.pluck("_id");
+      var now = new Date();
+      var time = now.getTime();
+      time += 3600 * 1000;
+      now.setTime(time);
 
       $.ajax({
-        type: 'PUT',
-        url: '/api/waitlists/locked',
-        data: { 'locked' : true }
+        type: 'POST',
+        url: '/api/waitlists/lock'
       }).done(function() {
+        document.cookie = 'beforeDate=true; expires=' + now.toUTCString() + '; path=/';
+        document.cookie = 'afterDate=false; expires=' + now.toUTCString() + '; path=/';
         location.reload();
       });
 
@@ -205,11 +238,17 @@ define([
     // Lock all classes - display 'registration period ended', send notification to students
     testTwo: function(){
 
+      var now = new Date();
+      var time = now.getTime();
+      time += 3600 * 1000;
+      now.setTime(time);
+
       $.ajax({
-        type: 'PUT',
-        url: '/api/waitlists/locked',
-        data: { 'locked' : true }
+        type: 'POST',
+        url: '/api/waitlists/lock'
       }).done(function() {
+        document.cookie = 'beforeDate=false ;expires=' + now.toUTCString() + '; path=/';
+        document.cookie = 'afterDate=true; expires=' + now.toUTCString() + '; path=/';
         location.reload();
       });
 
@@ -219,9 +258,8 @@ define([
     testThree: function(){
 
       $.ajax({
-        type: 'PUT',
-        url: '/api/waitlists/locked',
-        data: { 'locked' : false }
+        type: 'POST',
+        url: '/api/waitlists/unlock'
       }).done(function() {
         location.reload();
       });
@@ -229,15 +267,27 @@ define([
     },
 
     // Change a class stats, send notification to students on the list
+    // 13418 -> shut to open
+    // 17388 -> open to shut
     testFour: function(){
 
       $.ajax({
         type: 'PUT',
-        url: '/api/waitlists/locked',
-        data: { 'locked' : false }
+        url: '/api/waitlists/13418',
+        data: {'status': 'open', 'availableSeats' : '1', 'capacity': 'cap:70; enroll:69;avail:1'}
       }).done(function() {
-        location.reload();
+        alert("Class 13418 is updated");
       });
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/17388',
+        data: {'status': 'shut', 'availableSeats' : '0', 'capacity': 'cap:50; enroll:51;avail:0'}
+      }).done(function() {
+        alert("Class 17388 is updated");
+      });
+
+      location.reload();
 
     }
 

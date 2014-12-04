@@ -280,10 +280,12 @@ app.post('/api/waitlists/reorder', function (req, res) {
   // List waitlists
   app.post('/api/waitlists/lock', function (req, res) {
     return Waitlist.find({},function (err, waitlists) {
+        	console.log(waitlists);
       if (!err) {
         _.each(waitlists, function (elm) {
-          elm.locked = true;
-          elm.save();
+        	console.log(elm);
+	        elm.locked = true;
+	        elm.save();
         });
 
         return res.send(waitlists);

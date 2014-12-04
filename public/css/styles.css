@@ -350,9 +350,15 @@
     display: none; }
   #dashboard_view .student-visible {
     display: none; }
-  #dashboard_view .locked {
+  #dashboard_view .locked, #dashboard_view .before_date, #dashboard_view .after_date {
     background-color: #efefef;
     border: 1px dashed #dedede; }
+  #dashboard_view .before_date, #dashboard_view .after_date {
+    display: none;
+    min-height: 50px;
+    padding-top: 13px; }
+    #dashboard_view .before_date.show, #dashboard_view .after_date.show {
+      display: block; }
 
 #footer_view ul {
   padding: 0;
