@@ -3,6 +3,7 @@ var User = require('./models/user');
 var _ = require('lodash');
 var bcrypt   = require('bcrypt-nodejs');
 var util   = require('./util');
+var myData = require('./test');
 
 module.exports = function(app, passport) {
   // PROFILE SECTION =========================
@@ -16,6 +17,7 @@ module.exports = function(app, passport) {
 	course = new Waitlist({
 	  provider: req.body.provider.name,
 	});
+
 	course.save(function (err) {
 	  if (!err) {
 		return console.log("created");
@@ -316,10 +318,11 @@ app.post('/api/waitlists/reorder', function (req, res) {
   // Unlock
   app.post('/api/waitlists/testharness', function (req, res) {
     console.log(req.body);
-    return Waitlist.find({"crn": req.body.crn },function (err, waitlist) {
+     Waitlist.find({"crn": req.body.crn },function (err, waitlist) {
       console.log("Notification Sent");
       if (!err) {
-        util.notify(waitlist);
+
+        return res.send(util.notify(myData));
       } else {
         return res.send(err);
       }
@@ -329,8 +332,7 @@ app.post('/api/waitlists/reorder', function (req, res) {
   // Unlock
   app.post('/api/waitlists/testhorseness', function (req, res) {
     console.log(req.body);
-    var horse = require("./test.js");
-
+    util.notify(data);
     return res.send(true);
   });
 
@@ -368,4 +370,5 @@ app.post('/api/waitlists/reorder', function (req, res) {
       }
     });
   });
+
 };

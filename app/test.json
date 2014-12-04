@@ -1,4 +1,4 @@
-var data = {
+{
     "_id" : "547524b723f1a10000ddc66f",
     "status" : "shut",
     "capacity" : "cap:70; enroll:69;avail:1",
@@ -27,7 +27,7 @@ var data = {
     },
     "notified" : "2014-12-04T04:47:15.000Z",
     "lastModified" : "2014-11-26T00:54:15.215Z",
-    "subscribers" : [ 
+    "subscribers" : [
         {
             "textPreference" : "true",
             "access" : "student",
@@ -41,6 +41,3 @@ var data = {
     "locked" : false,
     "__v" : 1
 }
-var util = require("./util");
-
-util.notify(data);
