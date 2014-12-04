@@ -74,8 +74,8 @@ util.mail = function mail(to,subject,text,html) {
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'xtupledev@gmail.com',
-      pass: 'xTuple!23510'
+      user: 'corsica.odu@gmail.com',
+      pass: 'brunelle'
     }
   });
 

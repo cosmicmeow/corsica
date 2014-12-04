@@ -283,15 +283,22 @@ define([
       // cloud 547b78260fcdbe020011da93, 547b78260fcdbe020011dac5
       $.ajax({
         type: 'PUT',
-        url: '/api/waitlists/547524b723f1a10000ddc66f',
+        url: '/api/waitlists/547b78260fcdbe020011da93',
         data: {'status': 'open', 'availableSeats' : '1', 'capacity': 'cap:70; enroll:69;avail:1'}
       }).done(function() {
         alert("Class 13418 is updated");
       });
 
       $.ajax({
+        type: 'POST',
+        url: '/api/waitlists/testhorseness'
+      }).done(function() {
+        alert("Check your email!");
+      });
+
+      $.ajax({
         type: 'PUT',
-        url: '/api/waitlists/547524b723f1a10000ddc6a1',
+        url: '/api/waitlists/547b78260fcdbe020011dac5',
         data: {'status': 'shut', 'availableSeats' : '0', 'capacity': 'cap:50; enroll:51;avail:0'}
       }).done(function() {
         alert("Class 17388 is updated");
