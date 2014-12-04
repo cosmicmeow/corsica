@@ -30,7 +30,8 @@ define([
       "click #toggle_test1" : "testOne",
       "click #toggle_test2" : "testTwo",
       "click #toggle_test3" : "testThree",
-      "click #toggle_test4" : "testFour"
+      "click #toggle_test4" : "testFour",
+      "click #toggle_testReset" : "testReset"
     },
     
     initialize: function() {
@@ -257,10 +258,17 @@ define([
     // Unlock all classes
     testThree: function(){
 
+      var now = new Date();
+      var time = now.getTime();
+      time += 3600 * 1000;
+      now.setTime(time);
+
       $.ajax({
         type: 'POST',
         url: '/api/waitlists/unlock'
       }).done(function() {
+        document.cookie = 'beforeDate=false; expires=' + now.toUTCString() + '; path=/';
+        document.cookie = 'afterDate=false; expires=' + now.toUTCString() + '; path=/';
         location.reload();
       });
 
@@ -271,9 +279,11 @@ define([
     // 17388 -> open to shut
     testFour: function(){
 
+      //lookmai local test 547524b723f1a10000ddc66f, 547524b723f1a10000ddc6a1
+      // cloud 547b78260fcdbe020011da93, 547b78260fcdbe020011dac5
       $.ajax({
         type: 'PUT',
-        url: '/api/waitlists/13418',
+        url: '/api/waitlists/547524b723f1a10000ddc66f',
         data: {'status': 'open', 'availableSeats' : '1', 'capacity': 'cap:70; enroll:69;avail:1'}
       }).done(function() {
         alert("Class 13418 is updated");
@@ -281,10 +291,32 @@ define([
 
       $.ajax({
         type: 'PUT',
-        url: '/api/waitlists/17388',
+        url: '/api/waitlists/547524b723f1a10000ddc6a1',
         data: {'status': 'shut', 'availableSeats' : '0', 'capacity': 'cap:50; enroll:51;avail:0'}
       }).done(function() {
         alert("Class 17388 is updated");
+      });
+
+      location.reload();
+
+    },
+
+    testReset: function(){
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/547524b723f1a10000ddc66f',
+        data: {'status': 'shut', 'availableSeats' : '0', 'capacity': 'cap:70; enroll:70;avail:0'}
+      }).done(function() {
+        alert("Class 13418 is reset");
+      });
+
+      $.ajax({
+        type: 'PUT',
+        url: '/api/waitlists/547524b723f1a10000ddc6a1',
+        data: {'status': 'open', 'availableSeats' : '1', 'capacity': 'cap:50; enroll:50;avail:1'}
+      }).done(function() {
+        alert("Class 17388 is reset");
       });
 
       location.reload();

@@ -59,7 +59,7 @@ module.exports = function(app, passport) {
 
 	  ///product.description = req.body.description;
 		if (!err) {
-		  console.log("updated");
+		  console.log("Updated:", req.body);
 		} else {
 		  console.log(err);
 		}

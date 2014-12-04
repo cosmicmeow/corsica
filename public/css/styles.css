@@ -345,7 +345,10 @@
     height: 50px;
     min-width: 100px;
     background-color: #930E00;
-    color: #fff; }
+    color: #fff;
+    min-width: 100%; }
+  #dashboard_view #toggle_testReset {
+    margin-top: 10px; }
   #dashboard_view .search_notfound {
     display: none; }
   #dashboard_view .student-visible {

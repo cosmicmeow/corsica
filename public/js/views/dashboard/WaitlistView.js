@@ -239,7 +239,7 @@ define([
         url: '/api/waitlists/' + course_id,
         data: { 'locked' : true }
       }).done(function() {
-        location.reload();
+        //location.reload();
       });
       
     },

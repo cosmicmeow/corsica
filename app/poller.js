@@ -58,7 +58,13 @@ _.each(data.main, function(info){
                   //   console.log(waitlist.availableSeats !== klass.availableSeats);
                   // }
                   if (waitlist.availableSeats !== klass.availableSeats){
-                    console.log("change detected");
+                    console.log("-------------------------------------");
+                    console.log("Change detected in", waitlist.crn);
+
+                    console.log("Before:", waitlist.availableSeats, waitlist.status);
+                    console.log("After:", klass.availableSeats, klass.status);
+
+                    console.log("-------------------------------------");
                     //over a day since last notified?
                     var now = moment();
                     var past = moment(waitlist.notified);
@@ -66,14 +72,16 @@ _.each(data.main, function(info){
                     /** DEBUGGING EVERY HOUR **/
                     /** NOTE CHANGE HIS FOR PRODUCTION TO SET INTERVAL FOR UPDATE **/
                     var elapsed = now.diff(past, "hours");
-                    console.log(elapsed);
-                    console.log(waitlist.notified);
-                    console.log(moment.utc());
+                    console.log("elasped:", elapsed);
+                    console.log("waitlist.notified:", waitlist.notified);
+                    console.log("moment.utc:", moment.utc());
+
+                    console.log("-------------------------------------");
 
                     if (waitlist.status !== klass.status && elapsed > 0){
                     Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats, "notified": moment()}).exec();
                      console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
-                     console.log(" a wild change has appeared notification");
+                     console.log("See change(s), send out notification.");
                      //pass the array of subscribers
                      console.log(waitlist.subscribers);
                      util.notify(waitlist);
@@ -82,10 +90,12 @@ _.each(data.main, function(info){
                       //updates only the change in status
                       Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
                        console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
-                       console.log(" a wild change has appeared no notification");
+                       console.log("See change(s), but dont send out notification.");
                        //pass the array of subscribers
                        console.log(waitlist.subscribers);
                     }
+
+                    console.log("-------------------------------------");
                   }
                 });
               }
