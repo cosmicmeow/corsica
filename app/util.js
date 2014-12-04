@@ -40,7 +40,7 @@ _.each(waitlist.subscribers, function (person, key) {
     console.log(person.email);
     var link = "http://red411.herokuapp.com/confirm/"+ waitlist._id + "?u="+ util.encrypt(person.email);
     console.log("link");
-    html = html + " To claim, head to <a href='"+ link +"'></a>";
+    html = html + " To claim, head to '"+ link;
     if (person.textPreference === true || person.textPreference === "true" ){
       console.log("sent a text");
       message(person.phoneNumber, waitlist.listing.code);
