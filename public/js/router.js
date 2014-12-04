@@ -14,6 +14,7 @@ define([
     routes: {
       ''          : 'index',
       'about'     : 'about',
+      'faq'       : 'faq',
       'login'     : 'login',
       'dashboard' : 'dashboard',
       'search'    : 'search',
@@ -48,6 +49,15 @@ define([
 
       window.CorsicaApp.views.navbarView.render();
       window.CorsicaApp.views.aboutView.render();
+      window.CorsicaApp.views.footerView.render();
+
+    },
+
+    faq: function(){
+      console.log("ROUTER -- faq");
+
+      window.CorsicaApp.views.navbarView.render();
+      window.CorsicaApp.views.faqView.render();
       window.CorsicaApp.views.footerView.render();
 
     },

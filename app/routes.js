@@ -59,6 +59,16 @@ module.exports = function(app, passport) {
 			});
 		});
 
+		// about page for public view =================================
+		app.get('/about', function(req, res) {
+			res.render('about.ejs');
+		});
+
+		// faq page for public view =================================
+		app.get('/faq', function(req, res) {
+			res.render('faq.ejs');
+		});
+
 		// CREATE NEW ACCOUNT =================================
 		// show the signup form
 		app.get('/newaccount', isLoggedIn, function(req, res) {

@@ -8,6 +8,7 @@ define([
   //'models/user',
   'views/home/HomeView',
   'views/static/AboutView',
+  'views/static/FaqView',
   'views/static/LoginView',
   'views/dashboard/DashboardView',
   'views/dashboard/WaitlistView',
@@ -23,6 +24,7 @@ define([
   //UserModel,
   HomeView,
   AboutView,
+  FaqView,
   LoginView,
   DashboardView,
   WaitlistView,
@@ -62,6 +64,7 @@ define([
 
       // VIEWS
       self.views.aboutView = new AboutView();
+      self.views.faqView = new FaqView();
       self.views.homeView = new HomeView();
       self.views.loginView = new LoginView();
       self.views.dashboardView = new DashboardView();
