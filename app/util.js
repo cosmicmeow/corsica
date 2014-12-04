@@ -37,8 +37,10 @@ _.each(waitlist.subscribers, function (person, key) {
   var html = '<b>A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title + 'Your position is ' + (key+1) + '</b>';
   console.log(person.textPreference===true);
   if (key === 0){
-    text = text + " To claim, head to http://localhost:3000/email/" + waitlist._id;
-    html = html + " To claim, head to <a href='http://red411.herokuapp.com/confirm/'>Claim</a>" + waitlist._id;
+    console.log(person.email);
+    var link = "http://red411.herokuapp.com/confirm/"+ waitlist._id + "?u="+ util.encrypt(person.email);
+    console.log("link");
+    html = html + " To claim, head to <a href='"+ link +"'></a>";
     if (person.textPreference === true || person.textPreference === "true" ){
       console.log("sent a text");
       message(person.phoneNumber, waitlist.listing.code);
