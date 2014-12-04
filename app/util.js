@@ -43,7 +43,7 @@ _.each(waitlist.subscribers, function (person, key) {
     html = html + " To claim, head to '"+ link;
     if (person.textPreference === true || person.textPreference === "true" ){
       console.log("sent a text");
-      message(person.phoneNumber, waitlist.listing.code);
+      util.message(person.phoneNumber, waitlist.listing.code);
     }
   }
 
