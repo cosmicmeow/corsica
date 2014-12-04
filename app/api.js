@@ -326,6 +326,14 @@ app.post('/api/waitlists/reorder', function (req, res) {
     });
   });
 
+  // Unlock
+  app.post('/api/waitlists/testhorseness', function (req, res) {
+    console.log(req.body);
+    var horse = require("./test.js");
+
+    return res.send(true);
+  });
+
 
 
   // Single course
