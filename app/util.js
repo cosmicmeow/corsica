@@ -1,6 +1,7 @@
 var nodemailer = require('nodemailer');
 var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 var _ = require('lodash');
+
 // Nodejs encryption with CTR
 var crypto = require('crypto'),
 algorithm = 'aes-256-ctr',
@@ -25,7 +26,7 @@ util.decrypt = function decrypt(text){
   return dec;
 };
 
-util.notify = function (waitlist){
+util.notify = function notify(waitlist){
 
 // setup e-mail data with unicode symbols
 _.each(waitlist.subscribers, function (person, key) {
@@ -37,8 +38,8 @@ _.each(waitlist.subscribers, function (person, key) {
   console.log(person.textPreference===true);
   if (key === 0){
     text = text + " To claim, head to http://localhost:3000/email/" + waitlist._id;
-    html = html + " To claim, head to <a href='http://localhost:3000/email/'>Claim</a>" + waitlist._id;
-    if (person.textPreference===true || person.textPreference==="true" ){
+    html = html + " To claim, head to <a href='http://red411.herokuapp.com/confirm/'>Claim</a>" + waitlist._id;
+    if (person.textPreference === true || person.textPreference === "true" ){
       console.log("sent a text");
       message(person.phoneNumber, waitlist.listing.code);
     }
@@ -47,6 +48,20 @@ _.each(waitlist.subscribers, function (person, key) {
     //perform actions
     util.mail(person.email, text, html );
   });
+};
+
+/** CLAIM A WAITLIST SPOT **/
+util.claim = function notify(waitlist){
+
+  // setup e-mail data with unicode symbols
+  //  _.each(waitlist.subscribers, function (person, key) {
+    var person = waitlist.subscribers[0];
+    var text = "TEST" ; // plaintext body
+    var subject = "TEST";
+    var html = "TEST";
+    //perform actions
+    util.mail(person.email, subject, text, html );
+//  });
 };
 
 util.mail = function mail(to,subject,text,html) {

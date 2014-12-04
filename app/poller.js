@@ -2,7 +2,7 @@ var data = require('../data/fall_2014');
 var classData = require('../data/classes');
 var Waitlist = require('./models/waitlist');
 var _ = require('lodash');
-var util = require('./notify.js');
+var util = require('./util.js');
 var moment = require('moment');
 
 var courses = [];
@@ -32,6 +32,7 @@ var course = function (info){
     unknown6: info[18]
   };
 };
+
 console.log("poller is running, looking for changes");
 _.each(data.main, function(info){
     var klass = new course(info);
@@ -61,7 +62,7 @@ _.each(data.main, function(info){
                     //over a day since last notified?
                     var now = moment();
                     var past = moment(waitlist.notified);
-                    
+
                     /** DEBUGGING EVERY HOUR **/
                     /** NOTE CHANGE HIS FOR PRODUCTION TO SET INTERVAL FOR UPDATE **/
                     var elapsed = now.diff(past, "hours");
