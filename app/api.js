@@ -2,7 +2,7 @@ var Waitlist = require('./models/waitlist');
 var User = require('./models/user');
 var _ = require('lodash');
 var bcrypt   = require('bcrypt-nodejs');
-var notify   = require('./util');
+var util   = require('./util');
 
 module.exports = function(app, passport) {
   // PROFILE SECTION =========================
@@ -317,18 +317,32 @@ app.post('/api/waitlists/reorder', function (req, res) {
   // Single course
   //return a view
   app.get('/confirm/:id', function (req, res) {
-      console.log(req.query.params);
     return Waitlist.findById(req.params.id, function (err, course) {
       if (!err) {
-
-        return res.render('confirm.ejs', {
-          status : req.params.id,
-          data : course
-        });
+        var email = course.subscribers[0].email;
+        var email_dehash = util.decrypt(req.query.u);
+        console.log(email_dehash);
+        console.log(email);
+        if ( email_dehash === email){
+          console.log("right");
+          //SEND AN EMAIL BRUNELLE
+          util.claim(course);
+          return res.render('confirm.ejs', {
+            res : "Thanks the advisor has been notified " + course.subscribers[0].firstName
+          });
+        }
+        else {
+          console.log("wrong");
+          //SAY SORRY
+          return res.render('confirm.ejs', {
+            res : "sorry the link has expired or the course is no longer avaliable"
+          });
+        }
       } else {
         console.log(err);
-        return res.send(err);
-
+        return res.render('confirm.ejs', {
+          res : "sorry the link has expired or the course is no longer avaliable"
+        });
       }
     });
   });
