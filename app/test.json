@@ -1,4 +1,4 @@
-var data = {
+{
   "__v" : 1,
   "_id" : "547a818e2cc1b000001767b3",
   "availableSeats" : "0",
@@ -19,7 +19,7 @@ var data = {
   "location" : "DIEHN  1103",
   "locked" : true,
   "note" : " LECTURE. STUDENT MUST ALSO REGISTER FOR A RECITATION SECTION ",
-  "notified" : ("2014-11-30T02:31:42.392Z"),
+  "notified" : "2014-11-30T02:31:42.392Z",
   "prop" : "q",
   "status" : "shut",
   "subscribers" : [
@@ -39,7 +39,4 @@ var data = {
   "unknown4" : "dupeven",
   "unknown5" : "A",
   "unknown6" : "N"
-};
-var util = require("./util");
-
-util.notify(data);
+}
