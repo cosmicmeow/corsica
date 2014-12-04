@@ -27,7 +27,8 @@ util.decrypt = function decrypt(text){
 };
 
 util.notify = function notify(waitlist){
-
+console.log("Calling notify function");
+console.log(waitlist);
 // setup e-mail data with unicode symbols
 _.each(waitlist.subscribers, function (person, key) {
   console.log(person.firstName, "your position is " + (key+1) + " on the waitlist");
@@ -37,7 +38,6 @@ _.each(waitlist.subscribers, function (person, key) {
   var html = '<b>A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title + 'Your position is ' + (key+1) + '</b>';
   console.log(person.textPreference===true);
   if (key === 0){
-    console.log(person.email);
     var link = "http://red411.herokuapp.com/confirm/"+ waitlist._id + "?u="+ util.encrypt(person.email);
     console.log("link");
     html = html + " To claim, head to '"+ link;
@@ -47,8 +47,8 @@ _.each(waitlist.subscribers, function (person, key) {
     }
   }
 
-    //perform actions
-    util.mail(person.email, text, html );
+  //perform actions
+   util.mail(person.email, subject, text, html);
   });
 };
 

@@ -313,6 +313,20 @@ app.post('/api/waitlists/reorder', function (req, res) {
     });
   });
 
+  // Unlock
+  app.post('/api/waitlists/testharness', function (req, res) {
+    console.log(req.body);
+    return Waitlist.find({"crn": req.body.crn },function (err, waitlist) {
+      console.log("Notification Sent");
+      if (!err) {
+        util.notify(waitlist);
+      } else {
+        return res.send(err);
+      }
+    });
+  });
+
+
 
   // Single course
   //return a view
@@ -346,5 +360,4 @@ app.post('/api/waitlists/reorder', function (req, res) {
       }
     });
   });
-
 };
