@@ -35,7 +35,7 @@ _.each(waitlist.subscribers, function (person, key) {
 
   var text = 'A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title ; // plaintext body
   var subject = 'A spot has opened up in ' + waitlist.listing.code;
-  var html = '<b>A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title + 'Your position is ' + (key+1) + '</b>';
+  var html = 'A spot has opened up in ' + waitlist.listing.code + ": " + waitlist.listing.title + 'Your position is ' + (key+1);
   console.log(person.textPreference===true);
   if (key === 0){
     var link = "http://red411.herokuapp.com/confirm/"+ waitlist._id + "?u="+ util.encrypt(person.email);
@@ -58,11 +58,13 @@ util.claim = function notify(waitlist){
   // setup e-mail data with unicode symbols
   //  _.each(waitlist.subscribers, function (person, key) {
     var person = waitlist.subscribers[0];
-    var text = "TEST" ; // plaintext body
-    var subject = "TEST";
-    var html = "TEST";
+    var text = person.firstName + " " + person.lastName + " has accepted the spot for course: " + waitlist.courseNum + " crn: " + waitlist.crn; // plaintext body
+    var subject = "CORSICA WAITLIST REQUEST";
+    var html = text;
+    var admin = "oratt001@gmail.com";
+
     //perform actions
-    util.mail(person.email, subject, text, html );
+    util.mail(admin, subject, text, html );
 //  });
 };
 

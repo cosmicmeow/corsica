@@ -57,43 +57,48 @@ _.each(data.main, function(info){
                   //    console.log(waitlist.availableSeats);
                   //   console.log(waitlist.availableSeats !== klass.availableSeats);
                   // }
+
+                  //notify people in the system of changes
                   if (waitlist.availableSeats !== klass.availableSeats){
-                    console.log("-------------------------------------");
-                    console.log("Change detected in", waitlist.crn);
+                      console.log("-------------------------------------");
+                      console.log("Change detected in", waitlist.crn);
 
-                    console.log("Before:", waitlist.availableSeats, waitlist.status);
-                    console.log("After:", klass.availableSeats, klass.status);
+                      console.log("Before:", waitlist.availableSeats, waitlist.status);
+                      console.log("After:", klass.availableSeats, klass.status);
 
-                    console.log("-------------------------------------");
-                    //over a day since last notified?
-                    var now = moment();
-                    var past = moment(waitlist.notified);
+                      console.log("-------------------------------------");
+                      //over a day since last notified?
+                      var now = moment();
+                      var past = moment(waitlist.notified);
 
-                    /** DEBUGGING EVERY HOUR **/
-                    /** NOTE CHANGE HIS FOR PRODUCTION TO SET INTERVAL FOR UPDATE **/
-                    var elapsed = now.diff(past, "hours");
-                    console.log("elasped:", elapsed);
-                    console.log("waitlist.notified:", waitlist.notified);
-                    console.log("moment.utc:", moment.utc());
+                      /** DEBUGGING EVERY HOUR **/
+                      /** NOTE CHANGE HIS FOR PRODUCTION TO SET INTERVAL FOR UPDATE **/
+                      var elapsed = now.diff(past, "hours");
+                      console.log("elasped:", elapsed);
+                      console.log("waitlist.notified:", waitlist.notified);
+                      console.log("moment.utc:", moment.utc());
 
-                    console.log("-------------------------------------");
+                      console.log("-------------------------------------");
 
-                    if (waitlist.status !== klass.status && elapsed > 0){
-                    Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats, "notified": moment()}).exec();
-                     console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
-                     console.log("See change(s), send out notification.");
-                     //pass the array of subscribers
-                     console.log(waitlist.subscribers);
-                     util.notify(waitlist);
-                    }
-                    else {
-                      //updates only the change in status
-                      Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
+
+                      if (waitlist.status !== klass.status && elapsed > 0){
+
+                          //remove the first person from the list when...
+                      Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats, "notified": moment()}).exec();
                        console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
-                       console.log("See change(s), but dont send out notification.");
+                       console.log("See change(s), send out notification.");
                        //pass the array of subscribers
                        console.log(waitlist.subscribers);
-                    }
+                       util.notify(waitlist);
+                      }
+                      else {
+                        //updates only the change in status
+                        Waitlist.update({"crn": klass.crn},{"status":klass.status, "capacity:": klass.capacity, "availableSeats": klass.availableSeats}).exec();
+                         console.log(klass.crn, waitlist.crn, waitlist.status, klass.status);
+                         console.log("See change(s), but dont send out notification.");
+                         //pass the array of subscribers
+                         console.log(waitlist.subscribers);
+                      }
 
                     console.log("-------------------------------------");
                   }
