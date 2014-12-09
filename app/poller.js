@@ -89,7 +89,8 @@ _.each(data.main, function(info){
                        console.log("See change(s), send out notification.");
                        //pass the array of subscribers
                        console.log(waitlist.subscribers);
-                       util.notify(waitlist);
+
+                       util.mail(util.getInfo(waitlist));
                       }
                       else {
                         //updates only the change in status

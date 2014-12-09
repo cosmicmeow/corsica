@@ -26,9 +26,10 @@ util.decrypt = function decrypt(text){
   return dec;
 };
 
-util.notify = function notify(waitlist){
+util.getInfo = function getInfo(waitlist){
 console.log("Calling notify function");
 console.log(waitlist);
+var peeps = [];
 // setup e-mail data with unicode symbols
 _.each(waitlist.subscribers, function (person, key) {
   console.log(person.firstName, "your position is " + (key+1) + " on the waitlist");
@@ -46,10 +47,17 @@ _.each(waitlist.subscribers, function (person, key) {
       util.message(person.phoneNumber, waitlist.listing.code);
     }
   }
+  //form into an addressee object
+    var addressee = {
+      to: person.email,
+      subject: subject,
+      text: text,
+      html: html
+    };
+    peeps.push(addressee);
 
-  //perform actions
-   util.mail(person.email, subject, text, html);
   });
+  return peeps;
 };
 
 /** CLAIM A WAITLIST SPOT **/
@@ -62,13 +70,18 @@ util.claim = function notify(waitlist){
     var subject = "CORSICA WAITLIST REQUEST";
     var html = text;
     var admin = "oratt001@gmail.com";
-
+    var addressee = {
+      to: person,
+      subject: subject,
+      text: text,
+      html: html
+    };
     //perform actions
-    util.mail(admin, subject, text, html );
+    util.mail(addressee);
 //  });
 };
 
-util.mail = function mail(to,subject,text,html) {
+util.mail = function mail(persons) {
   // create reusable transporter object using SMTP transport
 
   var transporter = nodemailer.createTransport({
@@ -79,13 +92,14 @@ util.mail = function mail(to,subject,text,html) {
     }
   });
 
+  _.each(persons, function (person, info) {
   // body...
   var mailOptions = {
       from: 'Corsica (oratt001@gmail.com)', // sender address
-      to: to, // list of receivers
-      subject: subject,
-      text: text,
-      html: html// html body
+      to: person.to, // list of receivers
+      subject: person.subject,
+      text: person.text,
+      html: person.html// html body
   };
 
   // send mail with defined transport object
@@ -97,6 +111,7 @@ util.mail = function mail(to,subject,text,html) {
           console.log('Message sent: ' + info.response);
           return info.reponse;
       }
+  });
   });
 };
 /* Text the User
