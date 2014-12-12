@@ -44,7 +44,7 @@ define([
 
     renderStudent: function(){
 
-      $(".loader").removeClass("ughhide");
+      $(".loader").addClass("ughhide");
 
       var self = this;
 
@@ -95,12 +95,12 @@ define([
                   // Add this new row to the screen
                   courseRow.append(row);
 
-                  if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
-                    console.log("???");
-                    location.reload();
-                  } else{
-                    $(".loader").addClass("ughhide");
-                  }
+                  // if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
+                  //   console.log("???");
+                  //   location.reload();
+                  // } else{
+                  //   $(".loader").addClass("ughhide");
+                  // }
 
                 }
               }
@@ -147,7 +147,7 @@ define([
 
     render: function(){
 
-      $(".loader").removeClass("ughhide");
+      $(".loader").addClass("ughhide");
 
       var self = this;
 
@@ -188,12 +188,12 @@ define([
             // Add this new row to the screen
             courseRow.append(row);
 
-            if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
-              console.log("???");
-              location.reload();
-            } else{
-              $(".loader").addClass("ughhide");
-            }
+            // if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
+            //   console.log("???");
+            //   location.reload();
+            // } else{
+            //   $(".loader").addClass("ughhide");
+            // }
 
 
 

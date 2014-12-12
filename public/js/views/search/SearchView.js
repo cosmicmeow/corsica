@@ -104,6 +104,9 @@ define([
     },
 
     render: function () {
+      
+      $(".loader").addClass("ughhide");
+
       $(window).scrollTop(0);
       this.$el.html(SearchTemplate);
 
