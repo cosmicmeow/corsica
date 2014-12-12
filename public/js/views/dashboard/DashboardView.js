@@ -44,6 +44,8 @@ define([
 
     renderStudent: function(){
 
+      $(".loader").removeClass("ughhide");
+
       var self = this;
 
       console.log("Render - Student Dashboard");
@@ -93,6 +95,13 @@ define([
                   // Add this new row to the screen
                   courseRow.append(row);
 
+                  if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
+                    console.log("???");
+                    location.reload();
+                  }
+
+                  $(".loader").addClass("ughhide");
+
                 }
               }
 
@@ -138,6 +147,8 @@ define([
 
     render: function(){
 
+      $(".loader").removeClass("ughhide");
+
       var self = this;
 
       console.log("Render - Faculty Dashboard");
@@ -176,6 +187,14 @@ define([
 
             // Add this new row to the screen
             courseRow.append(row);
+
+            if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
+              console.log("???");
+              location.reload();
+            }
+
+            $(".loader").addClass("ughhide");
+
 
           });
 

@@ -541,3 +541,20 @@ input.LV_invalid_field:active,
 textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active {
   border: 1px solid #CC0000; }
+
+.loader {
+  opacity: 1;
+  transition: opacity 0s ease-out;
+  position: absolute;
+  background-color: #fefefe;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 99;
+  pointer-events: none; }
+  .loader.ughhide {
+    opacity: 0; }
+
+.navbar, footer {
+  z-index: 98; }

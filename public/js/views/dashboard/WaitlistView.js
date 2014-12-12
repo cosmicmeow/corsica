@@ -26,6 +26,8 @@ define([
 
     render: function(crn){
 
+      $(".loader").removeClass("ughhide");
+
       $(window).scrollTop(0);
       var self = this;
       this.crn = crn;
@@ -84,36 +86,41 @@ define([
               function addToDom(row){
                 // Add this new row to the screen
                 self.$el.html(row);
+
+                if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
+                  console.log("???");
+                  location.reload();
+                } else{
+
+                  $(".loader").addClass("ughhide");
+                }
+
               }
               
-              setTimeout(function(){
-                makeTemplate(addToDom);
+              makeTemplate(addToDom);
+              //this.$el.html(waitlistTemplate);
 
-                //this.$el.html(waitlistTemplate);
+              // id = #linked_lab_12345
 
-                // id = #linked_lab_12345
+              if (model.get('linked') === true){
+                var linkedCourses = collection.where({courseNum: model.get('courseNum')});
 
-                if (model.get('linked') === true){
-                  var linkedCourses = collection.where({courseNum: model.get('courseNum')});
+                for (var i = 0; i < linkedCourses.length; i++){
+                  if (linkedCourses[i].get('type') !== model.get('type')){
+                    if (linkedCourses[i].get('type') === 'lab'){
 
-                  for (var i = 0; i < linkedCourses.length; i++){
-                    if (linkedCourses[i].get('type') !== model.get('type')){
-                      if (linkedCourses[i].get('type') === 'lab'){
+                      var dom = "<div class\"radio\"><input type=\"radio\" name=\"options_" + linkedCourses[i].get('type') + "\" id=linked_lab_\"" + linkedCourses[i].get('crn') + "\" value=\"" + linkedCourses[i].get('crn') + "\">" + linkedCourses[i].get('crn') + " (" + linkedCourses[i].get('subscribers').length + " queued)</div>";
+                      $(".linked_labs").append(dom);
 
-                        var dom = "<div class\"radio\"><input type=\"radio\" name=\"options_" + linkedCourses[i].get('type') + "\" id=linked_lab_\"" + linkedCourses[i].get('crn') + "\" value=\"" + linkedCourses[i].get('crn') + "\">" + linkedCourses[i].get('crn') + " (" + linkedCourses[i].get('subscribers').length + " queued)</div>";
-                        $(".linked_labs").append(dom);
+                    } else if (linkedCourses[i].get('type') === 'recitation'){
 
-                      } else if (linkedCourses[i].get('type') === 'recitation'){
+                      var dom = "<div class\"radio\"><input type=\"radio\" name=\"options_" + linkedCourses[i].get('type') + "\" id=linked_rec_\"" + linkedCourses[i].get('crn') + "\" value=\"" + linkedCourses[i].get('crn') + "\">" + linkedCourses[i].get('crn') + " (" + linkedCourses[i].get('subscribers').length + " queued)</div>";
+                      $(".linked_recs").append(dom);
 
-                        var dom = "<div class\"radio\"><input type=\"radio\" name=\"options_" + linkedCourses[i].get('type') + "\" id=linked_rec_\"" + linkedCourses[i].get('crn') + "\" value=\"" + linkedCourses[i].get('crn') + "\">" + linkedCourses[i].get('crn') + " (" + linkedCourses[i].get('subscribers').length + " queued)</div>";
-                        $(".linked_recs").append(dom);
-
-                      }
                     }
                   }
                 }
-
-              }, 200);
+              }
 
             }
           });

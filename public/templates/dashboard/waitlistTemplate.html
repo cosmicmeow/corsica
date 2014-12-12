@@ -101,22 +101,24 @@
 		  	<div class="row">
 		        <div class="col-sm-12">
 		          <div class="course head row">
+		          	<div class="course_index_header col-sm-1"></div>
 		            <div class="course_name_header col-sm-4">Student</div>
 		            <div class="course_instructor col-sm-3">Email</div>
-		            <div class="course_stats col-sm-4">Phone #</div>
+		            <div class="course_stats col-sm-2">Phone #</div>
 		          </div>
 		        </div>
 			</div>
 
 			<div class="students_list">
 
-				<% data.subscribers.forEach(function(student) { %>
+				<% data.subscribers.forEach(function(student, i) { %>
 					<div class="course row col-sm-12 student_waitlist" student-id="<%=student.email%>">
+						<div class="col-sm-1"><%= i + 1 %></div>
 						<div class="col-sm-4 waitlist">
 							<span class="studen_name"><%= student.firstName%> <%= student.lastName%></span>
 						</div>
 						<div class="col-sm-3"><span class="student_email"><%= student.email%></span></div>
-						<div class="col-sm-3"><span class="student_phone"><%= student.phoneNumber%></span></div>
+						<div class="col-sm-2"><span class="student_phone"><%= student.phoneNumber%></span></div>
 						<div class="col-sm-2 control"><span class="glyphicon glyphicon-chevron-up advisor-visible"></span> <span class="glyphicon glyphicon-chevron-down advisor-visible"></span> <span class="glyphicon glyphicon-remove advisor-visible"></span></div>
 					</div>
 				<% }); %>
