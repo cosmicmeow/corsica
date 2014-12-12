@@ -18,6 +18,7 @@ var poll = require('./app/poller.js');
 
 var url = process.env.SEM_URL || "http://www.cs.odu.edu/~ibl/JSON/spr15.js";
 
+poll(url);
 setInterval( function (){
   //poll every 60 minutes
   poll(url);
