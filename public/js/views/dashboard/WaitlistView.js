@@ -65,7 +65,8 @@ define([
                 location: model.get('location'),
                 subscribed_num: model.get('subscribers').length,
                 subscribers: model.get('subscribers'),
-                current_num: position
+                current_num: position,
+                type: model.get('type')
               };
 
               locked = model.get("locked");
