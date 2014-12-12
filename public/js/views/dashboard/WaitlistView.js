@@ -44,7 +44,7 @@ define([
 
           collection.each(function(model) {
             if (model.get("crn") === crn){
-              console.log(model); 
+              console.log(model);
 
               for (var j = 0; j < model.get('subscribers').length; j++){
                 if (__user.email === model.get('subscribers')[j].email){
@@ -96,7 +96,7 @@ define([
                 }
 
               }
-              
+
               makeTemplate(addToDom);
               //this.$el.html(waitlistTemplate);
 
@@ -221,7 +221,7 @@ define([
       //   // Add this new row to the screen
       //   self.$el.html(row);
       // }
-      
+
       // makeTemplate(addToDom);
       //this.$el.html(waitlistTemplate);
 
@@ -335,7 +335,7 @@ define([
       }).done(function() {
         location.reload();
       });
-    }, 
+    },
 
     clickUnQueue: function(){
       $.ajax({
@@ -363,7 +363,7 @@ define([
     clickLock: function(e){
       console.log("Hide waitlist from student", $(e.target).attr("data-id"));
       var course_id = $(e.target).attr("data-id");
-      
+
       $.ajax({
         type: 'PUT',
         url: '/api/waitlists/' + course_id,
@@ -371,13 +371,13 @@ define([
       }).done(function() {
         //location.reload();
       });
-      
+
     },
 
     clickUnLock: function(e){
       console.log("Show waitlist from student", $(e.target).attr("data-id"));
       var course_id = $(e.target).attr("data-id");
-      
+
       $.ajax({
         type: 'PUT',
         url: '/api/waitlists/' + course_id,
@@ -385,11 +385,11 @@ define([
       }).done(function() {
         location.reload();
       });
-      
+
     }
 
   });
 
   return WaitlistView;
-  
+
 });
