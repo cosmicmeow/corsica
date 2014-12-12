@@ -53,9 +53,10 @@ module.exports = function(app, passport) {
 			//adding some security
 			req.user.local.password = "";
 			req.user.local.phoneNumber = "";
+			var url = process.env.SEM_URL.split("/")[5].slice(0,-3);
 			res.render('index.ejs', {
 				user: JSON.stringify(req.user.local),
-				semester: JSON.stringify(process.env.SEM_URL)
+				semester: JSON.stringify(url)
 			});
 		});
 
