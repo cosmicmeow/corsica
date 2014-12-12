@@ -67,3 +67,8 @@ var waitlistSchema = mongoose.Schema({
   notified: { type: Date, default: Date.now }
 });
 ```
+
+
+LICENSE
+---
+MIT
