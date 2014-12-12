@@ -98,9 +98,9 @@ define([
                   if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
                     console.log("???");
                     location.reload();
+                  } else{
+                    $(".loader").addClass("ughhide");
                   }
-
-                  $(".loader").addClass("ughhide");
 
                 }
               }
@@ -191,9 +191,10 @@ define([
             if ($(row).find(".waitlist").find(".course_num").text().indexOf("data.courseNum") >= 0){
               console.log("???");
               location.reload();
+            } else{
+              $(".loader").addClass("ughhide");
             }
 
-            $(".loader").addClass("ughhide");
 
 
           });

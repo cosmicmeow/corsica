@@ -25,6 +25,8 @@ define([
     },
     search: function () {
 
+      $(".loader").addClass("ughhide");
+
       console.log("Hit search for: ", this.$("#term").val());
 
       $(window).scrollTop(350);
