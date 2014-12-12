@@ -21,9 +21,6 @@ module.exports = function(app, passport) {
 		});
 	});
 
-	app.get('/app', isLoggedIn, function (req,res) {
-		res.send('you are logged in');
-	});
 	// LOGOUT ==============================
 	app.get('/logout', function(req, res) {
 		req.logout();
