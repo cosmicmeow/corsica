@@ -40,8 +40,8 @@ Run this every 30 minutes probably at peak times during day, hourly or not at ni
 */
 
 module.exports = function (url) {
+  console.log("polling:",url);
   request.get(url, function(err,res){
-
   if (!err && res.statusCode == 200) {
   //like eval
   vm.runInThisContext(res.body);

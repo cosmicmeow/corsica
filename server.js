@@ -14,7 +14,9 @@ var flash    = require('connect-flash');
 var session      = require('express-session');
 var configDB = require('./config/database.js');
 var poll = require('./app/poller.js');
-var url = "http://www.cs.odu.edu/~ibl/JSON/spr15.js";
+
+
+var url = process.env.SEM_URL || "http://www.cs.odu.edu/~ibl/JSON/spr15.js";
 
 setInterval( function (){
   //poll every 60 minutes
