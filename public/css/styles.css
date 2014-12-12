@@ -22,6 +22,10 @@
     line-height: 40px; }
     #waitlist_view .message span {
       color: #930E00; }
+  #waitlist_view .linked_container {
+    margin-top: 15px; }
+    #waitlist_view .linked_container input[type="radio"] {
+      margin-right: 5px; }
   #waitlist_view h1 {
     font-size: 26px;
     text-align: left; }
@@ -82,9 +86,9 @@
   #waitlist_view .students, #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
     display: none; }
   #waitlist_view #subscribe_btn, #waitlist_view #unsubscribe_btn {
-    position: absolute;
-    right: 0;
-    margin-right: 15px; }
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: 0; }
   #waitlist_view .empty {
     display: none;
     text-align: center; }
@@ -264,31 +268,33 @@
 
 #dashboard_view {
   margin-top: 50px; }
-  #dashboard_view .test_panel h1 {
-    margin-bottom: 0; }
-  #dashboard_view .test_panel hr {
-    margin: 10px 0;
-    border-top: 1px dashed;
-    border-color: #292120; }
-  #dashboard_view .test_panel ul {
-    margin-bottom: 20px; }
-  #dashboard_view .test_panel span {
-    color: #930E00; }
-  #dashboard_view .test_panel .btn {
-    height: auto;
-    border-radius: 0; }
-  #dashboard_view .test_panel table {
-    background-color: #fff; }
-    #dashboard_view .test_panel table th {
-      background-color: #333;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      border: 0; }
-    #dashboard_view .test_panel table tr > td:first-child {
-      text-align: center; }
-    #dashboard_view .test_panel table td {
-      padding: 10px; }
+  #dashboard_view .test_panel {
+    display: none; }
+    #dashboard_view .test_panel h1 {
+      margin-bottom: 0; }
+    #dashboard_view .test_panel hr {
+      margin: 10px 0;
+      border-top: 1px dashed;
+      border-color: #292120; }
+    #dashboard_view .test_panel ul {
+      margin-bottom: 20px; }
+    #dashboard_view .test_panel span {
+      color: #930E00; }
+    #dashboard_view .test_panel .btn {
+      height: auto;
+      border-radius: 0; }
+    #dashboard_view .test_panel table {
+      background-color: #fff; }
+      #dashboard_view .test_panel table th {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        border: 0; }
+      #dashboard_view .test_panel table tr > td:first-child {
+        text-align: center; }
+      #dashboard_view .test_panel table td {
+        padding: 10px; }
   #dashboard_view .message {
     height: 60px;
     color: #0f0f0f;
