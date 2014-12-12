@@ -146,6 +146,7 @@ module.exports = function (url) {
   });
   }
   else {
+    console.log("error the url provided was incorrect, please check, poller failed");
     throw err;
   }
   });
