@@ -13,6 +13,18 @@ var passport = require('passport');
 var flash    = require('connect-flash');
 var session      = require('express-session');
 var configDB = require('./config/database.js');
+var poll = require('./app/poller.js');
+var url = "http://www.cs.odu.edu/~ibl/JSON/spr15.js";
+
+setInterval( function (){
+  //poll every 60 minutes
+  poll(url);
+}, 60*60000);
+
+// start ^ configure polling
+
+// process.env.semester
+// url for semester to poll
 
 require('./config/passport')(passport); // pass passport for configuration
 dotenv.load();
@@ -30,7 +42,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
-require('./app/poller.js');
 require('./config/passport')(passport); // pass passport for configuration
 
 /** PASSPORT USER LOGIN**/

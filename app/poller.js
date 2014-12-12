@@ -9,6 +9,7 @@ var vm = require('vm');
 var courses = [];
 var klass;
 
+
 var course = function (info){
   return {
     status: info[0],
@@ -37,10 +38,9 @@ var course = function (info){
 /*
 Run this every 30 minutes probably at peak times during day, hourly or not at night
 */
-var url = "http://www.cs.odu.edu/~ibl/JSON/spr15.js";
 
-
-request.get(url, function(err,res){
+module.exports = function (url) {
+  request.get(url, function(err,res){
 
   if (!err && res.statusCode == 200) {
   //like eval
@@ -148,4 +148,5 @@ request.get(url, function(err,res){
   else {
     throw err;
   }
-});
+  });
+};
