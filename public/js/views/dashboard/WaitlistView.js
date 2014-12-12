@@ -37,114 +37,131 @@ define([
       var locked = false;
 
       //console.log(cid);
+      var currentCourse = window.CorsicaApp.collections.courseCollection.where({crn: crn});
+      var linkedCourses = [];
+      var model = currentCourse[0];
 
-      window.CorsicaApp.collections.courseCollection.fetch({
-        success: function(collection) {
+      for (var j = 0; j < model.get('subscribers').length; j++){
+        if (__user.email === model.get('subscribers')[j].email){
+          position = j + 1;
+        }
+      }
 
-          collection.each(function(model) {
-            if (model.get("crn") === crn){
-              console.log(model); 
+      var course_data = {
+        courseNum: model.get('courseNum'),
+        description: model.get('description'),
+        crn: model.get('crn'),
+        i_user: model.get('instructor'),
+        capacity: model.get('capacity'),
+        id: model.get('_id'),
+        listing: model.get('listing'),
+        note: model.get('note'),
+        time: model.get('days') + " " + model.get('times'),
+        location: model.get('location'),
+        subscribed_num: model.get('subscribers').length,
+        subscribers: model.get('subscribers'),
+        current_num: position,
+        type: model.get('type')
+      };
 
-              for (var j = 0; j < model.get('subscribers').length; j++){
-                if (__user.email === model.get('subscribers')[j].email){
-                  position = j + 1;
-                }
-              }
+      locked = model.get("locked");
 
-              var course_data = {
-                courseNum: model.get('courseNum'),
-                description: model.get('description'),
-                crn: model.get('crn'),
-                i_user: model.get('instructor'),
-                capacity: model.get('capacity'),
-                id: model.get('_id'),
-                listing: model.get('listing'),
-                note: model.get('note'),
-                time: model.get('days') + " " + model.get('times'),
-                location: model.get('location'),
-                subscribed_num: model.get('subscribers').length,
-                subscribers: model.get('subscribers'),
-                current_num: position
-              };
+      studentsOnList = model.get("subscribers").length;
 
-              locked = model.get("locked");
+      //console.log(course_data);
+      // Callback stuff
+      function makeTemplate (cb){
+        var row = waitlistTemplate({
+          data: course_data
+        });
 
-              studentsOnList = model.get("subscribers").length;
+        cb(row);
 
-              //console.log(course_data);
-              // Callback stuff
-              function makeTemplate (cb){
-                var row = waitlistTemplate({
-                  data: course_data
-                });
+      }
 
-                cb(row);
+      function addToDom(row){
+        // Add this new row to the screen
+        self.$el.html(row);
+      }
+      
+      makeTemplate(addToDom);
+      //this.$el.html(waitlistTemplate);
 
-              }
+      // id = #linked_lab_12345
 
-              function addToDom(row){
-                // Add this new row to the screen
-                self.$el.html(row);
-              }
-              
-              makeTemplate(addToDom);
-              //this.$el.html(waitlistTemplate);
-            }
-          });
+      if (model.get('linked') === true){
+        linkedCourses = window.CorsicaApp.collections.courseCollection.where({courseNum: model.get('courseNum')});
 
-          if (__user.access === "student"){
+        for (var i = 0; i < linkedCourses.length; i++){
+          if (linkedCourses[i].get('type') !== model.get('type')){
+            console.log(linkedCourses[i]);
+            if (linkedCourses[i].get('type') === 'lab'){
 
-            $(".students").hide();
-            var found = false;
-            for (var i = 0; i < __user.subscribed.length; i++){
-              if (__user.subscribed[i] === self.crn){
-                found = true;
-                $("#unsubscribe_btn").show();
-                $(".student-visible").show();
-              }
-            }
+              var dom = "<div class\"radio\"><input type=\"radio\" name=\"options_" + linkedCourses[i].get('type') + "\" id=linked_lab_\"" + linkedCourses[i].get('crn') + "\" value=\"" + linkedCourses[i].get('crn') + "\">" + linkedCourses[i].get('crn') + " (" + linkedCourses[i].get('subscribers').length + " user)</div>";
+              $(".linked_labs").find(".row").append(dom);
 
-            if (found === false){
-              $("#subscribe_btn").show();
-            }
+            } else if (linkedCourses[i].get('type') === 'recitation'){
 
-          } else{
+              var dom = "<div class\"radio\"><input type=\"radio\" name=\"options_" + linkedCourses[i].get('type') + "\" id=linked_rec_\"" + linkedCourses[i].get('crn') + "\" value=\"" + linkedCourses[i].get('crn') + "\">" + linkedCourses[i].get('crn') + " (" + linkedCourses[i].get('subscribers').length + " user)</div>";
+              $(".linked_recs").find(".row").append(dom);
 
-            if (locked === true){
-              $(".locked").show(); // shows the message that the course is hidden
-            }
-
-            $(".student-visible").hide();
-
-            if (studentsOnList === 0){
-              $(".empty").show();
-            } else{
-              $(".students").show();
-            }
-
-            if (__user.access === "advisor"){         // if user = advisor
-              $(".advisor-visible").show();
-
-            } else if (__user.access === "scheduler"){ // if user = scheduler
-              if (locked === true){
-                $(".glyphicon-plus.scheduler-visible").show();
-              } else{
-                $(".glyphicon-remove.scheduler-visible").show();
-              }
-
-            } else{                                    // if user = admin
-              $(".advisor-visible").show();
-
-              if (locked === true){
-                $(".glyphicon-plus.scheduler-visible").show();
-              } else{
-                $(".glyphicon-remove.scheduler-visible").show();
-              }
             }
           }
-
         }
-      });
+      }
+
+
+
+      if (__user.access === "student"){
+
+        $(".students").hide();
+        var found = false;
+        for (var i = 0; i < __user.subscribed.length; i++){
+          if (__user.subscribed[i] === self.crn){
+            found = true;
+            $("#unsubscribe_btn").show();
+            $(".student-visible").show();
+          }
+        }
+
+        if (found === false){
+          $("#subscribe_btn").show();
+        }
+
+      } else{
+
+        if (locked === true){
+          $(".locked").show(); // shows the message that the course is hidden
+        }
+
+        $(".student-visible").hide();
+
+        if (studentsOnList === 0){
+          $(".empty").show();
+        } else{
+          $(".students").show();
+        }
+
+        if (__user.access === "advisor"){         // if user = advisor
+          $(".advisor-visible").show();
+
+        } else if (__user.access === "scheduler"){ // if user = scheduler
+          if (locked === true){
+            $(".glyphicon-plus.scheduler-visible").show();
+          } else{
+            $(".glyphicon-remove.scheduler-visible").show();
+          }
+
+        } else{                                    // if user = admin
+          $(".advisor-visible").show();
+
+          if (locked === true){
+            $(".glyphicon-plus.scheduler-visible").show();
+          } else{
+            $(".glyphicon-remove.scheduler-visible").show();
+          }
+        }
+      }
 
     }, // .render
 

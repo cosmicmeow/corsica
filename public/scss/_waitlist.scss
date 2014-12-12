@@ -163,4 +163,12 @@
 		display:none;
 	}
 
+	.course_type{
+		display:inline-block;
+	}
+
+	.course_type:first-letter {
+		text-transform:uppercase;
+	}
+
 }	

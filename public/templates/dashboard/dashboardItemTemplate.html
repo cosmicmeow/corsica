@@ -8,11 +8,15 @@
   <div class="col-sm-5 waitlist" data-id="<%=data.id%>">
     <span class="course_num"><%= data.courseNum %>: </span>
     <span class="course_name"><%= data.listing.title %></span>
+    <% if (data.linked === true) { %>
+      <span class="course_linked">*</span>
+    <% } %>
   </div>
+  <div class="col-sm-1"><span class="course_type"><%= data.type %></span></div>
   <div class="col-sm-1"><span class="course_crn"><%= data.crn %></span></div>
   <div class="col-sm-3"><span class="course_instructor"><%= data.i_user %></span></div>
-  <div class="col-sm-2">
-  	<span class="course_stat"><%= data.subscribed_num %>/10</span>
+  <div class="col-sm-1">
+  	<span class="course_stat"><%= data.subscribed_num %></span>
 
   	<% if (data.locked === true) { %>
   		<span class="lock_message"> [Hidden]</span>

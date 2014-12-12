@@ -98,6 +98,10 @@
         margin: 0 0 30px; }
   #waitlist_view .advisor-visible, #waitlist_view .scheduler-visible {
     display: none; }
+  #waitlist_view .course_type {
+    display: inline-block; }
+  #waitlist_view .course_type:first-letter {
+    text-transform: uppercase; }
 
 #navbar .navbar-red {
   background-color: #930E00; }
@@ -326,10 +330,13 @@
   #dashboard_view .list .header {
     background-color: #fff;
     background-image: none;
-    height: 60px;
+    height: 50px;
     line-height: 60px;
     text-align: left;
     font-size: 30px; }
+  #dashboard_view .list .note {
+    text-align: left;
+    margin-bottom: 30px; }
   #dashboard_view .list .course.head {
     background-color: #F5F0E7;
     font-size: 20px;
@@ -366,6 +373,10 @@
     padding-top: 13px; }
     #dashboard_view .before_date.show, #dashboard_view .after_date.show {
       display: block; }
+  #dashboard_view .course_type {
+    display: inline-block; }
+  #dashboard_view .course_type:first-letter {
+    text-transform: uppercase; }
 
 #footer_view ul {
   padding: 0;

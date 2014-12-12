@@ -37,6 +37,24 @@ console.log("poller is running, looking for changes");
 _.each(data.main, function(info){
     var klass = new course(info);
     klass.courseNum = "CS" + klass.courseNum;
+
+    var klassType = "lecture";
+
+    // Determine type of class
+    // *** NOTE: type must be the first word of the note with a space before it
+    if (klass.note.indexOf("LAB") === 1){
+      klassType = "lab";
+    } else if (klass.note.indexOf("RECITATION") === 1){
+      klassType = "recitation";
+    }
+
+    klass.type = klassType;
+    klass.linked = false;
+
+    if ( ["CS121G", "CS150" ,"CS250" ,"CS350", "CS410", "CS411W"].indexOf(klass.courseNum) > -1){
+      klass.linked = true;
+    }
+
     _.find(classData, function  (listing) {
       if (listing.code === klass.courseNum) {
         klass.listing = listing;
@@ -48,9 +66,9 @@ _.each(data.main, function(info){
             console.log("created new record for ", klass.crn);
           } else {
                if (err.code === 11000 || err.code === 11001) {
-                 //console.log("exists");
-                 //do check updates
-                Waitlist.findOne({"crn": klass.crn}, function (err, waitlist) {
+                  //console.log("exists");
+                  //do check updates
+                  Waitlist.findOne({"crn": klass.crn}, function (err, waitlist) {
                   //update if change in status
                   // if (waitlist.crn==="13417"){
                   //    console.log(klass.availableSeats);

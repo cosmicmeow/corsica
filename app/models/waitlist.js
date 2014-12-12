@@ -23,6 +23,8 @@ var waitlistSchema = mongoose.Schema({
   unknown4: {type: String},
   unknown5: {type: String},
   unknown6: {type: String},
+  type: {type: String, default: "lecture"},
+  linked: {type: Boolean, default: false},
   locked: {type: Boolean, default: false},
   listing:  {type: mongoose.Schema.Types.Mixed},
   subscribers: {type: Array, default: Array}, //, unique: true?

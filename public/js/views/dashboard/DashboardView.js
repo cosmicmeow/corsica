@@ -79,7 +79,9 @@ define([
                     id: model.cid,
                     listing: model.get('listing'),
                     subscribed_num : model.get('subscribers').length,
-                    current_num : position
+                    current_num : position,
+                    type: model.get('type'),
+                    linked: model.get('linked')
                   };
 
                   // Create a new row
@@ -161,7 +163,9 @@ define([
               id: model.cid,
               listing: model.get('listing'),
               subscribed_num : model.get('subscribers').length,
-              locked: model.get('locked')
+              locked: model.get('locked'),
+              type: model.get('type'),
+              linked: model.get('linked')
             };
 
             // Create a new row
