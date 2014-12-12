@@ -17,6 +17,7 @@ var poll = require('./app/poller.js');
 
 
 var url = process.env.SEM_URL || "http://www.cs.odu.edu/~ibl/JSON/spr15.js";
+process.env.SEM_URL = url;
 
 poll(url);
 setInterval( function (){

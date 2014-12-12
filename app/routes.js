@@ -50,9 +50,12 @@ module.exports = function(app, passport) {
 			res.clearCookie('email');
 			res.cookie('email', req.user.local.email, {httpOnly: false});
 			console.log(req.user);
+			//adding some security
+			req.user.local.password = "";
+			req.user.local.phoneNumber = "";
 			res.render('index.ejs', {
-				user : req.user,
-				stringify: JSON.stringify(req.user.local)
+				user: JSON.stringify(req.user.local),
+				semester: JSON.stringify(process.env.SEM_URL)
 			});
 		});
 
